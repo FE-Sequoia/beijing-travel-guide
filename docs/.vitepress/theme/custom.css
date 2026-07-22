@@ -1,0 +1,715 @@
+/* ============================================================
+   北京旅游攻略 · 帝都意象主题
+   配色：宫墙朱红 · 琉璃金 · 徽墨 · 宣纸
+   字体：Noto Serif SC（宋体展示） + Noto Sans SC（黑体正文）
+   ============================================================ */
+
+:root {
+  --bj-vermilion: #A83226;
+  --bj-vermilion-deep: #8C271D;
+  --bj-vermilion-bright: #C24534;
+  --bj-gold: #C9A227;
+  --bj-gold-deep: #96770D;
+  --bj-ink: #2A2118;
+  --bj-font-display: 'Noto Serif SC', 'Songti SC', 'STSong', 'SimSun', serif;
+
+  /* VitePress 品牌色覆写 */
+  --vp-c-brand-1: var(--bj-vermilion);
+  --vp-c-brand-2: var(--bj-vermilion-deep);
+  --vp-c-brand-3: #6F1E16;
+  --vp-c-brand-soft: rgba(168, 50, 38, 0.12);
+
+  /* 宣纸底色 */
+  --vp-c-bg: #FBF8F1;
+  --vp-c-bg-alt: #F4EEE1;
+  --vp-c-bg-soft: #F1EADB;
+  --vp-c-bg-elv: #FEFCF7;
+
+  --vp-c-text-1: #2A2118;
+  --vp-c-text-2: #6B5D4B;
+  --vp-c-text-3: #998A78;
+  --vp-c-divider: rgba(140, 39, 29, 0.12);
+  --vp-c-gutter: rgba(140, 39, 29, 0.07);
+
+  --vp-font-family-base: 'Noto Sans SC', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', system-ui, sans-serif;
+}
+
+.dark {
+  --vp-c-brand-1: #E4674F;
+  --vp-c-brand-2: #D4574A;
+  --vp-c-brand-3: #C04838;
+  --vp-c-brand-soft: rgba(228, 103, 79, 0.16);
+
+  --vp-c-bg: #16110C;
+  --vp-c-bg-alt: #1B1510;
+  --vp-c-bg-soft: #231B13;
+  --vp-c-bg-elv: #251D14;
+
+  --vp-c-text-1: #EFE7D6;
+  --vp-c-text-2: #B4A78F;
+  --vp-c-text-3: #80725E;
+  --vp-c-divider: rgba(228, 103, 79, 0.16);
+  --vp-c-gutter: rgba(228, 103, 79, 0.08);
+}
+
+::selection {
+  background: rgba(201, 162, 39, 0.35);
+  color: inherit;
+}
+
+a:focus-visible,
+button:focus-visible,
+.VPButton:focus-visible {
+  outline: 2px solid var(--bj-gold);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* ---------- 正文排版：宋体标题 + 金线装饰 ---------- */
+
+.vp-doc h1,
+.vp-doc h2,
+.vp-doc h3,
+.vp-doc h4 {
+  font-family: var(--bj-font-display);
+  letter-spacing: 0.015em;
+}
+
+.vp-doc h2 {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.vp-doc h2::before {
+  content: '';
+  display: inline-block;
+  width: 6px;
+  height: 1.02em;
+  margin-right: 10px;
+  vertical-align: -0.12em;
+  border-radius: 2px;
+  background: linear-gradient(180deg, var(--bj-vermilion), var(--bj-gold));
+}
+
+.vp-doc blockquote {
+  border-left: 3px solid var(--bj-gold);
+  background: rgba(201, 162, 39, 0.06);
+  border-radius: 0 10px 10px 0;
+  padding: 12px 18px;
+  font-family: var(--bj-font-display);
+  font-size: 15px;
+}
+
+.vp-doc blockquote p {
+  margin: 4px 0;
+}
+
+.vp-doc img {
+  border-radius: 12px;
+  box-shadow: 0 6px 24px rgba(42, 33, 24, 0.14);
+}
+
+.vp-doc th {
+  background: rgba(168, 50, 38, 0.06);
+  font-weight: 700;
+}
+
+.vp-doc tr {
+  transition: background 0.2s;
+}
+
+.vp-doc tbody tr:hover {
+  background: rgba(201, 162, 39, 0.07);
+}
+
+.vp-doc .custom-block.tip {
+  border-color: var(--bj-gold);
+  background: rgba(201, 162, 39, 0.08);
+}
+
+.vp-doc .custom-block.tip .custom-block-title {
+  color: var(--bj-gold-deep);
+}
+
+.dark .vp-doc .custom-block.tip .custom-block-title {
+  color: var(--bj-gold);
+}
+
+/* ============================================================
+   首页 Hero —— 宫墙曙色
+   ============================================================ */
+
+.VPHomeHero {
+  position: relative;
+  overflow: hidden;
+}
+
+/* 朱红 × 琉璃金的晨雾光晕 */
+.VPHomeHero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(1100px 540px at 82% -18%, rgba(201, 162, 39, 0.17), transparent 62%),
+    radial-gradient(900px 520px at -8% 28%, rgba(168, 50, 38, 0.11), transparent 56%);
+}
+
+/* 殿脊剪影 */
+.VPHomeHero::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: 130px;
+  pointer-events: none;
+  opacity: 0.075;
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201440%20140'%20preserveAspectRatio='none'%3E%3Cpath%20d='M0,112%20Q12,120%2042,118%20Q370,124%20720,46%20Q1070,124%201398,118%20Q1428,120%201440,112%20L1440,140%20L0,140%20Z'%20fill='%23A83226'/%3E%3Cpath%20d='M0,130%20Q12,136%2042,134%20Q370,140%20720,76%20Q1070,140%201398,134%20Q1428,136%201440,130%20L1440,140%20L0,140%20Z'%20fill='%23A83226'%20opacity='0.55'/%3E%3C/svg%3E");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+/* 漂移的云气 */
+.VPHomeHero .container::before {
+  content: '';
+  position: absolute;
+  top: -40px;
+  left: -10%;
+  width: 120%;
+  height: 340px;
+  pointer-events: none;
+  background:
+    radial-gradient(460px 96px at 22% 34%, rgba(168, 50, 38, 0.055), transparent 70%),
+    radial-gradient(560px 120px at 68% 62%, rgba(201, 162, 39, 0.075), transparent 70%);
+  animation: bj-drift 26s ease-in-out infinite alternate;
+}
+
+.VPHomeHero .name .clip {
+  font-family: var(--bj-font-display);
+  font-weight: 900;
+  font-size: clamp(2.5rem, 1.1rem + 6vw, 4.6rem);
+  letter-spacing: 0.045em;
+  line-height: 1.18;
+  background: linear-gradient(115deg, #8C271D 4%, #A83226 46%, #C9A227 108%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.VPHomeHero .text {
+  font-family: var(--bj-font-display);
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: var(--vp-c-text-2);
+}
+
+.VPHomeHero .tagline {
+  letter-spacing: 0.02em;
+}
+
+.VPHomeHero .image-bg {
+  display: none;
+}
+
+.VPHomeHero .image-container {
+  background: transparent;
+}
+
+.VPHomeHero .image-container img {
+  animation: bj-float 7s ease-in-out infinite;
+  filter: drop-shadow(0 18px 34px rgba(140, 39, 29, 0.22));
+}
+
+.VPHomeHero .image-src {
+  top: 10%;
+}
+
+/* Hero 按钮 */
+.VPButton.brand {
+  background: var(--bj-vermilion);
+  border: 1px solid var(--bj-vermilion);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  transition: background 0.25s, box-shadow 0.3s, transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.VPButton.brand:hover {
+  background: var(--bj-vermilion-deep);
+  border-color: var(--bj-vermilion-deep);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 26px -6px rgba(140, 39, 29, 0.45);
+}
+
+.VPButton.alt {
+  border-color: rgba(168, 50, 38, 0.4);
+  transition: border-color 0.25s, color 0.25s, transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.VPButton.alt:hover {
+  border-color: var(--bj-gold);
+  color: var(--bj-gold-deep);
+  transform: translateY(-2px);
+}
+
+.dark .VPButton.alt:hover {
+  color: var(--bj-gold);
+}
+
+/* ============================================================
+   首页通用版心
+   ============================================================ */
+
+.VPHome .vp-doc > .bj-stats,
+.VPHome .vp-doc > .bj-section,
+.VPHome .vp-doc > .bj-foot {
+  max-width: 1104px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+/* ---------- 数据带 ---------- */
+
+.bj-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin: 8px auto 84px;
+}
+
+.bj-stats > div {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  padding: 24px 10px 20px;
+  border: 1px solid rgba(168, 50, 38, 0.14);
+  border-radius: 14px;
+  background: linear-gradient(165deg, var(--vp-c-bg-elv), transparent);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s, box-shadow 0.3s;
+}
+
+.bj-stats > div:hover {
+  transform: translateY(-3px);
+  border-color: rgba(201, 162, 39, 0.55);
+  box-shadow: 0 12px 28px -14px rgba(140, 39, 29, 0.3);
+}
+
+.bj-stats strong {
+  display: block;
+  font-family: var(--bj-font-display);
+  font-size: 2.3rem;
+  font-weight: 900;
+  line-height: 1;
+  color: var(--bj-vermilion);
+}
+
+.dark .bj-stats strong {
+  color: var(--bj-gold);
+}
+
+.bj-stats span {
+  display: block;
+  margin-top: 8px;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  color: var(--vp-c-text-2);
+}
+
+/* ---------- 节标题 ---------- */
+
+.bj-section {
+  margin-bottom: 84px;
+}
+
+.bj-section-head {
+  margin-bottom: 22px;
+}
+
+.bj-kicker {
+  display: inline-block;
+  font-size: 12px;
+  letter-spacing: 0.5em;
+  color: var(--bj-gold-deep);
+  margin-bottom: 6px;
+}
+
+.dark .bj-kicker {
+  color: var(--bj-gold);
+}
+
+.bj-kicker::before {
+  content: '';
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  margin-right: 12px;
+  vertical-align: 0;
+  background: var(--bj-vermilion);
+  border-radius: 2px;
+}
+
+.bj-section-head h2 {
+  font-family: var(--bj-font-display);
+  font-size: clamp(1.55rem, 1.15rem + 1.8vw, 2.15rem);
+  font-weight: 900;
+  letter-spacing: 0.02em;
+  margin: 0 0 8px;
+  color: var(--vp-c-text-1);
+}
+
+.bj-section-head p {
+  margin: 0;
+  font-size: 14.5px;
+  color: var(--vp-c-text-2);
+}
+
+/* ---------- 四大地标卡片 ---------- */
+
+.bj-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 18px;
+}
+
+.bj-grid .bj-card:nth-child(1) { grid-column: span 7; }
+.bj-grid .bj-card:nth-child(2) { grid-column: span 5; }
+.bj-grid .bj-card:nth-child(3) { grid-column: span 5; }
+.bj-grid .bj-card:nth-child(4) { grid-column: span 7; }
+
+.bj-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 320px;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #1B130D;
+  border: 1px solid rgba(140, 39, 29, 0.12);
+  text-decoration: none !important;
+  box-shadow: 0 2px 12px rgba(42, 33, 24, 0.1);
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.45s, border-color 0.45s;
+}
+
+.bj-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(201, 162, 39, 0.65);
+  box-shadow: 0 26px 52px -18px rgba(140, 39, 29, 0.4);
+}
+
+.bj-card figure {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+}
+
+.bj-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.02);
+  transition: transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.bj-card:hover img {
+  transform: scale(1.07);
+}
+
+.bj-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(180deg, rgba(22, 13, 8, 0.06) 0%, rgba(22, 13, 8, 0.22) 46%, rgba(22, 13, 8, 0.9) 100%);
+}
+
+.bj-card-body {
+  position: relative;
+  z-index: 2;
+  margin-top: auto;
+  padding: 24px 26px;
+  color: #F7EFE0;
+}
+
+.bj-badge {
+  display: inline-block;
+  padding: 3px 11px;
+  margin-bottom: 12px;
+  font-size: 11.5px;
+  letter-spacing: 0.1em;
+  color: #EBCB6E;
+  border: 1px solid rgba(201, 162, 39, 0.7);
+  border-radius: 999px;
+  background: rgba(22, 13, 8, 0.45);
+}
+
+.bj-card-body h3 {
+  margin: 0 0 6px;
+  font-family: var(--bj-font-display);
+  font-size: 1.55rem;
+  font-weight: 900;
+  letter-spacing: 0.03em;
+  color: #F7EFE0;
+}
+
+.bj-card-body p {
+  margin: 0 0 12px;
+  font-size: 13.5px;
+  color: rgba(247, 239, 224, 0.8);
+}
+
+.bj-more {
+  font-size: 13px;
+  letter-spacing: 0.06em;
+  color: #EBCB6E;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.35s, transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.bj-card:hover .bj-more {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ---------- 子景点漫游 ---------- */
+
+.bj-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.bj-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 9px 18px;
+  font-size: 14px;
+  color: var(--vp-c-text-1);
+  text-decoration: none !important;
+  border: 1px solid rgba(168, 50, 38, 0.28);
+  border-radius: 999px;
+  background: var(--vp-c-bg-elv);
+  transition: background 0.25s, color 0.25s, border-color 0.25s, transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s;
+}
+
+.bj-chip i {
+  font-style: normal;
+  font-size: 12px;
+  color: var(--bj-gold-deep);
+  transition: color 0.25s;
+}
+
+.dark .bj-chip i {
+  color: var(--bj-gold);
+}
+
+.bj-chip:hover {
+  background: var(--bj-vermilion);
+  border-color: var(--bj-vermilion);
+  color: #FBF6EC;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 22px -10px rgba(140, 39, 29, 0.55);
+}
+
+.bj-chip:hover i {
+  color: #EBCB6E;
+}
+
+/* ---------- 四季北京 ---------- */
+
+.bj-seasons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+
+.bj-season {
+  position: relative;
+  overflow: hidden;
+  padding: 20px 18px 16px;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 14px;
+  background: var(--vp-c-bg-elv);
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s, border-color 0.35s;
+}
+
+.bj-season::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--season-c, var(--bj-vermilion));
+}
+
+.bj-season:hover {
+  transform: translateY(-4px);
+  border-color: var(--season-c, var(--bj-vermilion));
+  box-shadow: 0 16px 32px -16px rgba(42, 33, 24, 0.3);
+}
+
+.bj-season strong {
+  font-family: var(--bj-font-display);
+  font-size: 1.25rem;
+  font-weight: 900;
+  color: var(--vp-c-text-1);
+}
+
+.bj-season em {
+  display: block;
+  margin: 3px 0 12px;
+  font-style: normal;
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  color: var(--vp-c-text-2);
+}
+
+.bj-season ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 13px;
+  line-height: 2;
+  color: var(--vp-c-text-2);
+}
+
+.bj-season li::before {
+  content: '·';
+  margin-right: 8px;
+  color: var(--season-c, var(--bj-vermilion));
+  font-weight: 900;
+}
+
+/* ---------- 出发之前 ---------- */
+
+.bj-guide-links {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.bj-guide-links a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px 18px;
+  font-size: 14px;
+  color: var(--vp-c-text-1);
+  text-decoration: none !important;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 12px;
+  background: var(--vp-c-bg-elv);
+  transition: border-color 0.25s, color 0.25s, transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.bj-guide-links a span {
+  font-size: 17px;
+}
+
+.bj-guide-links a:hover {
+  border-color: var(--vp-c-brand-1);
+  color: var(--vp-c-brand-1);
+  transform: translateX(4px);
+}
+
+/* ---------- 页脚印章 ---------- */
+
+.bj-foot {
+  margin-bottom: 72px;
+  padding: 34px 30px;
+  text-align: center;
+  border: 1px dashed rgba(201, 162, 39, 0.5);
+  border-radius: 18px;
+  background: rgba(201, 162, 39, 0.05);
+}
+
+.bj-foot p {
+  margin: 0;
+  font-family: var(--bj-font-display);
+  font-size: 15px;
+  letter-spacing: 0.06em;
+  color: var(--vp-c-text-2);
+}
+
+.bj-foot p + p {
+  margin-top: 8px;
+  font-size: 13px;
+}
+
+/* ============================================================
+   动效（尊重减弱动态偏好）
+   ============================================================ */
+
+@keyframes bj-rise {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: none; }
+}
+
+@keyframes bj-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-11px); }
+}
+
+@keyframes bj-drift {
+  from { transform: translateX(-2.5%); }
+  to { transform: translateX(2.5%); }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .VPHomeHero .main {
+    animation: bj-rise 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+  .VPHomeHero .image-container {
+    animation: bj-rise 0.8s 0.15s cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+  .bj-stats,
+  .bj-section {
+    animation: bj-rise 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+/* ============================================================
+   响应式
+   ============================================================ */
+
+@media (max-width: 960px) {
+  .bj-grid .bj-card:nth-child(n) {
+    grid-column: span 12;
+    min-height: 260px;
+  }
+  .bj-seasons {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .bj-stats {
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 64px;
+  }
+  .bj-guide-links {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .bj-seasons {
+    grid-template-columns: 1fr;
+  }
+  .bj-guide-links {
+    grid-template-columns: 1fr;
+  }
+}

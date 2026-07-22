@@ -6,7 +6,7 @@
 
 ## 皇家建筑
 
-### [故宫博物院](/landmarks/forbidden-city)
+### [故宫博物院](/landmarks/forbidden-city/)
 
 世界最大宫殿建筑群，明清两代皇宫，世界文化遗产。
 
@@ -14,7 +14,9 @@
 - **建议时长**：半天至一天
 - **看点**：太和殿、乾清宫、御花园、珍宝馆
 
-### [天坛](/landmarks/temple-of-heaven)
+🔍 **子景点**：[午门](/landmarks/forbidden-city/wumen) · [太和殿](/landmarks/forbidden-city/taihe-dian) · [中和殿](/landmarks/forbidden-city/zhonghe-dian) · [保和殿](/landmarks/forbidden-city/baohe-dian) · [乾清宫](/landmarks/forbidden-city/qianqing-gong) · [交泰殿](/landmarks/forbidden-city/jiaotai-dian) · [坤宁宫](/landmarks/forbidden-city/kunning-gong) · [御花园](/landmarks/forbidden-city/yuhua-garden) · [珍宝馆](/landmarks/forbidden-city/zhenbao-guan) · [钟表馆](/landmarks/forbidden-city/zhongbiao-guan) · [九龙壁](/landmarks/forbidden-city/jiulong-bi)
+
+### [天坛](/landmarks/temple-of-heaven/)
 
 明清皇帝祭天祈谷之地，世界文化遗产。
 
@@ -22,7 +24,9 @@
 - **建议时长**：3-4小时
 - **看点**：祈年殿、回音壁、圜丘坛
 
-### [颐和园](/landmarks/summer-palace)
+🔍 **子景点**：[祈年殿](/landmarks/temple-of-heaven/qinian-dian) · [圜丘坛](/landmarks/temple-of-heaven/huanqiu-tan) · [皇穹宇与回音壁](/landmarks/temple-of-heaven/huangqiong-yu) · [丹陛桥](/landmarks/temple-of-heaven/danbi-qiao) · [斋宫](/landmarks/temple-of-heaven/zhai-gong) · [神乐署](/landmarks/temple-of-heaven/shenyue-shu)
+
+### [颐和园](/landmarks/summer-palace/)
 
 中国古典园林巅峰之作，世界文化遗产。
 
@@ -30,7 +34,9 @@
 - **建议时长**：半天至一天
 - **看点**：佛香阁、长廊、十七孔桥、昆明湖
 
-### [圆明园](/landmarks/yuanmingyuan)
+🔍 **子景点**：[仁寿殿](/landmarks/summer-palace/renshou-dian) · [德和园](/landmarks/summer-palace/dehe-yuan) · [佛香阁](/landmarks/summer-palace/foxiang-ge) · [长廊](/landmarks/summer-palace/changlang) · [排云殿](/landmarks/summer-palace/paiyun-dian) · [昆明湖与十七孔桥](/landmarks/summer-palace/kunming-lake) · [石舫](/landmarks/summer-palace/shifang) · [苏州街](/landmarks/summer-palace/suzhou-street) · [谐趣园](/landmarks/summer-palace/xiequ-yuan) · [西堤六桥](/landmarks/summer-palace/xidi-bridges)
+
+### [圆明园](/landmarks/yuanmingyuan/)
 
 "万园之园"遗址，爱国主义教育基地。
 
@@ -38,7 +44,9 @@
 - **建议时长**：半天至一天
 - **看点**：西洋楼遗址、大水法、十二生肖
 
-### [北海公园](/landmarks/beihai)
+🔍 **子景点**：[大水法](/landmarks/yuanmingyuan/dashuifa) · [海晏堂与十二生肖兽首](/landmarks/yuanmingyuan/haiyan-tang) · [西洋楼建筑群](/landmarks/yuanmingyuan/xiyang-lou) · [福海景区](/landmarks/yuanmingyuan/fuhai) · [绮春园](/landmarks/yuanmingyuan/qichun-yuan) · [文源阁](/landmarks/yuanmingyuan/wenyuan-ge)
+
+### [北海公园](/landmarks/beihai/)
 
 现存最古老皇家园林，白塔琼岛。
 
@@ -46,7 +54,9 @@
 - **建议时长**：2-3小时
 - **看点**：白塔、九龙壁、让我们荡起双桨
 
-### [景山公园](/landmarks/jingshan)
+🔍 **子景点**：[白塔与琼华岛](/landmarks/beihai/baita) · [九龙壁](/landmarks/beihai/jiulongbi) · [五龙亭](/landmarks/beihai/wulongting) · [团城](/landmarks/beihai/tuancheng) · [静心斋](/landmarks/beihai/jingxinzhai) · [西天梵境](/landmarks/beihai/xitianfanjing)
+
+### [景山公园](/landmarks/jingshan/)
 
 北京内城制高点，俯瞰紫禁城最佳位置。
 
@@ -56,13 +66,15 @@
 
 ## 长城
 
-### [八达岭长城](/landmarks/badaling)
+### [八达岭长城](/landmarks/badaling/)
 
 万里长城精华段，最早开放的长城。
 
 - **门票**：40元
 - **建议时长**：3-4小时
 - **看点**：北八楼、好汉坡、关城
+
+🔍 **子景点**：[北八楼与好汉坡](/landmarks/badaling/beibalou) · [关城与城门](/landmarks/badaling/guancheng) · [敌楼与城墙](/landmarks/badaling/dilou) · [望京石与历史遗迹](/landmarks/badaling/wangjingshi) · [中国长城博物馆](/landmarks/badaling/changcheng-museum)
 
 ### [慕田峪长城](/landmarks/mutianyu)
 

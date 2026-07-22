@@ -4,119 +4,153 @@ layout: home
 hero:
   name: 北京旅游攻略
   text: 探索千年帝都
-  tagline: 从紫禁城到长城，从皇家园林到现代都市——一站式北京旅行指南
+  tagline: 从紫禁城到长城，从皇家园林到万园之园——33 个子景点深度讲解，一站读懂北京
   actions:
     - theme: brand
-      text: 开始探索
-      link: /landmarks/forbidden-city
+      text: 从故宫开始
+      link: /landmarks/forbidden-city/
     - theme: alt
-      text: 查看景点
-      link: /landmarks/
+      text: 实用攻略
+      link: /guide/
   image:
-    src: /hero-image.svg
-    alt: 北京
-
-features:
-  - icon: 🏛️
-    title: 名胜古迹
-    details: 故宫、天坛、长城、颐和园等皇家建筑，感受千年帝都的恢弘气势
-    link: /landmarks/forbidden-city
-  
-  - icon: 📜
-    title: 近代历史
-    details: 从圆明园到北大红楼，探寻中国近现代历史的沧桑巨变
-    link: /history/yuanmingyuan-ruins
-  
-  - icon: ⛪
-    title: 宗教建筑
-    details: 天主教堂、佛教寺院、道教宫观，多元宗教文化在北京的交融
-    link: /religion/catholic-churches
-  
-  - icon: 🏛️
-    title: 博物馆
-    details: 国博、首博、科技馆等，深入了解中华文明的璀璨瑰宝
-    link: /museums/national-museum
-  
-  - icon: 🌳
-    title: 城市公园
-    details: 皇家园林与现代公园，体验北京独特的城市绿色空间
-    link: /parks/beihai-park
-  
-  - icon: 🗺️
-    title: 实用攻略
-    details: 交通指南、最佳游览路线、门票预约等实用信息一应俱全
-    link: /guide/
+    src: /hero-emblem.svg
+    alt: 北京旅游攻略印章
 ---
 
-## 🎯 热门推荐
+<section class="bj-stats" aria-label="站点数据">
+  <div><strong>4</strong><span>大皇家地标群</span></div>
+  <div><strong>33</strong><span>个子景点讲解</span></div>
+  <div><strong>50+</strong><span>幅实景图片</span></div>
+  <div><strong>70+</strong><span>篇攻略页面</span></div>
+</section>
 
-<div class="highlights">
+<section class="bj-section">
+  <header class="bj-section-head">
+    <span class="bj-kicker">皇家气象</span>
+    <h2>四大皇家地标</h2>
+    <p>每一座都展开为独立导览——点开即见每座殿宇、每道长廊、每处遗址的图文详解</p>
+  </header>
+  <div class="bj-grid">
+    <a class="bj-card" href="/landmarks/forbidden-city/">
+      <figure><img src="https://images.unsplash.com/photo-1509265226434-5f4ddbdb2f7a?w=1100&q=80&auto=format" alt="故宫全景" loading="lazy"></figure>
+      <div class="bj-card-body">
+        <span class="bj-badge">11 个子景点</span>
+        <h3>故宫博物院</h3>
+        <p>世界最大宫殿建筑群 · 明清二十四帝的家与国</p>
+        <span class="bj-more">进入详解 →</span>
+      </div>
+    </a>
+    <a class="bj-card" href="/landmarks/temple-of-heaven/">
+      <figure><img src="https://images.unsplash.com/photo-1569165755139-296fac054979?w=900&q=80&auto=format" alt="天坛祈年殿" loading="lazy"></figure>
+      <div class="bj-card-body">
+        <span class="bj-badge">6 个子景点</span>
+        <h3>天坛</h3>
+        <p>明清祭天圣地 · 世界文化遗产</p>
+        <span class="bj-more">进入详解 →</span>
+      </div>
+    </a>
+    <a class="bj-card" href="/landmarks/summer-palace/">
+      <figure><img src="https://images.unsplash.com/photo-1619825479213-62e158b5a79d?w=900&q=80&auto=format" alt="颐和园昆明湖" loading="lazy"></figure>
+      <div class="bj-card-body">
+        <span class="bj-badge">10 个子景点</span>
+        <h3>颐和园</h3>
+        <p>皇家园林博物馆 · 一池三山的江南梦</p>
+        <span class="bj-more">进入详解 →</span>
+      </div>
+    </a>
+    <a class="bj-card" href="/landmarks/yuanmingyuan/">
+      <figure><img src="https://images.unsplash.com/photo-1769865693493-3b876f3361dc?w=1100&q=80&auto=format" alt="圆明园西洋楼遗址" loading="lazy"></figure>
+      <div class="bj-card-body">
+        <span class="bj-badge">6 个子景点</span>
+        <h3>圆明园</h3>
+        <p>万园之园的断壁残垣 · 一部石头写的近代史</p>
+        <span class="bj-more">进入详解 →</span>
+      </div>
+    </a>
+  </div>
+</section>
 
-### 🏆 必游 TOP 5
+<section class="bj-section">
+  <header class="bj-section-head">
+    <span class="bj-kicker">按图索骥</span>
+    <h2>子景点漫游</h2>
+    <p>三十三处殿阁楼台，每一处都有它自己的故事</p>
+  </header>
+  <div class="bj-chips">
+    <a class="bj-chip" href="/landmarks/forbidden-city/taihe-dian"><i>故宫</i>太和殿</a>
+    <a class="bj-chip" href="/landmarks/forbidden-city/qianqing-gong"><i>故宫</i>乾清宫</a>
+    <a class="bj-chip" href="/landmarks/forbidden-city/zhenbao-guan"><i>故宫</i>珍宝馆</a>
+    <a class="bj-chip" href="/landmarks/forbidden-city/zhongbiao-guan"><i>故宫</i>钟表馆</a>
+    <a class="bj-chip" href="/landmarks/temple-of-heaven/qinian-dian"><i>天坛</i>祈年殿</a>
+    <a class="bj-chip" href="/landmarks/temple-of-heaven/huangqiong-yu"><i>天坛</i>回音壁</a>
+    <a class="bj-chip" href="/landmarks/summer-palace/foxiang-ge"><i>颐和园</i>佛香阁</a>
+    <a class="bj-chip" href="/landmarks/summer-palace/changlang"><i>颐和园</i>长廊</a>
+    <a class="bj-chip" href="/landmarks/summer-palace/kunming-lake"><i>颐和园</i>十七孔桥</a>
+    <a class="bj-chip" href="/landmarks/summer-palace/shifang"><i>颐和园</i>石舫</a>
+    <a class="bj-chip" href="/landmarks/yuanmingyuan/dashuifa"><i>圆明园</i>大水法</a>
+    <a class="bj-chip" href="/landmarks/yuanmingyuan/haiyan-tang"><i>圆明园</i>十二生肖兽首</a>
+  </div>
+</section>
 
-| 排名 | 景点 | 特色 | 建议时长 |
-|:---:|:---|:---|:---:|
-| 1 | **故宫博物院** | 世界最大宫殿建筑群，明清两代皇宫 | 半天-1天 |
-| 2 | **八达岭长城** | 万里长城精华段，"不到长城非好汉" | 半天 |
-| 3 | **颐和园** | 中国古典园林巅峰之作，皇家园林博物馆 | 半天 |
-| 4 | **天坛** | 明清皇帝祭天祈谷之所，建筑艺术杰作 | 3-4小时 |
-| 5 | **北海公园** | 现存最古老皇家园林，白塔琼岛 | 2-3小时 |
+<section class="bj-section">
+  <header class="bj-section-head">
+    <span class="bj-kicker">四时风物</span>
+    <h2>四季北京</h2>
+    <p>九月底到十月中旬是黄金档，其余季节也各有看头</p>
+  </header>
+  <div class="bj-seasons">
+    <div class="bj-season" style="--season-c: #C2698A">
+      <strong>春</strong><em>3 — 5 月</em>
+      <ul>
+        <li>玉渊潭樱花</li>
+        <li>景山牡丹</li>
+        <li>故宫杏花</li>
+      </ul>
+    </div>
+    <div class="bj-season" style="--season-c: #4E8D5B">
+      <strong>夏</strong><em>6 — 8 月</em>
+      <ul>
+        <li>昆明湖荷花</li>
+        <li>北海划船</li>
+        <li>注意防暑避正午</li>
+      </ul>
+    </div>
+    <div class="bj-season" style="--season-c: #C9A227">
+      <strong>秋</strong><em>9 — 11 月</em>
+      <ul>
+        <li>香山红叶</li>
+        <li>地坛银杏大道</li>
+        <li>最佳旅游季</li>
+      </ul>
+    </div>
+    <div class="bj-season" style="--season-c: #6E8CA8">
+      <strong>冬</strong><em>12 — 2 月</em>
+      <ul>
+        <li>故宫雪景</li>
+        <li>什刹海滑冰</li>
+        <li>春节庙会</li>
+      </ul>
+    </div>
+  </div>
+</section>
 
-</div>
+<section class="bj-section">
+  <header class="bj-section-head">
+    <span class="bj-kicker">行前功课</span>
+    <h2>出发之前</h2>
+    <p>门票预约是北京旅游的必修课，交通、路线、吃住一次备齐</p>
+  </header>
+  <div class="bj-guide-links">
+    <a href="/guide/tickets"><span>🎫</span>门票预约指南</a>
+    <a href="/guide/transportation"><span>🚇</span>交通出行</a>
+    <a href="/guide/routes"><span>🗺️</span>推荐路线</a>
+    <a href="/guide/food"><span>🦆</span>美食地图</a>
+    <a href="/guide/accommodation"><span>🏮</span>住宿建议</a>
+    <a href="/guide/best-time"><span>📅</span>最佳时间</a>
+  </div>
+</section>
 
-## 🏛️ 清代北京城布局
-
-清代北京城采用"四重城郭"格局，从中心向外依次为：**紫禁城**、**皇城**、**内城**、**外城**。
-
-![清代北京城平面图](/qing-beijing-map.svg)
-
-<div class="map-description">
-
-### 四重城郭结构
-
-| 层级 | 范围 | 功能 | 主要建筑 |
-|:---:|:---|:---|:---|
-| **紫禁城** | 核心区 | 皇帝办公起居 | 太和殿、乾清宫、御花园 |
-| **皇城** | 环绕紫禁城 | 皇家服务机构 | 太庙、社稷坛、景山、西苑 |
-| **内城** | 北城区 | 八旗驻防 | 钟鼓楼、胡同民居 |
-| **外城** | 南城区 | 平民居住区 | 天坛、先农坛 |
-
-### 中轴线
-
-北京中轴线南起永定门，北至钟鼓楼，全长7.8公里。沿线分布着：
-
-**永定门** → **正阳门** → **天安门** → **紫禁城** → **景山** → **钟鼓楼**
-
-> 💡 **提示**：点击上方平面图可放大查看详细布局。
-
-</div>
-
-## 📅 最佳游览季节
-
-| 季节 | 时间 | 推荐景点 | 注意事项 |
-|:---:|:---|:---|:---|
-| 🌸 春季 | 3-5月 | 玉渊潭樱花、植物园桃花 | 早晚温差大，注意保暖 |
-| ☀️ 夏季 | 6-8月 | 颐和园荷花、北海划船 | 防暑防晒，避开正午 |
-| 🍂 秋季 | 9-11月 | 香山红叶、故宫银杏 | 最佳旅游季，人流量大 |
-| ❄️ 冬季 | 12-2月 | 故宫雪景、什刹海滑冰 | 注意保暖，部分景点提前闭馆 |
-
-## 🚇 交通贴士
-
-- **地铁**：覆盖主要景点，推荐使用「亿通行」APP
-- **公交**：1元起价，可刷码乘车
-- **出租车/网约车**：起步价14元，高峰期较拥堵
-- **共享单车**：适合短距离接驳，注意禁停区域
-
-<style>
-.highlights {
-  background: var(--vp-c-bg-soft);
-  padding: 24px;
-  border-radius: 12px;
-  margin: 24px 0;
-}
-
-.highlights h3 {
-  margin-top: 0;
-  color: var(--vp-c-brand);
-}
-</style>
+<section class="bj-foot">
+  <p>千年古都，步步是史。愿你带着敬畏与好奇，走进这座城。</p>
+  <p>本站内容仅供参考 · 门票与开放时间以各景区公告为准</p>
+</section>

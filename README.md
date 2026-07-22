@@ -1,10 +1,10 @@
 # 北京旅游攻略 Wiki
 
-[![Deploy](https://github.com/yourusername/beijing-travel-guide/workflows/deploy.yml/badge.svg)](https://github.com/yourusername/beijing-travel-guide/actions)
+<!-- TODO: 将下面的 yourusername 替换为你的 GitHub 用户名 -->
 
 一个详尽的北京旅游指南网站，基于 VitePress 构建，内容涵盖名胜古迹、近代历史、宗教建筑、博物馆、科技馆、公园等。
 
-🔗 **在线预览**：[https://yourusername.github.io/beijing-travel-guide/](https://yourusername.github.io/beijing-travel-guide/)
+🔗 **在线预览**：部署后请替换为 `https://<你的用户名>.github.io/beijing-travel-guide/`
 
 ## 内容概览
 

@@ -6,18 +6,19 @@ export default defineConfig({
   lang: 'zh-CN',
   base: '/beijing-travel-guide/',
   lastUpdated: true,
-  ignoreDeadLinks: true,
+  ignoreDeadLinks: false,
   
   themeConfig: {
     logo: '/logo.svg',
     
     nav: [
       { text: '首页', link: '/' },
-      { text: '名胜古迹', link: '/landmarks/forbidden-city' },
-      { text: '近代历史', link: '/history/summer-palace' },
-      { text: '宗教建筑', link: '/religion/catholic-churches' },
-      { text: '博物馆', link: '/museums/palace-museum' },
-      { text: '公园', link: '/parks/beihai-park' }
+      { text: '名胜古迹', link: '/landmarks/' },
+      { text: '近代历史', link: '/history/' },
+      { text: '宗教建筑', link: '/religion/' },
+      { text: '博物馆', link: '/museums/' },
+      { text: '公园', link: '/parks/' },
+      { text: '实用攻略', link: '/guide/' }
     ],
     
     sidebar: {
@@ -26,11 +27,80 @@ export default defineConfig({
           text: '皇家建筑',
           collapsed: false,
           items: [
-            { text: '故宫博物院', link: '/landmarks/forbidden-city' },
-            { text: '天坛', link: '/landmarks/temple-of-heaven' },
-            { text: '颐和园', link: '/landmarks/summer-palace' },
-            { text: '圆明园', link: '/landmarks/yuanmingyuan' },
-            { text: '北海公园', link: '/landmarks/beihai' },
+            {
+              text: '故宫博物院',
+              link: '/landmarks/forbidden-city/',
+              collapsed: true,
+              items: [
+                { text: '午门', link: '/landmarks/forbidden-city/wumen' },
+                { text: '太和殿', link: '/landmarks/forbidden-city/taihe-dian' },
+                { text: '中和殿', link: '/landmarks/forbidden-city/zhonghe-dian' },
+                { text: '保和殿', link: '/landmarks/forbidden-city/baohe-dian' },
+                { text: '乾清宫', link: '/landmarks/forbidden-city/qianqing-gong' },
+                { text: '交泰殿', link: '/landmarks/forbidden-city/jiaotai-dian' },
+                { text: '坤宁宫', link: '/landmarks/forbidden-city/kunning-gong' },
+                { text: '御花园', link: '/landmarks/forbidden-city/yuhua-garden' },
+                { text: '珍宝馆', link: '/landmarks/forbidden-city/zhenbao-guan' },
+                { text: '钟表馆', link: '/landmarks/forbidden-city/zhongbiao-guan' },
+                { text: '九龙壁', link: '/landmarks/forbidden-city/jiulong-bi' }
+              ]
+            },
+            {
+              text: '天坛',
+              link: '/landmarks/temple-of-heaven/',
+              collapsed: true,
+              items: [
+                { text: '祈年殿', link: '/landmarks/temple-of-heaven/qinian-dian' },
+                { text: '圜丘坛', link: '/landmarks/temple-of-heaven/huanqiu-tan' },
+                { text: '皇穹宇与回音壁', link: '/landmarks/temple-of-heaven/huangqiong-yu' },
+                { text: '丹陛桥', link: '/landmarks/temple-of-heaven/danbi-qiao' },
+                { text: '斋宫', link: '/landmarks/temple-of-heaven/zhai-gong' },
+                { text: '神乐署', link: '/landmarks/temple-of-heaven/shenyue-shu' }
+              ]
+            },
+            {
+              text: '颐和园',
+              link: '/landmarks/summer-palace/',
+              collapsed: true,
+              items: [
+                { text: '仁寿殿', link: '/landmarks/summer-palace/renshou-dian' },
+                { text: '德和园', link: '/landmarks/summer-palace/dehe-yuan' },
+                { text: '佛香阁', link: '/landmarks/summer-palace/foxiang-ge' },
+                { text: '长廊', link: '/landmarks/summer-palace/changlang' },
+                { text: '排云殿', link: '/landmarks/summer-palace/paiyun-dian' },
+                { text: '昆明湖与十七孔桥', link: '/landmarks/summer-palace/kunming-lake' },
+                { text: '石舫', link: '/landmarks/summer-palace/shifang' },
+                { text: '苏州街', link: '/landmarks/summer-palace/suzhou-street' },
+                { text: '谐趣园', link: '/landmarks/summer-palace/xiequ-yuan' },
+                { text: '西堤六桥', link: '/landmarks/summer-palace/xidi-bridges' }
+              ]
+            },
+            {
+              text: '圆明园',
+              link: '/landmarks/yuanmingyuan/',
+              collapsed: true,
+              items: [
+                { text: '大水法', link: '/landmarks/yuanmingyuan/dashuifa' },
+                { text: '海晏堂与十二生肖兽首', link: '/landmarks/yuanmingyuan/haiyan-tang' },
+                { text: '西洋楼建筑群', link: '/landmarks/yuanmingyuan/xiyang-lou' },
+                { text: '福海景区', link: '/landmarks/yuanmingyuan/fuhai' },
+                { text: '绮春园', link: '/landmarks/yuanmingyuan/qichun-yuan' },
+                { text: '文源阁', link: '/landmarks/yuanmingyuan/wenyuan-ge' }
+              ]
+            },
+            {
+              text: '北海公园',
+              link: '/landmarks/beihai/',
+              collapsed: true,
+              items: [
+                { text: '白塔与琼华岛', link: '/landmarks/beihai/baita' },
+                { text: '九龙壁', link: '/landmarks/beihai/jiulongbi' },
+                { text: '五龙亭', link: '/landmarks/beihai/wulongting' },
+                { text: '团城', link: '/landmarks/beihai/tuancheng' },
+                { text: '静心斋', link: '/landmarks/beihai/jingxinzhai' },
+                { text: '西天梵境', link: '/landmarks/beihai/xitianfanjing' }
+              ]
+            },
             { text: '景山公园', link: '/landmarks/jingshan' }
           ]
         },
@@ -38,7 +108,18 @@ export default defineConfig({
           text: '长城',
           collapsed: false,
           items: [
-            { text: '八达岭长城', link: '/landmarks/badaling' },
+            {
+              text: '八达岭长城',
+              link: '/landmarks/badaling/',
+              collapsed: true,
+              items: [
+                { text: '北八楼与好汉坡', link: '/landmarks/badaling/beibalou' },
+                { text: '关城与城门', link: '/landmarks/badaling/guancheng' },
+                { text: '敌楼与城墙', link: '/landmarks/badaling/dilou' },
+                { text: '望京石与历史遗迹', link: '/landmarks/badaling/wangjingshi' },
+                { text: '中国长城博物馆', link: '/landmarks/badaling/changcheng-museum' }
+              ]
+            },
             { text: '慕田峪长城', link: '/landmarks/mutianyu' },
             { text: '司马台长城', link: '/landmarks/simatai' },
             { text: '居庸关', link: '/landmarks/juyongguan' }
@@ -101,7 +182,19 @@ export default defineConfig({
           text: '佛教寺院',
           collapsed: false,
           items: [
-            { text: '雍和宫', link: '/religion/yonghegong' },
+            {
+              text: '雍和宫',
+              link: '/religion/yonghegong/',
+              collapsed: true,
+              items: [
+                { text: '牌楼院与昭泰门', link: '/religion/yonghegong/pailou-yuan' },
+                { text: '雍和门（天王殿）', link: '/religion/yonghegong/yonghe-men' },
+                { text: '雍和宫殿', link: '/religion/yonghegong/yonghe-dadian' },
+                { text: '永佑殿', link: '/religion/yonghegong/yongyou-dian' },
+                { text: '法轮殿', link: '/religion/yonghegong/falun-dian' },
+                { text: '万福阁（弥勒大佛）', link: '/religion/yonghegong/wanfu-ge' }
+              ]
+            },
             { text: '潭柘寺', link: '/religion/tanzhe' },
             { text: '戒台寺', link: '/religion/jietai' },
             { text: '法源寺', link: '/religion/fayuan' },
@@ -182,10 +275,6 @@ export default defineConfig({
       ]
     },
     
-    socialLinks: [
-      { icon: 'github', link: 'https://github.com/yourusername/beijing-travel-guide' }
-    ],
-    
     footer: {
       message: '用心记录北京的历史与文化',
       copyright: 'Copyright © 2024 北京旅游攻略'
@@ -195,14 +284,17 @@ export default defineConfig({
       provider: 'local'
     },
     
-    editLink: {
-      pattern: 'https://github.com/yourusername/beijing-travel-guide/edit/main/docs/:path'
-    }
+    // editLink: {
+    //   pattern: 'https://github.com/<你的用户名>/beijing-travel-guide/edit/main/docs/:path'
+    // }
   },
   
   head: [
     ['link', { rel: 'icon', type: 'image/svg+xml', href: '/logo.svg' }],
-    ['meta', { name: 'theme-color', content: '#5f67ee' }],
+    ['link', { rel: 'preconnect', href: 'https://fonts.googleapis.com' }],
+    ['link', { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' }],
+    ['link', { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@700;900&display=swap' }],
+    ['meta', { name: 'theme-color', content: '#A83226' }],
     ['meta', { property: 'og:type', content: 'website' }],
     ['meta', { property: 'og:title', content: '北京旅游攻略' }],
     ['meta', { property: 'og:description', content: '北京旅游 Wiki - 名胜古迹、历史文化、博物馆完整指南' }]

@@ -44,13 +44,15 @@
 
 ## 佛教寺院
 
-### [雍和宫](/religion/yonghegong)
+### [雍和宫](/religion/yonghegong/)
 
 北京最大的藏传佛教寺院，清代皇家寺院。
 
 - **门票**：25元
 - **特色**：檀香木弥勒大佛、乾隆出生地
 - **地址**：东城区雍和宫大街
+
+🔍 **子景点**：[牌楼院](/religion/yonghegong/pailou-yuan) · [雍和门](/religion/yonghegong/yonghe-men) · [雍和宫殿](/religion/yonghegong/yonghe-dadian) · [永佑殿](/religion/yonghegong/yongyou-dian) · [法轮殿](/religion/yonghegong/falun-dian) · [万福阁](/religion/yonghegong/wanfu-ge)
 
 ### [潭柘寺](/religion/tanzhe)
 

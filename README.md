@@ -1,0 +1,44 @@
+# 北京旅游攻略 Wiki
+
+[![Deploy](https://github.com/yourusername/beijing-travel-guide/workflows/deploy.yml/badge.svg)](https://github.com/yourusername/beijing-travel-guide/actions)
+
+一个详尽的北京旅游指南网站，基于 VitePress 构建，内容涵盖名胜古迹、近代历史、宗教建筑、博物馆、科技馆、公园等。
+
+🔗 **在线预览**：[https://yourusername.github.io/beijing-travel-guide/](https://yourusername.github.io/beijing-travel-guide/)
+
+## 内容概览
+
+- 🏛️ **名胜古迹**：故宫、天坛、长城、颐和园、圆明园等
+- 📜 **近代历史**：天安门广场、北大红楼、圆明园遗址等
+- ⛪ **宗教建筑**：四大天主教堂、雍和宫、白云观等
+- 🏛️ **博物馆**：国家博物馆、科技馆、自然博物馆等
+- 🌳 **城市公园**：北海、景山、奥林匹克森林公园等
+
+## 本地开发
+
+```bash
+# 安装依赖
+npm install
+
+# 启动开发服务器
+npm run docs:dev
+
+# 构建
+npm run docs:build
+```
+
+## 部署
+
+本仓库配置了 GitHub Actions，推送到 main 分支后会自动部署到 GitHub Pages。
+
+## 贡献
+
+欢迎提交 Issue 和 PR 来完善内容。
+
+## 许可
+
+[MIT](./LICENSE)
+
+---
+
+**注意**：本项目为个人学习项目，内容仅供参考。

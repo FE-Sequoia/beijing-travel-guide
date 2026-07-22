@@ -1,0 +1,13 @@
+{
+  "name": "beijing-travel-guide",
+  "version": "1.0.0",
+  "description": "北京旅游攻略 Wiki - 名胜古迹、历史文化、博物馆指南",
+  "scripts": {
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
+  },
+  "devDependencies": {
+    "vitepress": "^1.0.0"
+  }
+}

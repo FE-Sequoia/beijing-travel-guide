@@ -8,7 +8,13 @@
 
 ## 内容维护
 
-景点数据在 `data/places.json`，攻略数据在 `data/guides.json`，行程数据在 `data/itineraries.json`。将景点的 `featured` 设为 `true` 并设置 `funRank`，即可出现在首页“趣玩”模块。
+Web 端 Markdown 是景点和攻略的唯一内容源。更新 `docs/landmarks`、`docs/museums`、`docs/parks`、`docs/religion`、`docs/history` 或 `docs/guide` 后，在仓库根目录运行：
+
+```bash
+node beijing-travel-mp/scripts/sync-from-docs.js
+```
+
+该命令会递归转换父级景点和所有子景点，并同时更新 `data/places.json`、`data/guides.json` 及其同内容的 `.js` 运行时模块；不要只手动修改其中一个文件。行程数据保存在 `data/itineraries.json`。首页“趣玩”由同步脚本中的精选 ID 和既有排序决定。
 
 每个景点至少应保留 `id`、`name`、`categoryId`、`summary`、`tags`、`cover`、`info` 和 `sections` 字段；行程的每个 `stops[].placeId` 必须引用一个现有景点 ID。封面路径不可用时，页面会自动显示分类色块，因此内容仍可离线阅读。
 

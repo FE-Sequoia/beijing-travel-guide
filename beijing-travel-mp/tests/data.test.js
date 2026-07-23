@@ -15,7 +15,26 @@ const {
   getGuideById,
   getItineraries,
   getItineraryByDays,
+  getRelatedPlaces,
 } = require('../utils/data');
+
+const docsRoot = path.resolve(__dirname, '../../docs');
+const placeCategories = ['landmarks', 'museums', 'parks', 'religion', 'history'];
+function eligibleMarkdown(categoryId) {
+  const categoryRoot = path.join(docsRoot, categoryId);
+  const files = [];
+  function walk(dir) {
+    fs.readdirSync(dir, { withFileTypes: true }).forEach((entry) => {
+      const file = path.join(dir, entry.name);
+      if (entry.isDirectory()) return walk(file);
+      if (!entry.name.endsWith('.md')) return;
+      if (path.relative(categoryRoot, file) === 'index.md') return;
+      files.push(path.relative(docsRoot, file).split(path.sep).join('/'));
+    });
+  }
+  walk(categoryRoot);
+  return files.sort();
+}
 
 assert.ok(getCategories().length > 0, '分类数据应可读取');
 assert.ok(getPlaces({ categoryId: 'museums' }).every((place) => place.categoryId === 'museums'));
@@ -29,6 +48,26 @@ assert.deepStrictEqual(
 assert.strictEqual(getPlaceById('missing-place'), null, '未知景点应返回 null');
 assert.ok(getGuides().length >= 7, '应提供基础行前攻略');
 assert.strictEqual(getGuideById('missing-guide'), null, '未知攻略应返回 null');
+
+const expectedPlaceSources = placeCategories.flatMap(eligibleMarkdown).sort();
+const expectedGuideSources = eligibleMarkdown('guide');
+const syncedPlaces = getPlaces();
+assert.strictEqual(syncedPlaces.length, expectedPlaceSources.length, '每篇可迁移景点文档都应成为独立景点');
+assert.deepStrictEqual(syncedPlaces.map((place) => place.sourcePath).sort(), expectedPlaceSources, '景点数据应覆盖所有 Web 来源文档');
+assert.strictEqual(getGuides().length, expectedGuideSources.length, '每篇实用攻略都应成为独立攻略');
+assert.deepStrictEqual(getGuides().map((guide) => guide.sourcePath).sort(), expectedGuideSources, '攻略数据应覆盖所有 Web 来源文档');
+const wumen = syncedPlaces.find((place) => place.sourcePath === 'landmarks/forbidden-city/wumen.md');
+assert.ok(wumen, '故宫子景点应成为独立条目');
+assert.strictEqual(wumen.parentId, 'forbidden-city', '故宫子景点应关联到父级景点');
+assert.strictEqual(getPlaceById('forbidden-city').parentId, '', '目录首页生成的父级景点不应关联到自身');
+assert.ok(wumen.summary && wumen.sections.length > 0, '转换后的子景点应具有可阅读详情');
+assert.ok(getRelatedPlaces(wumen).some((place) => place.id === 'forbidden-city'), '子景点详情应能找到父级地点');
+assert.ok(getRelatedPlaces(getPlaceById('forbidden-city')).some((place) => place.id === wumen.id), '父级地点详情应能找到子景点');
+
+['places', 'guides'].forEach((name) => {
+  const json = JSON.parse(fs.readFileSync(path.join(__dirname, `../data/${name}.json`), 'utf8'));
+  assert.deepStrictEqual(require(`../data/${name}`), json, `${name}.js 应与 ${name}.json 保持一致`);
+});
 
 assert.deepStrictEqual(
   getItineraries().map((item) => item.days),

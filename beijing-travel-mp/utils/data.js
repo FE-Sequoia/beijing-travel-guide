@@ -22,9 +22,13 @@ function getPlaces(options = {}) {
   }).map(withCategoryName);
 }
 function getPlaceById(id) { const place = places.find((item) => item.id === id); return place ? withCategoryName(place) : null; }
+function getRelatedPlaces(place) {
+  if (!place) return [];
+  return places.filter((item) => item.id === place.parentId || item.parentId === place.id).map(withCategoryName);
+}
 function getGuides() { return guides; }
 function getGuideById(id) { return guides.find((guide) => guide.id === id) || null; }
 function getItineraries() { return itineraries.slice().sort((a, b) => a.days - b.days); }
 function getItineraryByDays(days) { return itineraries.find((item) => item.days === Number(days)) || null; }
 
-module.exports = { getCategories, getPlaces, getPlaceById, getGuides, getGuideById, getItineraries, getItineraryByDays };
+module.exports = { getCategories, getPlaces, getPlaceById, getRelatedPlaces, getGuides, getGuideById, getItineraries, getItineraryByDays };

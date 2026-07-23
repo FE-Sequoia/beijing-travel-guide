@@ -11,14 +11,14 @@
   ],
   "window": {
     "navigationBarTitleText": "北京慢游记",
-    "navigationBarBackgroundColor": "#F8F5EF",
+    "navigationBarBackgroundColor": "#F7F3EC",
     "navigationBarTextStyle": "black",
-    "backgroundColor": "#F8F5EF",
+    "backgroundColor": "#F7F3EC",
     "backgroundTextStyle": "light"
   },
   "tabBar": {
     "color": "#8A9995",
-    "selectedColor": "#2E7D6B",
+    "selectedColor": "#1F5B4F",
     "backgroundColor": "#FFFDF9",
     "borderStyle": "white",
     "list": [

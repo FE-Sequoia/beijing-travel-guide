@@ -1,0 +1,1624 @@
+// 小程序静态数据模块：避免部分开发者工具对 require(JSON) 的兼容问题。
+module.exports = [
+  {
+    "id": "tiananmen",
+    "name": "天安门广场",
+    "categoryId": "landmarks",
+    "summary": "在晨光与华灯之间，感受北京最开阔的城市客厅。",
+    "tags": [
+      "城市地标",
+      "适合清晨"
+    ],
+    "cover": "/assets/hero-image.svg",
+    "featured": true,
+    "funRank": 1,
+    "info": [
+      {
+        "label": "建议时长",
+        "value": "1–2小时"
+      },
+      {
+        "label": "预约提示",
+        "value": "提前查看官方安排"
+      }
+    ],
+    "sections": [
+      {
+        "title": "值得一看",
+        "body": "天安门广场是北京城市中轴线上最庄严也最开阔的空间，适合和故宫、国家博物馆安排在同一天。"
+      }
+    ]
+  },
+  {
+    "id": "national-museum",
+    "name": "中国国家博物馆",
+    "categoryId": "museums",
+    "summary": "从古代中国到近现代历史，一座博物馆读懂文明长河。",
+    "tags": [
+      "历史文化",
+      "室内游览"
+    ],
+    "cover": "/assets/hero-emblem.svg",
+    "featured": true,
+    "funRank": 2,
+    "info": [
+      {
+        "label": "建议时长",
+        "value": "3–4小时"
+      },
+      {
+        "label": "游览方式",
+        "value": "分主题参观"
+      }
+    ],
+    "sections": [
+      {
+        "title": "游览建议",
+        "body": "建议提前规划展厅顺序，留出充足时间给常设展与当期专题展。"
+      }
+    ]
+  },
+  {
+    "id": "forbidden-city",
+    "name": "故宫博物院",
+    "categoryId": "landmarks",
+    "summary": "沿着中轴线穿过宫门、殿宇与庭院，读一段六百年的光阴。",
+    "tags": [
+      "皇家建筑",
+      "经典必游"
+    ],
+    "cover": "/assets/qing-beijing-map.svg",
+    "featured": true,
+    "funRank": 3,
+    "info": [
+      {
+        "label": "建议时长",
+        "value": "半天"
+      },
+      {
+        "label": "游览建议",
+        "value": "从午门入馆"
+      }
+    ],
+    "sections": [
+      {
+        "title": "慢慢看",
+        "body": "故宫适合留出半天，从午门进入后沿中轴线游览，再根据体力选择东西六宫和珍宝馆。"
+      }
+    ]
+  },
+  {
+    "id": "cao-xueqin-former-residence",
+    "name": "曹雪芹故居",
+    "categoryId": "history",
+    "summary": "在胡同深处，寻找《红楼梦》与北京生活交叠的痕迹。",
+    "tags": [
+      "胡同漫步",
+      "文学记忆"
+    ],
+    "cover": "/assets/logo.svg",
+    "featured": true,
+    "funRank": 4,
+    "info": [
+      {
+        "label": "建议时长",
+        "value": "1小时"
+      },
+      {
+        "label": "适合安排",
+        "value": "与胡同散步结合"
+      }
+    ],
+    "sections": [
+      {
+        "title": "一处小而有味的目的地",
+        "body": "这里适合放慢脚步，和周边胡同、老城街巷一起安排，感受北京细碎而真实的生活肌理。"
+      }
+    ]
+  },
+  {
+    "id": "temple-of-heaven",
+    "name": "天坛公园",
+    "categoryId": "landmarks",
+    "summary": "在古老的祭祀建筑与苍柏之间，感受北京的秩序感。",
+    "tags": [
+      "古建",
+      "公园"
+    ],
+    "cover": "/assets/hero-image.svg",
+    "featured": false,
+    "funRank": 0,
+    "info": [],
+    "sections": [
+      {
+        "title": "游览建议",
+        "body": "清晨入园更安静，也能看到当地居民晨练的日常景象。"
+      }
+    ]
+  },
+  {
+    "id": "jingshan-park",
+    "name": "景山公园",
+    "categoryId": "parks",
+    "summary": "登上万春亭，俯瞰故宫金色屋顶和北京中轴线。",
+    "tags": [
+      "城市视野",
+      "四季皆宜"
+    ],
+    "cover": "/assets/qing-beijing-map.svg",
+    "featured": false,
+    "funRank": 0,
+    "info": [],
+    "sections": [
+      {
+        "title": "最佳视角",
+        "body": "从故宫神武门出发，步行即可抵达，是故宫游览后的轻松收尾。"
+      }
+    ]
+  },
+  {
+    "id": "yonghegong",
+    "name": "雍和宫",
+    "categoryId": "religion",
+    "summary": "黄瓦红墙之间，感受北京宗教建筑的庄重与烟火。",
+    "tags": [
+      "宗教建筑",
+      "城市漫游"
+    ],
+    "cover": "/assets/hero-emblem.svg",
+    "featured": false,
+    "funRank": 0,
+    "info": [],
+    "sections": [
+      {
+        "title": "参观礼仪",
+        "body": "参观时保持安静，遵守现场开放与礼仪要求。"
+      }
+    ]
+  },
+  {
+    "id": "palace-museum",
+    "name": "首都博物馆",
+    "categoryId": "museums",
+    "summary": "从城市史与民俗展览切入，认识北京的另一面。",
+    "tags": [
+      "城市文化",
+      "室内游览"
+    ],
+    "cover": "/assets/logo.svg",
+    "featured": false,
+    "funRank": 0,
+    "info": [],
+    "sections": [
+      {
+        "title": "适合谁",
+        "body": "适合想了解北京城市发展和地方文化的旅行者。"
+      }
+    ]
+  },
+  {
+    "id": "landmarks-798-art-zone",
+    "name": "798艺术区",
+    "categoryId": "landmarks",
+    "summary": "![798艺术区](https://images.unsplash.com/photo-AWr2a2EKA8?w=1200)",
+    "tags": [
+      "名胜古迹"
+    ],
+    "cover": "/assets/hero-image.svg",
+    "featured": false,
+    "funRank": 0,
+    "info": [],
+    "sections": [
+      {
+        "title": "攻略内容",
+        "body": "798艺术区\n\n![798艺术区](https://images.unsplash.com/photo-AWr2a2EKA8?w=1200)\n\n\"老厂房里的艺术梦想，工业与时尚的完美碰撞。\""
+      }
+    ]
+  },
+  {
+    "id": "landmarks-city-wall",
+    "name": "明城墙遗址",
+    "categoryId": "landmarks",
+    "summary": "![明城墙遗址](https://images.unsplash.com/photo-1599661046289-e31897846e41?w=1200)",
+    "tags": [
+      "名胜古迹"
+    ],
+    "cover": "/assets/hero-image.svg",
+    "featured": false,
+    "funRank": 0,
+    "info": [],
+    "sections": [
+      {
+        "title": "攻略内容",
+        "body": "明城墙遗址\n\n![明城墙遗址](https://images.unsplash.com/photo-1599661046289-e31897846e41?w=1200)\n\n\"古都最后的记忆，明清城墙的残存。\""
+      }
+    ]
+  },
+  {
+    "id": "landmarks-dashilan",
+    "name": "大栅栏",
+    "categoryId": "landmarks",
+    "summary": "![大栅栏](https://images.unsplash.com/photo-3bqa0rGhVSA?w=1200)",
+    "tags": [
+      "名胜古迹"
+    ],
+    "cover": "/assets/hero-image.svg",
+    "featured": false,
+    "funRank": 0,
+    "info": [],
+    "sections": [
+      {
+        "title": "攻略内容",
+        "body": "大栅栏\n\n![大栅栏](https://images.unsplash.com/photo-3bqa0rGhVSA?w=1200)\n\n\"百年商街，老北京的商业记忆。\""
+      }
+    ]
+  },
+  {
+    "id": "landmarks-drum-tower",
+    "name": "钟鼓楼",
+    "categoryId": "landmarks",
+    "summary": "\"晨钟暮鼓，老北京的时间记忆。\"",
+    "tags": [
+      "名胜古迹"
+    ],
+    "cover": "/assets/hero-image.svg",
+    "featured": false,
+    "funRank": 0,
+    "info": [],
+    "sections": [
+      {
+        "title": "攻略内容",
+        "body": "钟鼓楼\n\n\"晨钟暮鼓，老北京的时间记忆。\"\n\n简介"
+      }
+    ]
+  },
+  {
+    "id": "landmarks-gongwangfu",
+    "name": "恭王府",
+    "categoryId": "landmarks",
+    "summary": "![恭王府](https://images.unsplash.com/photo-BGZj9K41kOo?w=1200)",
+    "tags": [
+      "名胜古迹"
+    ],
+    "cover": "/assets/hero-image.svg",
+    "featured": false,
+    "funRank": 0,
+    "info": [],
+    "sections": [
+      {
+        "title": "攻略内容",
+        "body": "恭王府\n\n![恭王府](https://images.unsplash.com/photo-BGZj9K41kOo?w=1200)\n\n\"一座恭王府，半部清代史。\""
+      }
+    ]
+  },
+  {
+    "id": "landmarks-guozijian",
+    "name": "国子监与孔庙",
+    "categoryId": "landmarks",
+    "summary": "![国子监与孔庙](https://images.unsplash.com/photo-GTno1mONTfo?w=1200)",
+    "tags": [
+      "名胜古迹"
+    ],
+    "cover": "/assets/hero-image.svg",
+    "featured": false,
+    "funRank": 0,
+    "info": [],
+    "sections": [
+      {
+        "title": "攻略内容",
+        "body": "国子监与孔庙\n\n![国子监与孔庙](https://images.unsplash.com/photo-GTno1mONTfo?w=1200)\n\n\"千年学府，万世师表。\""
+      }
+    ]
+  },
+  {
+    "id": "landmarks-juyongguan",
+    "name": "居庸关",
+    "categoryId": "landmarks",
+    "summary": "![居庸关](https://images.unsplash.com/photo-1548013146-72479768bada?w=1200)",
+    "tags": [
+      "名胜古迹"
+    ],
+    "cover": "/assets/hero-image.svg",
+    "featured": false,
+    "funRank": 0,
+    "info": [],
+    "sections": [
+      {
+        "title": "攻略内容",
+        "body": "居庸关\n\n![居庸关](https://images.unsplash.com/photo-1548013146-72479768bada?w=1200)\n\n\"天下第一雄关，云台石刻耀古今。\""
+      }
+    ]
+  },
+  {
+    "id": "landmarks-lao-she-teahouse",
+    "name": "老舍茶馆",
+    "categoryId": "landmarks",
+    "summary": "![老舍茶馆](https://images.unsplash.com/photo-mKv0-Z8enhA?w=1200)",
+    "tags": [
+      "名胜古迹"
+    ],
+    "cover": "/assets/hero-image.svg",
+    "featured": false,
+    "funRank": 0,
+    "info": [],
+    "sections": [
+      {
+        "title": "攻略内容",
+        "body": "老舍茶馆\n\n![老舍茶馆](https://images.unsplash.com/photo-mKv0-Z8enhA?w=1200)\n\n\"一杯清茶，一段京韵，品味老北京的慢生活。\""
+      }
+    ]
+  },
+  {
+    "id": "landmarks-liulichang",
+    "name": "琉璃厂",
+    "categoryId": "landmarks",
+    "summary": "![琉璃厂](https://images.unsplash.com/photo-1583977393611-885b3e5cc701?w=1200)",
+    "tags": [
+      "名胜古迹"
+    ],
+    "cover": "/assets/hero-image.svg",
+    "featured": false,
+    "funRank": 0,
+    "info": [],
+    "sections": [
+      {
+        "title": "攻略内容",
+        "body": "琉璃厂\n\n![琉璃厂](https://images.unsplash.com/photo-1583977393611-885b3e5cc701?w=1200)\n\n\"一厂琉璃，半城翰墨香。\""
+      }
+    ]
+  },
+  {
+    "id": "landmarks-mutianyu",
+    "name": "慕田峪长城",
+    "categoryId": "landmarks",
+    "summary": "![慕田峪长城](https://images.unsplash.com/photo-1713346643797-34e3e7188833?w=1200)",
+    "tags": [
+      "名胜古迹"
+    ],
+    "cover": "/assets/hero-image.svg",
+    "featured": false,
+    "funRank": 0,
+    "info": [],
+    "sections": [
+      {
+        "title": "攻略内容",
+        "body": "慕田峪长城\n\n![慕田峪长城](https://images.unsplash.com/photo-1713346643797-34e3e7188833?w=1200)\n\n\"万里长城，慕田峪独秀。\""
+      }
+    ]
+  },
+  {
+    "id": "landmarks-nanluoguxiang",
+    "name": "南锣鼓巷",
+    "categoryId": "landmarks",
+    "summary": "![南锣鼓巷](https://images.unsplash.com/photo-Uk19VsygF9Y?w=1200)",
+    "tags": [
+      "名胜古迹"
+    ],
+    "cover": "/assets/hero-image.svg",
+    "featured": false,
+    "funRank": 0,
+    "info": [],
+    "sections": [
+      {
+        "title": "攻略内容",
+        "body": "南锣鼓巷\n\n![南锣鼓巷](https://images.unsplash.com/photo-Uk19VsygF9Y?w=1200)\n\n\"胡同里的文艺梦，老北京的新活力。\""
+      }
+    ]
+  },
+  {
+    "id": "landmarks-national-theatre",
+    "name": "国家大剧院",
+    "categoryId": "landmarks",
+    "summary": "![国家大剧院](https://images.unsplash.com/photo-2S13rwpjKY?w=1200)",
+    "tags": [
+      "名胜古迹"
+    ],
+    "cover": "/assets/hero-image.svg",
+    "featured": false,
+    "funRank": 0,
+    "info": [],
+    "sections": [
+      {
+        "title": "攻略内容",
+        "body": "国家大剧院\n\n![国家大剧院](https://images.unsplash.com/photo-2S13rwpjKY?w=1200)\n\n\"水上明珠，艺术的殿堂。\""
+      }
+    ]
+  },
+  {
+    "id": "landmarks-niaochao",
+    "name": "鸟巢与水立方",
+    "categoryId": "landmarks",
+    "summary": "![鸟巢](https://images.unsplash.com/photo-rLCooDyRYqA?w=1200)",
+    "tags": [
+      "名胜古迹"
+    ],
+    "cover": "/assets/hero-image.svg",
+    "featured": false,
+    "funRank": 0,
+    "info": [],
+    "sections": [
+      {
+        "title": "攻略内容",
+        "body": "鸟巢与水立方\n\n![鸟巢](https://images.unsplash.com/photo-rLCooDyRYqA?w=1200)\n\n\"钢铁编织的鸟巢，见证了一个民族的腾飞。\""
+      }
+    ]
+  },
+  {
+    "id": "landmarks-panjiayuan",
+    "name": "潘家园旧货市场",
+    "categoryId": "landmarks",
+    "summary": "![潘家园旧货市场](https://images.unsplash.com/photo-i2INSSaWI4k?w=1200)",
+    "tags": [
+      "名胜古迹"
+    ],
+    "cover": "/assets/hero-image.svg",
+    "featured": false,
+    "funRank": 0,
+    "info": [],
+    "sections": [
+      {
+        "title": "攻略内容",
+        "body": "潘家园旧货市场\n\n![潘家园旧货市场](https://images.unsplash.com/photo-i2INSSaWI4k?w=1200)\n\n\"淘宝者的天堂，老物件的博物馆。\""
+      }
+    ]
+  },
+  {
+    "id": "landmarks-qianmen",
+    "name": "前门大街",
+    "categoryId": "landmarks",
+    "summary": "![前门大街](https://images.unsplash.com/photo-1542079668-197625d11054?w=1200)",
+    "tags": [
+      "名胜古迹"
+    ],
+    "cover": "/assets/hero-image.svg",
+    "featured": false,
+    "funRank": 0,
+    "info": [],
+    "sections": [
+      {
+        "title": "攻略内容",
+        "body": "前门大街\n\n![前门大街](https://images.unsplash.com/photo-1542079668-197625d11054?w=1200)\n\n\"老北京商业的缩影，百年老字号的聚集地。\""
+      }
+    ]
+  },
+  {
+    "id": "landmarks-shichahai",
+    "name": "什刹海",
+    "categoryId": "landmarks",
+    "summary": "![什刹海](https://images.unsplash.com/photo-voV-byLj7qg?w=1200)",
+    "tags": [
+      "名胜古迹"
+    ],
+    "cover": "/assets/hero-image.svg",
+    "featured": false,
+    "funRank": 0,
+    "info": [],
+    "sections": [
+      {
+        "title": "攻略内容",
+        "body": "什刹海\n\n![什刹海](https://images.unsplash.com/photo-voV-byLj7qg?w=1200)\n\n\"柳荫深处是京华，一湖碧水映晚霞。\""
+      }
+    ]
+  },
+  {
+    "id": "landmarks-simatai",
+    "name": "司马台长城",
+    "categoryId": "landmarks",
+    "summary": "\"中国长城之最，原始风貌的绝佳体验。\"",
+    "tags": [
+      "名胜古迹"
+    ],
+    "cover": "/assets/hero-image.svg",
+    "featured": false,
+    "funRank": 0,
+    "info": [],
+    "sections": [
+      {
+        "title": "攻略内容",
+        "body": "司马台长城\n\n\"中国长城之最，原始风貌的绝佳体验。\"\n\n简介"
+      }
+    ]
+  },
+  {
+    "id": "landmarks-tianqiao",
+    "name": "天桥",
+    "categoryId": "landmarks",
+    "summary": "![天桥](https://images.unsplash.com/photo-1583977393611-885b3e5cc701?w=1200)",
+    "tags": [
+      "名胜古迹"
+    ],
+    "cover": "/assets/hero-image.svg",
+    "featured": false,
+    "funRank": 0,
+    "info": [],
+    "sections": [
+      {
+        "title": "攻略内容",
+        "body": "天桥\n\n![天桥](https://images.unsplash.com/photo-1583977393611-885b3e5cc701?w=1200)\n\n\"天桥杂耍，老北京的市井传奇。\""
+      }
+    ]
+  },
+  {
+    "id": "landmarks-zhengyangmen",
+    "name": "正阳门（箭楼）",
+    "categoryId": "landmarks",
+    "summary": "![正阳门](https://images.unsplash.com/photo-3bqa0rGhVSA?w=1200)",
+    "tags": [
+      "名胜古迹"
+    ],
+    "cover": "/assets/hero-image.svg",
+    "featured": false,
+    "funRank": 0,
+    "info": [],
+    "sections": [
+      {
+        "title": "攻略内容",
+        "body": "正阳门（箭楼）\n\n![正阳门](https://images.unsplash.com/photo-3bqa0rGhVSA?w=1200)\n\n\"国门第一楼，守望京城六百年。\""
+      }
+    ]
+  },
+  {
+    "id": "landmarks-zhonglou",
+    "name": "钟楼",
+    "categoryId": "landmarks",
+    "summary": "![钟楼](https://images.unsplash.com/photo-RYiW8HBpEbo?w=1200)",
+    "tags": [
+      "名胜古迹"
+    ],
+    "cover": "/assets/hero-image.svg",
+    "featured": false,
+    "funRank": 0,
+    "info": [],
+    "sections": [
+      {
+        "title": "攻略内容",
+        "body": "钟楼\n\n![钟楼](https://images.unsplash.com/photo-RYiW8HBpEbo?w=1200)\n\n\"晨钟暮鼓，报尽人间岁月。\""
+      }
+    ]
+  },
+  {
+    "id": "history-anti-japanese-war",
+    "name": "中国人民抗日战争纪念馆",
+    "categoryId": "history",
+    "summary": "中国人民抗日战争纪念馆位于北京市丰台区宛平城内，是全国唯一一座全面反映中国人民抗日战争历史的大型综合性专题纪念馆。纪念馆建于1987年，是为了纪念抗日战争全面爆",
+    "tags": [
+      "近代历史"
+    ],
+    "cover": "/assets/hero-image.svg",
+    "featured": false,
+    "funRank": 0,
+    "info": [],
+    "sections": [
+      {
+        "title": "攻略内容",
+        "body": "中国人民抗日战争纪念馆\n\n\"铭记历史，珍爱和平。\"\n\n简介"
+      }
+    ]
+  },
+  {
+    "id": "history-cai-yuanpei",
+    "name": "蔡元培故居",
+    "categoryId": "history",
+    "summary": "\"北京大学校长，\"思想自由，兼容并包\"的倡导者。\"",
+    "tags": [
+      "近代历史"
+    ],
+    "cover": "/assets/hero-image.svg",
+    "featured": false,
+    "funRank": 0,
+    "info": [],
+    "sections": [
+      {
+        "title": "攻略内容",
+        "body": "蔡元培故居\n\n\"北京大学校长，\"思想自由，兼容并包\"的倡导者。\"\n\n简介"
+      }
+    ]
+  },
+  {
+    "id": "history-cao-xueqin-residence",
+    "name": "曹雪芹故居纪念馆",
+    "categoryId": "history",
+    "summary": "![曹雪芹故居](https://images.unsplash.com/photo-1583977393611-885b3e5cc701?w=1200)",
+    "tags": [
+      "近代历史"
+    ],
+    "cover": "/assets/hero-image.svg",
+    "featured": false,
+    "funRank": 0,
+    "info": [],
+    "sections": [
+      {
+        "title": "攻略内容",
+        "body": "曹雪芹故居纪念馆\n\n![曹雪芹故居](https://images.unsplash.com/photo-1583977393611-885b3e5cc701?w=1200)\n\n\"满纸荒唐言，一把辛酸泪。都云作者痴，谁解其中味？\""
+      }
+    ]
+  },
+  {
+    "id": "history-guo-moruo-residence",
+    "name": "郭沫若故居",
+    "categoryId": "history",
+    "summary": "![郭沫若故居](https://images.unsplash.com/photo-voV-byLj7qg?w=1200)",
+    "tags": [
+      "近代历史"
+    ],
+    "cover": "/assets/hero-image.svg",
+    "featured": false,
+    "funRank": 0,
+    "info": [],
+    "sections": [
+      {
+        "title": "攻略内容",
+        "body": "郭沫若故居\n\n![郭沫若故居](https://images.unsplash.com/photo-voV-byLj7qg?w=1200)\n\n\"诗人、学者、革命家，一代文豪的京城岁月。\""
+      }
+    ]
+  },
+  {
+    "id": "history-lao-she-residence",
+    "name": "老舍故居",
+    "categoryId": "history",
+    "summary": "![老舍故居](https://images.unsplash.com/photo-1662792193082-9f02de0c12f0?w=1200)",
+    "tags": [
+      "近代历史"
+    ],
+    "cover": "/assets/hero-image.svg",
+    "featured": false,
+    "funRank": 0,
+    "info": [],
+    "sections": [
+      {
+        "title": "攻略内容",
+        "body": "老舍故居\n\n![老舍故居](https://images.unsplash.com/photo-1662792193082-9f02de0c12f0?w=1200)\n\n\"人民艺术家，京味文学的代言人。\""
+      }
+    ]
+  },
+  {
+    "id": "history-lu-xun-residence",
+    "name": "鲁迅故居",
+    "categoryId": "history",
+    "summary": "\"新文化运动的旗手，民族魂的栖息地。\"",
+    "tags": [
+      "近代历史"
+    ],
+    "cover": "/assets/hero-image.svg",
+    "featured": false,
+    "funRank": 0,
+    "info": [],
+    "sections": [
+      {
+        "title": "攻略内容",
+        "body": "鲁迅故居\n\n\"新文化运动的旗手，民族魂的栖息地。\"\n\n简介"
+      }
+    ]
+  },
+  {
+    "id": "history-lugou-bridge",
+    "name": "卢沟桥",
+    "categoryId": "history",
+    "summary": "![卢沟桥](https://images.unsplash.com/photo-1599571234909-29ed5d1321d6?w=1200)",
+    "tags": [
+      "近代历史"
+    ],
+    "cover": "/assets/hero-image.svg",
+    "featured": false,
+    "funRank": 0,
+    "info": [],
+    "sections": [
+      {
+        "title": "攻略内容",
+        "body": "卢沟桥\n\n![卢沟桥](https://images.unsplash.com/photo-1599571234909-29ed5d1321d6?w=1200)\n\n\"卢沟晓月，燕京八景；七七事变，民族记忆。\""
+      }
+    ]
+  },
+  {
+    "id": "history-mao-dun-residence",
+    "name": "茅盾故居",
+    "categoryId": "history",
+    "summary": "![茅盾故居](https://images.unsplash.com/photo-Uk19VsygF9Y?w=1200)",
+    "tags": [
+      "近代历史"
+    ],
+    "cover": "/assets/hero-image.svg",
+    "featured": false,
+    "funRank": 0,
+    "info": [],
+    "sections": [
+      {
+        "title": "攻略内容",
+        "body": "茅盾故居\n\n![茅盾故居](https://images.unsplash.com/photo-Uk19VsygF9Y?w=1200)\n\n\"中国现代文学的奠基人，在胡同深处静静守望。\""
+      }
+    ]
+  },
+  {
+    "id": "history-mausoleum",
+    "name": "毛主席纪念堂",
+    "categoryId": "history",
+    "summary": "\"伟大领袖和导师毛泽东主席永垂不朽！\"",
+    "tags": [
+      "近代历史"
+    ],
+    "cover": "/assets/hero-image.svg",
+    "featured": false,
+    "funRank": 0,
+    "info": [],
+    "sections": [
+      {
+        "title": "攻略内容",
+        "body": "毛主席纪念堂\n\n\"伟大领袖和导师毛泽东主席永垂不朽！\"\n\n简介"
+      }
+    ]
+  },
+  {
+    "id": "history-monument",
+    "name": "人民英雄纪念碑",
+    "categoryId": "history",
+    "summary": "\"人民英雄永垂不朽！\"\n —— 毛泽东",
+    "tags": [
+      "近代历史"
+    ],
+    "cover": "/assets/hero-image.svg",
+    "featured": false,
+    "funRank": 0,
+    "info": [],
+    "sections": [
+      {
+        "title": "攻略内容",
+        "body": "人民英雄纪念碑\n\n\"人民英雄永垂不朽！\"\n —— 毛泽东\n\n简介"
+      }
+    ]
+  },
+  {
+    "id": "history-national-museum",
+    "name": "中国国家博物馆历史",
+    "categoryId": "history",
+    "summary": "::: tip 📖 完整导览\n本页为历史沿革视角。国博完整导览（含常设展览、镇馆之宝详解）请见 → [中国国家博物馆](/museums/national-m",
+    "tags": [
+      "近代历史"
+    ],
+    "cover": "/assets/hero-image.svg",
+    "featured": false,
+    "funRank": 0,
+    "info": [],
+    "sections": [
+      {
+        "title": "攻略内容",
+        "body": "中国国家博物馆历史\n\n::: tip 📖 完整导览\n本页为历史沿革视角。国博完整导览（含常设展览、镇馆之宝详解）请见 → [中国国家博物馆](/museums/national-museum)\n:::\n\n![中国国家博物馆](https://images.unsplash.com/photo-1701847895783-979e086dae5e?w=1200)"
+      }
+    ]
+  },
+  {
+    "id": "history-peking-university-red",
+    "name": "北大红楼",
+    "categoryId": "history",
+    "summary": "\"新文化运动的摇篮，五四运动的发源地。\"",
+    "tags": [
+      "近代历史"
+    ],
+    "cover": "/assets/hero-image.svg",
+    "featured": false,
+    "funRank": 0,
+    "info": [],
+    "sections": [
+      {
+        "title": "攻略内容",
+        "body": "北大红楼\n\n\"新文化运动的摇篮，五四运动的发源地。\"\n\n简介"
+      }
+    ]
+  },
+  {
+    "id": "history-soong-ching-ling-residence",
+    "name": "宋庆龄故居",
+    "categoryId": "history",
+    "summary": "![宋庆龄故居](https://images.unsplash.com/photo-1583977393611-885b3e5cc701?w=1200)",
+    "tags": [
+      "近代历史"
+    ],
+    "cover": "/assets/hero-image.svg",
+    "featured": false,
+    "funRank": 0,
+    "info": [],
+    "sections": [
+      {
+        "title": "攻略内容",
+        "body": "宋庆龄故居\n\n![宋庆龄故居](https://images.unsplash.com/photo-1583977393611-885b3e5cc701?w=1200)\n\n\"国之瑰宝，二十世纪中国最伟大的女性之一。\""
+      }
+    ]
+  },
+  {
+    "id": "history-summer-palace",
+    "name": "颐和园历史",
+    "categoryId": "history",
+    "summary": "::: tip 📖 完整导览\n本页为近代历史视角。颐和园完整导览（含佛香阁、长廊、十七孔桥、石舫等 10 个子景点详解与图片）请见 → [颐和园](/land",
+    "tags": [
+      "近代历史"
+    ],
+    "cover": "/assets/hero-image.svg",
+    "featured": false,
+    "funRank": 0,
+    "info": [],
+    "sections": [
+      {
+        "title": "攻略内容",
+        "body": "颐和园历史\n\n::: tip 📖 完整导览\n本页为近代历史视角。颐和园完整导览（含佛香阁、长廊、十七孔桥、石舫等 10 个子景点详解与图片）请见 → [颐和园](/landmarks/summer-palace/)\n:::\n\n![颐和园历史](https://images.unsplash.com/photo-1583977393611-885b3e5cc701?w=1200)"
+      }
+    ]
+  },
+  {
+    "id": "history-tiananmen-square",
+    "name": "天安门广场",
+    "categoryId": "history",
+    "summary": "![天安门广场](https://images.unsplash.com/photo-1718749742771-d33cd3719fab?w=1200)",
+    "tags": [
+      "近代历史"
+    ],
+    "cover": "/assets/hero-image.svg",
+    "featured": false,
+    "funRank": 0,
+    "info": [],
+    "sections": [
+      {
+        "title": "攻略内容",
+        "body": "天安门广场\n\n![天安门广场](https://images.unsplash.com/photo-1718749742771-d33cd3719fab?w=1200)\n\n\"世界最大城市广场，祖国的心脏。\""
+      }
+    ]
+  },
+  {
+    "id": "history-yuanmingyuan-ruins",
+    "name": "圆明园遗址",
+    "categoryId": "history",
+    "summary": "::: tip 📖 完整导览\n本页为历史遗址视角。圆明园完整导览（含大水法、海晏堂、西洋楼、福海等 6 个子景点详解与图片）请见 → [圆明园](/landm",
+    "tags": [
+      "近代历史"
+    ],
+    "cover": "/assets/hero-image.svg",
+    "featured": false,
+    "funRank": 0,
+    "info": [],
+    "sections": [
+      {
+        "title": "攻略内容",
+        "body": "圆明园遗址\n\n::: tip 📖 完整导览\n本页为历史遗址视角。圆明园完整导览（含大水法、海晏堂、西洋楼、福海等 6 个子景点详解与图片）请见 → [圆明园](/landmarks/yuanmingyuan/)\n:::\n\n\"断壁残垣诉沧桑，万园之园成焦土。\""
+      }
+    ]
+  },
+  {
+    "id": "religion-baiyunguan",
+    "name": "白云观",
+    "categoryId": "religion",
+    "summary": "\"道教全真派祖庭，丘处机祖师修炼之地。\"",
+    "tags": [
+      "宗教建筑"
+    ],
+    "cover": "/assets/hero-image.svg",
+    "featured": false,
+    "funRank": 0,
+    "info": [],
+    "sections": [
+      {
+        "title": "攻略内容",
+        "body": "白云观\n\n\"道教全真派祖庭，丘处机祖师修炼之地。\"\n\n简介"
+      }
+    ]
+  },
+  {
+    "id": "religion-beitang",
+    "name": "北堂（西什库天主堂）",
+    "categoryId": "religion",
+    "summary": "\"北京最华丽的天主教堂，哥特式建筑的杰作。\"",
+    "tags": [
+      "宗教建筑"
+    ],
+    "cover": "/assets/hero-image.svg",
+    "featured": false,
+    "funRank": 0,
+    "info": [],
+    "sections": [
+      {
+        "title": "攻略内容",
+        "body": "北堂（西什库天主堂）\n\n\"北京最华丽的天主教堂，哥特式建筑的杰作。\"\n\n简介"
+      }
+    ]
+  },
+  {
+    "id": "religion-catholic-churches",
+    "name": "北京天主教堂概览",
+    "categoryId": "religion",
+    "summary": "\"中西文化交融的见证，哥特式与巴洛克式的建筑瑰宝。\"",
+    "tags": [
+      "宗教建筑"
+    ],
+    "cover": "/assets/hero-image.svg",
+    "featured": false,
+    "funRank": 0,
+    "info": [],
+    "sections": [
+      {
+        "title": "攻略内容",
+        "body": "北京天主教堂概览\n\n\"中西文化交融的见证，哥特式与巴洛克式的建筑瑰宝。\"\n\n简介"
+      }
+    ]
+  },
+  {
+    "id": "religion-dongjiaominxiang",
+    "name": "东交民巷天主堂",
+    "categoryId": "religion",
+    "summary": "\"使馆区中的百年教堂，近代历史的见证。\"",
+    "tags": [
+      "宗教建筑"
+    ],
+    "cover": "/assets/hero-image.svg",
+    "featured": false,
+    "funRank": 0,
+    "info": [],
+    "sections": [
+      {
+        "title": "攻略内容",
+        "body": "东交民巷天主堂\n\n\"使馆区中的百年教堂，近代历史的见证。\"\n\n简介"
+      }
+    ]
+  },
+  {
+    "id": "religion-dongtang",
+    "name": "东堂（王府井天主堂）",
+    "categoryId": "religion",
+    "summary": "\"繁华王府井中的静谧圣地，新人最爱的婚纱摄影地。\"",
+    "tags": [
+      "宗教建筑"
+    ],
+    "cover": "/assets/hero-image.svg",
+    "featured": false,
+    "funRank": 0,
+    "info": [],
+    "sections": [
+      {
+        "title": "攻略内容",
+        "body": "东堂（王府井天主堂）\n\n\"繁华王府井中的静谧圣地，新人最爱的婚纱摄影地。\"\n\n简介"
+      }
+    ]
+  },
+  {
+    "id": "religion-dongyuemiao",
+    "name": "东岳庙",
+    "categoryId": "religion",
+    "summary": "\"北京最大的道教庙宇，七十六司神秘莫测。\"",
+    "tags": [
+      "宗教建筑"
+    ],
+    "cover": "/assets/hero-image.svg",
+    "featured": false,
+    "funRank": 0,
+    "info": [],
+    "sections": [
+      {
+        "title": "攻略内容",
+        "body": "东岳庙\n\n\"北京最大的道教庙宇，七十六司神秘莫测。\"\n\n简介"
+      }
+    ]
+  },
+  {
+    "id": "religion-fayuan",
+    "name": "法源寺",
+    "categoryId": "religion",
+    "summary": "\"北京最古老的名刹，中国佛学院所在地。\"",
+    "tags": [
+      "宗教建筑"
+    ],
+    "cover": "/assets/hero-image.svg",
+    "featured": false,
+    "funRank": 0,
+    "info": [],
+    "sections": [
+      {
+        "title": "攻略内容",
+        "body": "法源寺\n\n\"北京最古老的名刹，中国佛学院所在地。\"\n\n简介"
+      }
+    ]
+  },
+  {
+    "id": "religion-guangji",
+    "name": "广济寺",
+    "categoryId": "religion",
+    "summary": "\"中国佛教协会所在地，免费斋饭闻名。\"",
+    "tags": [
+      "宗教建筑"
+    ],
+    "cover": "/assets/hero-image.svg",
+    "featured": false,
+    "funRank": 0,
+    "info": [],
+    "sections": [
+      {
+        "title": "攻略内容",
+        "body": "广济寺\n\n\"中国佛教协会所在地，免费斋饭闻名。\"\n\n简介"
+      }
+    ]
+  },
+  {
+    "id": "religion-huoshen",
+    "name": "火神庙",
+    "categoryId": "religion",
+    "summary": "\"什刹海边的千年古庙，火神庇佑之地。\"",
+    "tags": [
+      "宗教建筑"
+    ],
+    "cover": "/assets/hero-image.svg",
+    "featured": false,
+    "funRank": 0,
+    "info": [],
+    "sections": [
+      {
+        "title": "攻略内容",
+        "body": "火神庙\n\n\"什刹海边的千年古庙，火神庇佑之地。\"\n\n简介"
+      }
+    ]
+  },
+  {
+    "id": "religion-jietai",
+    "name": "戒台寺",
+    "categoryId": "religion",
+    "summary": "\"中国三大戒台之一，松树与戒台闻名。\"",
+    "tags": [
+      "宗教建筑"
+    ],
+    "cover": "/assets/hero-image.svg",
+    "featured": false,
+    "funRank": 0,
+    "info": [],
+    "sections": [
+      {
+        "title": "攻略内容",
+        "body": "戒台寺\n\n\"中国三大戒台之一，松树与戒台闻名。\"\n\n简介"
+      }
+    ]
+  },
+  {
+    "id": "religion-nantang",
+    "name": "南堂（宣武门天主堂）",
+    "categoryId": "religion",
+    "summary": "\"北京四大天主教堂之首，见证中西文化交流四百年。\"",
+    "tags": [
+      "宗教建筑"
+    ],
+    "cover": "/assets/hero-image.svg",
+    "featured": false,
+    "funRank": 0,
+    "info": [],
+    "sections": [
+      {
+        "title": "攻略内容",
+        "body": "南堂（宣武门天主堂）\n\n\"北京四大天主教堂之首，见证中西文化交流四百年。\"\n\n简介"
+      }
+    ]
+  },
+  {
+    "id": "religion-tanzhe",
+    "name": "潭柘寺",
+    "categoryId": "religion",
+    "summary": "\"先有潭柘寺，后有北京城。\"",
+    "tags": [
+      "宗教建筑"
+    ],
+    "cover": "/assets/hero-image.svg",
+    "featured": false,
+    "funRank": 0,
+    "info": [],
+    "sections": [
+      {
+        "title": "攻略内容",
+        "body": "潭柘寺\n\n\"先有潭柘寺，后有北京城。\"\n\n简介"
+      }
+    ]
+  },
+  {
+    "id": "religion-xitang",
+    "name": "西堂（西直门天主堂）",
+    "categoryId": "religion",
+    "summary": "\"老城区的静谧教堂，老北京风情的见证。\"",
+    "tags": [
+      "宗教建筑"
+    ],
+    "cover": "/assets/hero-image.svg",
+    "featured": false,
+    "funRank": 0,
+    "info": [],
+    "sections": [
+      {
+        "title": "攻略内容",
+        "body": "西堂（西直门天主堂）\n\n\"老城区的静谧教堂，老北京风情的见证。\"\n\n简介"
+      }
+    ]
+  },
+  {
+    "id": "museums-capital-museum",
+    "name": "首都博物馆",
+    "categoryId": "museums",
+    "summary": "\"了解北京历史文化的最佳窗口。\"",
+    "tags": [
+      "博物馆"
+    ],
+    "cover": "/assets/hero-image.svg",
+    "featured": false,
+    "funRank": 0,
+    "info": [],
+    "sections": [
+      {
+        "title": "攻略内容",
+        "body": "首都博物馆\n\n\"了解北京历史文化的最佳窗口。\"\n\n简介"
+      }
+    ]
+  },
+  {
+    "id": "museums-laoshe",
+    "name": "老舍纪念馆",
+    "categoryId": "museums",
+    "summary": "![老舍纪念馆](https://images.unsplash.com/photo-1662792193082-9f02de0c12f0?w=1200)",
+    "tags": [
+      "博物馆"
+    ],
+    "cover": "/assets/hero-image.svg",
+    "featured": false,
+    "funRank": 0,
+    "info": [],
+    "sections": [
+      {
+        "title": "攻略内容",
+        "body": "老舍纪念馆\n\n![老舍纪念馆](https://images.unsplash.com/photo-1662792193082-9f02de0c12f0?w=1200)\n\n\"生活是种律动，须有光有影，有左有右，有晴有雨，滋味就含在这变而不猛的曲折里。\"\n —— 老舍《小病》"
+      }
+    ]
+  },
+  {
+    "id": "museums-lu-xun",
+    "name": "鲁迅博物馆",
+    "categoryId": "museums",
+    "summary": "![鲁迅博物馆](https://images.unsplash.com/photo-1714296160734-9d6331b77cd1?w=1200)",
+    "tags": [
+      "博物馆"
+    ],
+    "cover": "/assets/hero-image.svg",
+    "featured": false,
+    "funRank": 0,
+    "info": [],
+    "sections": [
+      {
+        "title": "攻略内容",
+        "body": "鲁迅博物馆\n\n![鲁迅博物馆](https://images.unsplash.com/photo-1714296160734-9d6331b77cd1?w=1200)\n\n\"横眉冷对千夫指，俯首甘为孺子牛。\"\n —— 鲁迅《自嘲》"
+      }
+    ]
+  },
+  {
+    "id": "museums-military",
+    "name": "中国人民革命军事博物馆",
+    "categoryId": "museums",
+    "summary": "\"了解中国军事历史的最佳场所。\"",
+    "tags": [
+      "博物馆"
+    ],
+    "cover": "/assets/hero-image.svg",
+    "featured": false,
+    "funRank": 0,
+    "info": [],
+    "sections": [
+      {
+        "title": "攻略内容",
+        "body": "中国人民革命军事博物馆\n\n\"了解中国军事历史的最佳场所。\"\n\n简介"
+      }
+    ]
+  },
+  {
+    "id": "museums-national-museum",
+    "name": "中国国家博物馆",
+    "categoryId": "museums",
+    "summary": "\"世界上建筑面积最大的博物馆，中华文明的总汇。\"",
+    "tags": [
+      "博物馆"
+    ],
+    "cover": "/assets/hero-image.svg",
+    "featured": false,
+    "funRank": 0,
+    "info": [],
+    "sections": [
+      {
+        "title": "攻略内容",
+        "body": "中国国家博物馆\n\n\"世界上建筑面积最大的博物馆，中华文明的总汇。\"\n\n简介"
+      }
+    ]
+  },
+  {
+    "id": "museums-natural-history",
+    "name": "北京自然博物馆",
+    "categoryId": "museums",
+    "summary": "\"探索自然奥秘，恐龙世界精彩。\"",
+    "tags": [
+      "博物馆"
+    ],
+    "cover": "/assets/hero-image.svg",
+    "featured": false,
+    "funRank": 0,
+    "info": [],
+    "sections": [
+      {
+        "title": "攻略内容",
+        "body": "北京自然博物馆\n\n\"探索自然奥秘，恐龙世界精彩。\"\n\n简介"
+      }
+    ]
+  },
+  {
+    "id": "museums-palace-museum",
+    "name": "故宫博物院",
+    "categoryId": "museums",
+    "summary": "::: tip 📖 完整导览\n本页为博物馆藏品视角。故宫完整导览（含午门、太和殿、乾清宫、珍宝馆、钟表馆等 11 个子景点详解与图片）请见 → [故宫博物院]",
+    "tags": [
+      "博物馆"
+    ],
+    "cover": "/assets/hero-image.svg",
+    "featured": false,
+    "funRank": 0,
+    "info": [],
+    "sections": [
+      {
+        "title": "攻略内容",
+        "body": "故宫博物院\n\n::: tip 📖 完整导览\n本页为博物馆藏品视角。故宫完整导览（含午门、太和殿、乾清宫、珍宝馆、钟表馆等 11 个子景点详解与图片）请见 → [故宫博物院](/landmarks/forbidden-city/)\n:::\n\n![故宫博物院](https://images.unsplash.com/photo-1603120527222-33f28c2ce89e?w=1200)"
+      }
+    ]
+  },
+  {
+    "id": "museums-paleo-zoo",
+    "name": "中国古动物馆",
+    "categoryId": "museums",
+    "summary": "\"亚洲最大的古动物博物馆，恐龙迷的天堂。\"",
+    "tags": [
+      "博物馆"
+    ],
+    "cover": "/assets/hero-image.svg",
+    "featured": false,
+    "funRank": 0,
+    "info": [],
+    "sections": [
+      {
+        "title": "攻略内容",
+        "body": "中国古动物馆\n\n\"亚洲最大的古动物博物馆，恐龙迷的天堂。\"\n\n简介"
+      }
+    ]
+  },
+  {
+    "id": "museums-planetarium",
+    "name": "北京天文馆",
+    "categoryId": "museums",
+    "summary": "\"探索宇宙奥秘，仰望星空梦想。\"",
+    "tags": [
+      "博物馆"
+    ],
+    "cover": "/assets/hero-image.svg",
+    "featured": false,
+    "funRank": 0,
+    "info": [],
+    "sections": [
+      {
+        "title": "攻略内容",
+        "body": "北京天文馆\n\n\"探索宇宙奥秘，仰望星空梦想。\"\n\n简介"
+      }
+    ]
+  },
+  {
+    "id": "museums-science-center",
+    "name": "中国科学技术馆",
+    "categoryId": "museums",
+    "summary": "\"中国唯一的国家级综合性科技馆，探索科学的奇妙世界。\"",
+    "tags": [
+      "博物馆"
+    ],
+    "cover": "/assets/hero-image.svg",
+    "featured": false,
+    "funRank": 0,
+    "info": [],
+    "sections": [
+      {
+        "title": "攻略内容",
+        "body": "中国科学技术馆\n\n\"中国唯一的国家级综合性科技馆，探索科学的奇妙世界。\"\n\n简介"
+      }
+    ]
+  },
+  {
+    "id": "parks-beihai-park",
+    "name": "北海公园",
+    "categoryId": "parks",
+    "summary": "::: tip 📖 完整导览\n本页为城市公园视角。北海公园完整导览（含白塔与琼华岛、九龙壁、五龙亭、团城、静心斋、西天梵境等 6 个子景点详解与图片）请见 →",
+    "tags": [
+      "城市公园"
+    ],
+    "cover": "/assets/hero-image.svg",
+    "featured": false,
+    "funRank": 0,
+    "info": [],
+    "sections": [
+      {
+        "title": "攻略内容",
+        "body": "北海公园\n\n::: tip 📖 完整导览\n本页为城市公园视角。北海公园完整导览（含白塔与琼华岛、九龙壁、五龙亭、团城、静心斋、西天梵境等 6 个子景点详解与图片）请见 → [北海公园](/landmarks/beihai/)\n:::\n\n\"让我们荡起双桨，小船儿推开波浪，海面倒映着美丽的白塔，四周环绕着绿树红墙。\"\n —— 《让我们荡起双桨》"
+      }
+    ]
+  },
+  {
+    "id": "parks-beijing-zoo",
+    "name": "北京动物园",
+    "categoryId": "parks",
+    "summary": "![北京动物园](https://images.unsplash.com/photo-AfRCvaeieVk?w=1200)",
+    "tags": [
+      "城市公园"
+    ],
+    "cover": "/assets/hero-image.svg",
+    "featured": false,
+    "funRank": 0,
+    "info": [],
+    "sections": [
+      {
+        "title": "攻略内容",
+        "body": "北京动物园\n\n![北京动物园](https://images.unsplash.com/photo-AfRCvaeieVk?w=1200)\n\n\"动物王国，童趣天地。\""
+      }
+    ]
+  },
+  {
+    "id": "parks-botanical-garden",
+    "name": "北京植物园",
+    "categoryId": "parks",
+    "summary": "![北京植物园](https://images.unsplash.com/photo-CMNxYfonRpc?w=1200)",
+    "tags": [
+      "城市公园"
+    ],
+    "cover": "/assets/hero-image.svg",
+    "featured": false,
+    "funRank": 0,
+    "info": [],
+    "sections": [
+      {
+        "title": "攻略内容",
+        "body": "北京植物园\n\n![北京植物园](https://images.unsplash.com/photo-CMNxYfonRpc?w=1200)\n\n\"万木争荣，百花争艳，植物王国的奇妙之旅。\""
+      }
+    ]
+  },
+  {
+    "id": "parks-chaoyang-park",
+    "name": "朝阳公园",
+    "categoryId": "parks",
+    "summary": "\"四环内最大的城市公园，音乐节的举办地。\"",
+    "tags": [
+      "城市公园"
+    ],
+    "cover": "/assets/hero-image.svg",
+    "featured": false,
+    "funRank": 0,
+    "info": [],
+    "sections": [
+      {
+        "title": "攻略内容",
+        "body": "朝阳公园\n\n\"四环内最大的城市公园，音乐节的举办地。\"\n\n简介"
+      }
+    ]
+  },
+  {
+    "id": "parks-cultural-palace",
+    "name": "劳动人民文化宫",
+    "categoryId": "parks",
+    "summary": "\"明清太庙，皇家祭祖圣地。\"",
+    "tags": [
+      "城市公园"
+    ],
+    "cover": "/assets/hero-image.svg",
+    "featured": false,
+    "funRank": 0,
+    "info": [],
+    "sections": [
+      {
+        "title": "攻略内容",
+        "body": "劳动人民文化宫\n\n\"明清太庙，皇家祭祖圣地。\"\n\n简介"
+      }
+    ]
+  },
+  {
+    "id": "parks-ditan-park",
+    "name": "地坛公园",
+    "categoryId": "parks",
+    "summary": "\"明清祭地之所，银杏大道金黄。\"",
+    "tags": [
+      "城市公园"
+    ],
+    "cover": "/assets/hero-image.svg",
+    "featured": false,
+    "funRank": 0,
+    "info": [],
+    "sections": [
+      {
+        "title": "攻略内容",
+        "body": "地坛公园\n\n\"明清祭地之所，银杏大道金黄。\"\n\n简介"
+      }
+    ]
+  },
+  {
+    "id": "parks-jingshan-park",
+    "name": "景山公园",
+    "categoryId": "parks",
+    "summary": "\"京华览胜第一处，俯瞰紫禁城的最佳位置。\"",
+    "tags": [
+      "城市公园"
+    ],
+    "cover": "/assets/hero-image.svg",
+    "featured": false,
+    "funRank": 0,
+    "info": [],
+    "sections": [
+      {
+        "title": "攻略内容",
+        "body": "景山公园\n\n\"京华览胜第一处，俯瞰紫禁城的最佳位置。\"\n\n简介"
+      }
+    ]
+  },
+  {
+    "id": "parks-olympic-forest",
+    "name": "奥林匹克森林公园",
+    "categoryId": "parks",
+    "summary": "\"北京最大的城市公园，城市中的绿肺。\"",
+    "tags": [
+      "城市公园"
+    ],
+    "cover": "/assets/hero-image.svg",
+    "featured": false,
+    "funRank": 0,
+    "info": [],
+    "sections": [
+      {
+        "title": "攻略内容",
+        "body": "奥林匹克森林公园\n\n\"北京最大的城市公园，城市中的绿肺。\"\n\n简介"
+      }
+    ]
+  },
+  {
+    "id": "parks-ritan-park",
+    "name": "日坛公园",
+    "categoryId": "parks",
+    "summary": "\"明清祭日之所，使馆区的宁静绿洲。\"",
+    "tags": [
+      "城市公园"
+    ],
+    "cover": "/assets/hero-image.svg",
+    "featured": false,
+    "funRank": 0,
+    "info": [],
+    "sections": [
+      {
+        "title": "攻略内容",
+        "body": "日坛公园\n\n\"明清祭日之所，使馆区的宁静绿洲。\"\n\n简介"
+      }
+    ]
+  },
+  {
+    "id": "parks-temple-heaven",
+    "name": "天坛公园",
+    "categoryId": "parks",
+    "summary": "\"明清祭天圣地，世界文化遗产。\"",
+    "tags": [
+      "城市公园"
+    ],
+    "cover": "/assets/hero-image.svg",
+    "featured": false,
+    "funRank": 0,
+    "info": [],
+    "sections": [
+      {
+        "title": "攻略内容",
+        "body": "天坛公园\n\n\"明清祭天圣地，世界文化遗产。\"\n\n简介"
+      }
+    ]
+  },
+  {
+    "id": "parks-wenyuhe",
+    "name": "温榆河公园",
+    "categoryId": "parks",
+    "summary": "![温榆河公园](https://images.unsplash.com/photo-1583977393611-885b3e5cc701?w=1200)",
+    "tags": [
+      "城市公园"
+    ],
+    "cover": "/assets/hero-image.svg",
+    "featured": false,
+    "funRank": 0,
+    "info": [],
+    "sections": [
+      {
+        "title": "攻略内容",
+        "body": "温榆河公园\n\n![温榆河公园](https://images.unsplash.com/photo-1583977393611-885b3e5cc701?w=1200)\n\n\"城市绿肺，生态家园。\""
+      }
+    ]
+  },
+  {
+    "id": "parks-xiangshan",
+    "name": "香山公园",
+    "categoryId": "parks",
+    "summary": "![香山公园](https://images.unsplash.com/photo-UN1Y14Heo0?w=1200)",
+    "tags": [
+      "城市公园"
+    ],
+    "cover": "/assets/hero-image.svg",
+    "featured": false,
+    "funRank": 0,
+    "info": [],
+    "sections": [
+      {
+        "title": "攻略内容",
+        "body": "香山公园\n\n![香山公园](https://images.unsplash.com/photo-UN1Y14Heo0?w=1200)\n\n\"香山红叶红满天，层林尽染醉秋烟。\""
+      }
+    ]
+  },
+  {
+    "id": "parks-yuetan-park",
+    "name": "月坛公园",
+    "categoryId": "parks",
+    "summary": "\"明清祭月之所，西城区的小众公园。\"",
+    "tags": [
+      "城市公园"
+    ],
+    "cover": "/assets/hero-image.svg",
+    "featured": false,
+    "funRank": 0,
+    "info": [],
+    "sections": [
+      {
+        "title": "攻略内容",
+        "body": "月坛公园\n\n\"明清祭月之所，西城区的小众公园。\"\n\n简介"
+      }
+    ]
+  },
+  {
+    "id": "parks-yuyuantan",
+    "name": "玉渊潭公园",
+    "categoryId": "parks",
+    "summary": "\"北京最大樱花观赏地，电视塔倒影如画。\"",
+    "tags": [
+      "城市公园"
+    ],
+    "cover": "/assets/hero-image.svg",
+    "featured": false,
+    "funRank": 0,
+    "info": [],
+    "sections": [
+      {
+        "title": "攻略内容",
+        "body": "玉渊潭公园\n\n\"北京最大樱花观赏地，电视塔倒影如画。\"\n\n简介"
+      }
+    ]
+  },
+  {
+    "id": "parks-zhongshan-park",
+    "name": "中山公园",
+    "categoryId": "parks",
+    "summary": "\"明清社稷坛，北京郁金香名园。\"",
+    "tags": [
+      "城市公园"
+    ],
+    "cover": "/assets/hero-image.svg",
+    "featured": false,
+    "funRank": 0,
+    "info": [],
+    "sections": [
+      {
+        "title": "攻略内容",
+        "body": "中山公园\n\n\"明清社稷坛，北京郁金香名园。\"\n\n简介"
+      }
+    ]
+  },
+  {
+    "id": "parks-zizhuyuan",
+    "name": "紫竹院公园",
+    "categoryId": "parks",
+    "summary": "\"竹影婆娑，人少景美的城市公园。\"",
+    "tags": [
+      "城市公园"
+    ],
+    "cover": "/assets/hero-image.svg",
+    "featured": false,
+    "funRank": 0,
+    "info": [],
+    "sections": [
+      {
+        "title": "攻略内容",
+        "body": "紫竹院公园\n\n\"竹影婆娑，人少景美的城市公园。\"\n\n简介"
+      }
+    ]
+  }
+];

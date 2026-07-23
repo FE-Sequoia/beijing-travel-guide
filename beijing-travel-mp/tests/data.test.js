@@ -1,4 +1,12 @@
 const assert = require('assert');
+const fs = require('fs');
+const path = require('path');
+
+const dataModuleSource = fs.readFileSync(path.join(__dirname, '../utils/data.js'), 'utf8');
+assert.ok(
+  !/require\(['\"]\.\.\/data\/[^'\"]+\.json['\"]\)/.test(dataModuleSource),
+  '小程序数据层不能直接 require JSON 文件，应通过 JS 数据模块加载',
+);
 const {
   getCategories,
   getPlaces,

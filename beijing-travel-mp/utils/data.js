@@ -1,7 +1,9 @@
-const categories = require('../data/categories.json');
-const places = require('../data/places.json');
-const guides = require('../data/guides.json');
-const itineraries = require('../data/itineraries.json');
+// 部分微信开发者工具版本不会将 require(JSON) 注册为运行时模块，
+// 因此使用同内容的 CommonJS 静态数据模块，保证真机与开发工具均可加载。
+const categories = require('../data/categories');
+const places = require('../data/places');
+const guides = require('../data/guides');
+const itineraries = require('../data/itineraries');
 const categoryNames = categories.reduce((result, item) => { result[item.id] = item.name; return result; }, {});
 const withCategoryName = (place) => ({ ...place, categoryName: categoryNames[place.categoryId] || place.categoryId });
 

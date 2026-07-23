@@ -1,1 +1,15 @@
-.hero { padding:34rpx 30rpx; border-radius:24rpx; color:#FFF; background:linear-gradient(135deg,#2E7D6B,#5E9A83); }.eyebrow { opacity:.78; font-size:22rpx; }.title { font-size:44rpx; font-weight:700; margin-top:14rpx; }.summary { font-size:24rpx; line-height:1.65; margin-top:12rpx; opacity:.92; }.tip { margin-top:20rpx; padding:20rpx; border-radius:14rpx; background:#F6EEE4; color:#6D5845; font-size:23rpx; line-height:1.65; }.day { margin-top:34rpx; }.day-title { font-size:31rpx; font-weight:700; margin-bottom:15rpx; }.stop { display:flex; align-items:center; width:100%; min-width:0; padding:22rpx; margin-bottom:14rpx; }.time { width:82rpx; flex:none; color:#B9513A; font-size:22rpx; font-weight:700; }.stop-content { flex:1; min-width:0; }.place { font-size:28rpx; font-weight:700; }.note { color:#718096; font-size:22rpx; line-height:1.55; margin-top:7rpx; }.arrow { flex:none; margin-left:auto; color:#B9513A; font-size:38rpx; }
+.hero { padding:34rpx 30rpx; border-radius:24rpx; color:#FFF; background:linear-gradient(135deg,#2E7D6B,#5E9A83); }
+.eyebrow { opacity:.78; font-size:22rpx; }
+.title { font-size:44rpx; font-weight:700; margin-top:14rpx; }
+.summary { font-size:24rpx; line-height:1.65; margin-top:12rpx; opacity:.92; }
+.tip { margin-top:20rpx; padding:20rpx; border-radius:14rpx; background:#F6EEE4; color:#6D5845; font-size:23rpx; line-height:1.65; }
+.day { margin-top:34rpx; }
+.day-title { font-size:31rpx; font-weight:700; margin-bottom:15rpx; }
+.stops { overflow:hidden; background:#FFFCF7; border:1rpx solid #E6DED2; border-radius:16rpx; }
+.stop { display:flex; align-items:center; width:100%; min-width:0; padding:22rpx; border-bottom:1rpx solid #E8ECEA; }
+.stop:last-child { border-bottom:0; }
+.time { width:82rpx; flex:none; color:#B9513A; font-size:22rpx; font-weight:700; }
+.stop-content { flex:1; min-width:0; }
+.place { font-size:28rpx; font-weight:700; }
+.note { color:#718096; font-size:22rpx; line-height:1.55; margin-top:7rpx; }
+.arrow { flex:none; margin-left:auto; color:#B9513A; font-size:38rpx; }

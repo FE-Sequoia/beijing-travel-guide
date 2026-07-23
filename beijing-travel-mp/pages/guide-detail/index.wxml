@@ -1,1 +1,5 @@
-<scroll-view wx:if="{{guide}}" scroll-y class="page detail safe-bottom"><view class="icon">{{guide.icon}}</view><view class="title">{{guide.title}}</view><view class="summary">{{guide.summary}}</view><view wx:for="{{guide.sections}}" wx:key="title" class="section"><view class="section-title">{{item.title}}</view><view class="copy">{{item.body}}</view></view></scroll-view><empty-state wx:else title="攻略不存在" description="这条攻略还没有录入" button-text="返回" bind:actiontap="back"></empty-state>
+<scroll-view wx:if="{{guide}}" scroll-y class="page detail safe-bottom">
+  <view class="guide-header"><view class="icon">{{guide.icon}}</view><view class="title">{{guide.title}}</view><view class="summary">{{guide.summary}}</view></view>
+  <view wx:for="{{guide.sections}}" wx:key="title" class="section"><view class="section-title">{{item.title}}</view><view class="copy body-copy">{{item.body}}</view></view>
+</scroll-view>
+<empty-state wx:else title="攻略不存在" description="这条攻略还没有录入" button-text="返回" bind:actiontap="back"></empty-state>

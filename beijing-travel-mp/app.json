@@ -5,7 +5,9 @@
     "pages/guides/index",
     "pages/profile/index",
     "pages/place-detail/index",
-    "pages/guide-detail/index"
+    "pages/guide-detail/index",
+    "pages/itineraries/index",
+    "pages/itinerary-detail/index"
   ],
   "window": {
     "navigationBarTitleText": "北京慢游记",

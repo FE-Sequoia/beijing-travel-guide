@@ -1,0 +1,95 @@
+[
+  {
+    "id": "classic-1-day",
+    "days": 1,
+    "title": "一日初见北京",
+    "summary": "把中轴线的第一眼，留给天安门、故宫和老城夜色。",
+    "theme": "经典中轴线",
+    "tips": "故宫等热门场馆请提前以官方渠道确认预约；当天只选一处馆内重点慢慢看。",
+    "schedule": [
+      { "day": 1, "title": "皇城与湖畔", "stops": [
+        { "time": "上午", "placeId": "tiananmen", "note": "清晨广场视野开阔，按现场安排游览。" },
+        { "time": "上午", "placeId": "forbidden-city", "note": "从午门入馆，预留半天。" },
+        { "time": "午后", "placeId": "jingshan-park", "note": "登高看中轴线，再按体力继续。" },
+        { "time": "傍晚", "placeId": "landmarks-shichahai", "note": "沿水边散步，给晚餐留出时间。" }
+      ] }
+    ]
+  },
+  {
+    "id": "highlights-2-days",
+    "days": 2,
+    "title": "两日精华慢游",
+    "summary": "一天走皇城，一天看园林，把步行量控制在舒服的节奏。",
+    "theme": "初次到访",
+    "tips": "第二天路线较长，优先地铁接驳，体力不足时可省略最后一站。",
+    "schedule": [
+      { "day": 1, "title": "皇城记忆", "stops": [
+        { "time": "上午", "placeId": "tiananmen", "note": "先从开阔的城市中轴线开始。" },
+        { "time": "上午", "placeId": "forbidden-city", "note": "预约成功后再安排当天路线。" },
+        { "time": "午后", "placeId": "jingshan-park", "note": "用一段登高收束故宫视角。" },
+        { "time": "傍晚", "placeId": "parks-beihai-park", "note": "在湖边放慢脚步。" }
+      ] },
+      { "day": 2, "title": "园林与学府", "stops": [
+        { "time": "上午", "placeId": "history-summer-palace", "note": "园区面积大，建议只选一条主线。" },
+        { "time": "午后", "placeId": "history-yuanmingyuan-ruins", "note": "与颐和园同日安排时注意体力。" },
+        { "time": "傍晚", "placeId": "parks-olympic-forest", "note": "以轻松散步结束一天。" }
+      ] }
+    ]
+  },
+  {
+    "id": "classic-3-days",
+    "days": 3,
+    "title": "三日北京经典线",
+    "summary": "中轴线、园林和城市历史各留一天，第一次来也不会太赶。",
+    "theme": "经典全览",
+    "tips": "第三天可根据天气在室内博物馆与户外公园之间互换。",
+    "schedule": [
+      { "day": 1, "title": "中轴线初见", "stops": [
+        { "time": "上午", "placeId": "tiananmen", "note": "城市地标与广场。" },
+        { "time": "上午", "placeId": "forbidden-city", "note": "半天深度游览。" },
+        { "time": "午后", "placeId": "jingshan-park", "note": "看故宫全景。" }
+      ] },
+      { "day": 2, "title": "园林回响", "stops": [
+        { "time": "上午", "placeId": "history-summer-palace", "note": "重点游览长廊与昆明湖一带。" },
+        { "time": "午后", "placeId": "history-yuanmingyuan-ruins", "note": "从遗址中读一段近代史。" }
+      ] },
+      { "day": 3, "title": "历史与街巷", "stops": [
+        { "time": "上午", "placeId": "national-museum", "note": "提前确认预约和开放安排。" },
+        { "time": "午后", "placeId": "landmarks-qianmen", "note": "从老字号与街景中慢慢逛。" },
+        { "time": "傍晚", "placeId": "landmarks-nanluoguxiang", "note": "避开主街高峰，转进附近胡同。" }
+      ] }
+    ]
+  },
+  {
+    "id": "deep-5-days",
+    "days": 5,
+    "title": "五日深度体验",
+    "summary": "在经典之外，给博物馆、公园与胡同各留出从容的一天。",
+    "theme": "慢节奏城市漫游",
+    "tips": "每一天最多安排两处重点景点，下午留出交通与休息弹性。",
+    "schedule": [
+      { "day": 1, "title": "皇城中轴", "stops": [{ "time": "上午", "placeId": "tiananmen", "note": "从广场开始。" }, { "time": "上午", "placeId": "forbidden-city", "note": "故宫半日。" }, { "time": "午后", "placeId": "jingshan-park", "note": "登景山。" }] },
+      { "day": 2, "title": "园林湖光", "stops": [{ "time": "上午", "placeId": "history-summer-palace", "note": "主线游览。" }, { "time": "午后", "placeId": "history-yuanmingyuan-ruins", "note": "遗址漫步。" }] },
+      { "day": 3, "title": "博物馆的一天", "stops": [{ "time": "上午", "placeId": "national-museum", "note": "选定一个展览主题。" }, { "time": "午后", "placeId": "parks-beihai-park", "note": "湖边缓一缓。" }] },
+      { "day": 4, "title": "老城街巷", "stops": [{ "time": "上午", "placeId": "landmarks-qianmen", "note": "老城步行。" }, { "time": "午后", "placeId": "landmarks-nanluoguxiang", "note": "胡同慢游。" }, { "time": "傍晚", "placeId": "landmarks-shichahai", "note": "水边晚风。" }] },
+      { "day": 5, "title": "公园与留白", "stops": [{ "time": "上午", "placeId": "parks-temple-heaven", "note": "公园主轴线。" }, { "time": "午后", "placeId": "parks-olympic-forest", "note": "按体力调整。" }] }
+    ]
+  },
+  {
+    "id": "complete-7-days",
+    "days": 7,
+    "title": "七日从容北京",
+    "summary": "适合第一次深入停留：经典、园林、博物馆、胡同与公园都有余白。",
+    "theme": "全景慢游",
+    "tips": "把预约制场馆优先固定，再把公园和街巷作为可替换的弹性日程。",
+    "schedule": [
+      { "day": 1, "title": "中轴线", "stops": [{ "time": "上午", "placeId": "tiananmen", "note": "开场地标。" }, { "time": "上午", "placeId": "forbidden-city", "note": "故宫主线。" }] },
+      { "day": 2, "title": "景山与北海", "stops": [{ "time": "上午", "placeId": "jingshan-park", "note": "高处看城。" }, { "time": "午后", "placeId": "parks-beihai-park", "note": "湖畔休闲。" }] },
+      { "day": 3, "title": "园林", "stops": [{ "time": "上午", "placeId": "history-summer-palace", "note": "颐和园主线。" }, { "time": "午后", "placeId": "history-yuanmingyuan-ruins", "note": "圆明园遗址。" }] },
+      { "day": 4, "title": "国博与前门", "stops": [{ "time": "上午", "placeId": "national-museum", "note": "看一条展览线。" }, { "time": "午后", "placeId": "landmarks-qianmen", "note": "老城散步。" }] },
+      { "day": 5, "title": "胡同", "stops": [{ "time": "上午", "placeId": "landmarks-nanluoguxiang", "note": "早些出发。" }, { "time": "午后", "placeId": "landmarks-shichahai", "note": "水边与街巷。" }] },
+      { "day": 6, "title": "天坛与公园", "stops": [{ "time": "上午", "placeId": "parks-temple-heaven", "note": "留意开放安排。" }, { "time": "午后", "placeId": "parks-olympic-forest", "note": "森林公园散步。" }] },
+      { "day": 7, "title": "留白日", "stops": [{ "time": "上午", "placeId": "cao-xueqin-former-residence", "note": "选一处小而安静的文化停留。" }, { "time": "午后", "placeId": "landmarks-gongwangfu", "note": "按预约与体力决定。" }] }
+    ]
+  }
+]

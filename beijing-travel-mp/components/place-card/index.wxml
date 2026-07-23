@@ -1,1 +1,10 @@
-<view class="card {{variant}}" bindtap="onTap"><image wx:if="{{!coverFailed}}" class="cover" src="{{place.cover}}" mode="aspectFill" binderror="onCoverError"></image><view wx:else class="cover fallback"><text>{{place.categoryName || '北京'}}</text></view><view class="body"><view class="category">{{place.categoryName}}</view><view class="name">{{place.name}}</view><view class="summary">{{place.summary}}</view><view class="tags"><text wx:for="{{place.tags}}" wx:key="*this" class="tag">{{item}}</text></view></view></view>
+<view class="card {{variant}}" bindtap="onTap">
+  <image wx:if="{{!coverFailed}}" class="cover" src="{{place.cover}}" mode="aspectFill" binderror="onCoverError"></image>
+  <view wx:else class="cover fallback"><text>{{place.categoryName || '北京'}}</text></view>
+  <view class="body">
+    <view class="category">{{place.categoryName}}</view>
+    <view class="name">{{place.name}}</view>
+    <view class="summary">{{place.summary}}</view>
+    <view class="tags"><text wx:for="{{place.tags}}" wx:key="*this" class="tag">{{item}}</text></view>
+  </view>
+</view>

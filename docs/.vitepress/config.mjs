@@ -126,12 +126,43 @@ export default defineConfig({
           ]
         },
         {
+          text: '胡同街区',
+          collapsed: false,
+          items: [
+            { text: '什刹海', link: '/landmarks/shichahai' },
+            { text: '南锣鼓巷', link: '/landmarks/nanluoguxiang' },
+            { text: '前门大街', link: '/landmarks/qianmen' },
+            { text: '大栅栏', link: '/landmarks/dashilan' },
+            { text: '琉璃厂', link: '/landmarks/liulichang' },
+            { text: '天桥', link: '/landmarks/tianqiao' }
+          ]
+        },
+        {
           text: '古城遗迹',
           collapsed: false,
           items: [
             { text: '明城墙遗址', link: '/landmarks/city-wall' },
-            { text: '前门大街', link: '/landmarks/qianmen' },
-            { text: '钟鼓楼', link: '/landmarks/drum-tower' }
+            { text: '正阳门（箭楼）', link: '/landmarks/zhengyangmen' },
+            { text: '钟鼓楼', link: '/landmarks/drum-tower' },
+            { text: '恭王府', link: '/landmarks/gongwangfu' },
+            { text: '国子监与孔庙', link: '/landmarks/guozijian' }
+          ]
+        },
+        {
+          text: '现代地标',
+          collapsed: false,
+          items: [
+            { text: '鸟巢与水立方', link: '/landmarks/niaochao' },
+            { text: '国家大剧院', link: '/landmarks/national-theatre' },
+            { text: '798艺术区', link: '/landmarks/798-art-zone' }
+          ]
+        },
+        {
+          text: '文化体验',
+          collapsed: false,
+          items: [
+            { text: '老舍茶馆', link: '/landmarks/lao-she-teahouse' },
+            { text: '潘家园旧货市场', link: '/landmarks/panjiayuan' }
           ]
         }
       ],
@@ -147,11 +178,16 @@ export default defineConfig({
           ]
         },
         {
-          text: '民国建筑',
+          text: '名人故居',
           collapsed: false,
           items: [
             { text: '北大红楼', link: '/history/peking-university-red' },
+            { text: '曹雪芹故居', link: '/history/cao-xueqin-residence' },
+            { text: '宋庆龄故居', link: '/history/soong-ching-ling-residence' },
+            { text: '老舍故居', link: '/history/lao-she-residence' },
             { text: '鲁迅故居', link: '/history/lu-xun-residence' },
+            { text: '茅盾故居', link: '/history/mao-dun-residence' },
+            { text: '郭沫若故居', link: '/history/guo-moruo-residence' },
             { text: '蔡元培故居', link: '/history/cai-yuanpei' }
           ]
         },
@@ -266,10 +302,14 @@ export default defineConfig({
           text: '现代公园',
           collapsed: false,
           items: [
+            { text: '香山公园', link: '/parks/xiangshan' },
+            { text: '北京植物园', link: '/parks/botanical-garden' },
+            { text: '北京动物园', link: '/parks/beijing-zoo' },
             { text: '奥林匹克森林公园', link: '/parks/olympic-forest' },
             { text: '朝阳公园', link: '/parks/chaoyang-park' },
             { text: '玉渊潭公园', link: '/parks/yuyuantan' },
-            { text: '紫竹院公园', link: '/parks/zizhuyuan' }
+            { text: '紫竹院公园', link: '/parks/zizhuyuan' },
+            { text: '温榆河公园', link: '/parks/wenyuhe' }
           ]
         }
       ]

@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+  <rect x="2" y="2" width="44" height="44" rx="9" fill="#A83226"/>
+  <rect x="5.5" y="5.5" width="37" height="37" rx="6" fill="none" stroke="#F7EFE0" stroke-opacity="0.4" stroke-width="1.4"/>
+  <text x="24" y="33.5" text-anchor="middle" font-family="'Noto Serif SC','Songti SC','STSong','SimSun',serif" font-size="27" font-weight="900" fill="#F7EFE0">京</text>
+</svg>

@@ -1,0 +1,1 @@
+.row { display:flex; justify-content:space-between; align-items:flex-end; margin-bottom:20rpx; }.title { font-size:36rpx; font-weight:700; }.subtitle { color:#718096; font-size:23rpx; margin-top:6rpx; }.action { color:#2E7D6B; font-size:24rpx; }

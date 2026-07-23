@@ -1,0 +1,1 @@
+<view class="row"><view><view class="title">{{title}}</view><view wx:if="{{subtitle}}" class="subtitle">{{subtitle}}</view></view><text wx:if="{{actionText}}" class="action" bindtap="onAction">{{actionText}} ›</text></view>

@@ -1,0 +1,1 @@
+<view class="empty"><view class="mark">⌁</view><view class="title">{{title}}</view><view class="desc">{{description}}</view><button wx:if="{{buttonText}}" size="mini" bindtap="onAction">{{buttonText}}</button></view>

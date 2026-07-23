@@ -1,0 +1,31 @@
+{
+  "pages": [
+    "pages/home/index",
+    "pages/explore/index",
+    "pages/guides/index",
+    "pages/profile/index",
+    "pages/place-detail/index",
+    "pages/guide-detail/index"
+  ],
+  "window": {
+    "navigationBarTitleText": "北京慢游记",
+    "navigationBarBackgroundColor": "#F8F5EF",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#F8F5EF",
+    "backgroundTextStyle": "light"
+  },
+  "tabBar": {
+    "color": "#8A9995",
+    "selectedColor": "#2E7D6B",
+    "backgroundColor": "#FFFDF9",
+    "borderStyle": "white",
+    "list": [
+      { "pagePath": "pages/home/index", "text": "首页" },
+      { "pagePath": "pages/explore/index", "text": "探索" },
+      { "pagePath": "pages/guides/index", "text": "攻略" },
+      { "pagePath": "pages/profile/index", "text": "我的" }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

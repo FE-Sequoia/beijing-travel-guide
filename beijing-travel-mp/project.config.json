@@ -1,0 +1,11 @@
+{
+  "description": "北京慢游记个人离线攻略",
+  "packOptions": { "ignore": [] },
+  "setting": { "urlCheck": false, "es6": true, "enhance": true, "minified": true },
+  "compileType": "miniprogram",
+  "libVersion": "3.7.3",
+  "appid": "touristappid",
+  "projectname": "beijing-travel-mp",
+  "simulatorType": "wechat",
+  "condition": {}
+}

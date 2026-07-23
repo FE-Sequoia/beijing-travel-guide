@@ -1,0 +1,3 @@
+const { getCategories, getPlaces } = require('../../utils/data');
+const { getHistory } = require('../../utils/storage');
+Page({ data: { categories: [], funPlaces: [], history: [] }, onShow() { const all = getPlaces(); this.setData({ categories: getCategories(), funPlaces: getPlaces({ featured: true }), history: getHistory().map((id) => all.find((p) => p.id === id)).filter(Boolean).slice(0, 3) }); }, onSearch() { wx.switchTab({ url: '/pages/explore/index' }); }, onCategory(e) { wx.switchTab({ url: '/pages/explore/index' }); }, onPlace(e) { wx.navigateTo({ url: '/pages/place-detail/index?id=' + e.detail.id }); } });

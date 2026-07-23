@@ -1,0 +1,2 @@
+const { getPlaceById } = require('../../utils/data'); const storage = require('../../utils/storage');
+Page({ data: { place: null, favorite: false }, onLoad(options) { const place = getPlaceById(options.id); this.setData({ place, favorite: place ? storage.isFavorite(place.id) : false }); if (place) storage.recordHistory(place.id); }, toggleFavorite() { if (!this.data.place) return; const favorite = storage.toggleFavorite(this.data.place.id); this.setData({ favorite }); wx.showToast({ title: favorite ? '已收藏' : '已取消收藏', icon: 'none' }); }, back() { wx.navigateBack(); } });

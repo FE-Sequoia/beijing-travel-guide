@@ -1,0 +1,8 @@
+page { background: #F8F5EF; color: #263238; font-family: -apple-system-font, BlinkMacSystemFont, "Helvetica Neue", sans-serif; }
+.page { padding: 28rpx 24rpx 48rpx; }
+.card { background: #FFFDF9; border-radius: 20rpx; box-shadow: 0 8rpx 28rpx rgba(53, 72, 65, .07); }
+.muted { color: #718096; }
+.green { color: #2E7D6B; }
+.red { color: #B9513A; }
+.section-gap { margin-top: 42rpx; }
+.safe-bottom { padding-bottom: calc(32rpx + env(safe-area-inset-bottom)); }

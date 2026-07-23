@@ -4,7 +4,7 @@
 本页为**历史沿革视角**。国博完整导览（含常设展览、镇馆之宝详解）请见 → [中国国家博物馆](/museums/national-museum)
 :::
 
-![中国国家博物馆](https://images.unsplash.com/photo-1545569341-9eb8b30979d9?w=1200)
+![中国国家博物馆](https://images.unsplash.com/photo-1701847895783-979e086dae5e?w=1200)
 
 > "中华文明的殿堂，民族记忆的宝库。"
 

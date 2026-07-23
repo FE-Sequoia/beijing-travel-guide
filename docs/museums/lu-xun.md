@@ -1,6 +1,6 @@
 # 鲁迅博物馆
 
-![鲁迅博物馆](https://images.unsplash.com/photo-1545569341-9eb8b30979d9?w=1200)
+![鲁迅博物馆](https://images.unsplash.com/photo-1714296160734-9d6331b77cd1?w=1200)
 
 > "横眉冷对千夫指，俯首甘为孺子牛。"
 > —— 鲁迅《自嘲》

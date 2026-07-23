@@ -4,7 +4,7 @@
 本页为**近代历史视角**。颐和园完整导览（含佛香阁、长廊、十七孔桥、石舫等 10 个子景点详解与图片）请见 → [颐和园](/landmarks/summer-palace/)
 :::
 
-![颐和园历史](https://images.unsplash.com/photo-1599577170594-50c2845c7f12?w=1200)
+![颐和园历史](https://images.unsplash.com/photo-1583977393611-885b3e5cc701?w=1200)
 
 > "颐和园里看沧桑，万园之园梦一场。"
 
@@ -60,7 +60,7 @@
 
 石舫又名清晏舫，是乾隆时期建造的一座石船。1860年被焚毁，船舱木质结构化为灰烬，只剩下石质船身。
 
-![石舫](https://images.unsplash.com/photo-1508804185872-d7badad00f7d?w=800)
+![石舫](https://images.unsplash.com/photo-1769967226082-4bb1e137eac1?w=800)
 
 ### 长廊
 

@@ -1,6 +1,6 @@
 # 天安门广场
 
-![天安门广场](https://images.unsplash.com/photo-1508804185872-d7badad00f7d?w=1200)
+![天安门广场](https://images.unsplash.com/photo-1718749742771-d33cd3719fab?w=1200)
 
 > "世界最大城市广场，祖国的心脏。"
 

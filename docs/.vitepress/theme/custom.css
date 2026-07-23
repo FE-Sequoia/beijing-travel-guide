@@ -507,15 +507,15 @@ button:focus-visible,
 }
 
 .bj-chip:hover {
-  background: var(--bj-vermilion);
+  background: #FBF6EC;
   border-color: var(--bj-vermilion);
-  color: #FBF6EC;
+  color: var(--bj-vermilion);
   transform: translateY(-3px);
   box-shadow: 0 10px 22px -10px rgba(140, 39, 29, 0.55);
 }
 
 .bj-chip:hover i {
-  color: #EBCB6E;
+  color: var(--bj-gold-deep);
 }
 
 /* ---------- 四季北京 ---------- */

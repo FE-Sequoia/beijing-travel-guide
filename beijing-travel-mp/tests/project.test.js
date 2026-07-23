@@ -32,6 +32,19 @@ projectConfig.condition.miniprogram.list.forEach((entry) => {
 const sitemap = JSON.parse(fs.readFileSync(path.join(root, 'sitemap.json'), 'utf8'));
 assert.ok(sitemap.rules.length > 0, 'sitemap.json 应显式声明索引规则');
 
+const homeWxml = fs.readFileSync(path.join(root, 'pages/home/index.wxml'), 'utf8');
+const homeWxss = fs.readFileSync(path.join(root, 'pages/home/index.wxss'), 'utf8');
+const homeJs = fs.readFileSync(path.join(root, 'pages/home/index.js'), 'utf8');
+const exploreJs = fs.readFileSync(path.join(root, 'pages/explore/index.js'), 'utf8');
+const appWxss = fs.readFileSync(path.join(root, 'app.wxss'), 'utf8');
+assert.ok(homeWxml.includes('class="category-grid"'), '首页分类应使用六宫格容器');
+assert.ok(!homeWxml.includes('scroll-x class="categories"'), '首页分类不应横向滚动');
+assert.match(homeWxss, /\.category-grid\s*\{[^}]*grid-template-columns:\s*repeat\(3,\s*minmax\(0,\s*1fr\)\)/s, '首页分类应为三列网格');
+assert.ok(homeJs.includes("name: '全部景点'"), '首页分类应补足第六个入口');
+assert.match(exploreJs, /pending\s*!==\s*undefined/, '探索页应能处理“全部景点”的空分类状态');
+assert.match(appWxss, /box-sizing:\s*border-box/, '全局应使用 border-box 计算宽度');
+assert.match(appWxss, /overflow-x:\s*hidden/, '页面应裁切意外的横向溢出');
+
 ['categories.json', 'places.json', 'guides.json', 'itineraries.json'].forEach((file) => {
   assert.doesNotThrow(() => JSON.parse(fs.readFileSync(path.join(root, 'data', file), 'utf8')));
 });

@@ -1,5 +1,6 @@
-page { background: #F8F5EF; color: #263238; font-family: -apple-system-font, BlinkMacSystemFont, "Helvetica Neue", sans-serif; }
-.page { padding: 28rpx 24rpx 48rpx; }
+page { background: #F8F5EF; color: #263238; overflow-x: hidden; font-family: -apple-system-font, BlinkMacSystemFont, "Helvetica Neue", sans-serif; }
+page, view, scroll-view, image, text, input, button { box-sizing: border-box; }
+.page { width: 100%; min-width: 0; padding: 28rpx 24rpx 48rpx; }
 .card { background: #FFFDF9; border-radius: 20rpx; box-shadow: 0 8rpx 28rpx rgba(53, 72, 65, .07); }
 .muted { color: #718096; }
 .green { color: #2E7D6B; }

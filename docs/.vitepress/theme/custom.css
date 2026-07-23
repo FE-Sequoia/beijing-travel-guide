@@ -713,3 +713,77 @@ button:focus-visible,
     grid-template-columns: 1fr;
   }
 }
+
+/* ============================================================
+   导航当前选中状态
+   ============================================================ */
+
+/* 顶部导航栏当前选中状态 */
+.VPNavBarMenuLink.active {
+  color: var(--bj-vermilion);
+  font-weight: 600;
+}
+
+.VPNavBarMenuLink.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--bj-vermilion), var(--bj-gold));
+  border-radius: 1px;
+}
+
+/* 导航链接悬停效果 */
+.VPNavBarMenuLink {
+  position: relative;
+  transition: color 0.25s ease;
+}
+
+.VPNavBarMenuLink:hover {
+  color: var(--bj-vermilion);
+}
+
+/* 侧边栏当前选中状态 */
+.VPSidebarItem.is-active > .VPSidebarItemLink {
+  color: var(--bj-vermilion);
+  font-weight: 600;
+}
+
+.VPSidebarItem.is-active > .VPSidebarItemLink::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 3px;
+  height: 16px;
+  background: linear-gradient(180deg, var(--bj-vermilion), var(--bj-gold));
+  border-radius: 0 2px 2px 0;
+}
+
+/* 侧边栏链接悬停效果 */
+.VPSidebarItemLink {
+  position: relative;
+  transition: color 0.2s ease, background 0.2s ease;
+}
+
+.VPSidebarItemLink:hover {
+  color: var(--bj-vermilion);
+  background: rgba(168, 50, 38, 0.04);
+}
+
+/* 移动端导航当前选中状态 */
+.VPNavScreenMenuLink.active {
+  color: var(--bj-vermilion);
+  font-weight: 600;
+  background: rgba(168, 50, 38, 0.08);
+}
+
+/* 面包屑当前页面 */
+.VPDocBreadcrumbs .item.active {
+  color: var(--bj-vermilion);
+  font-weight: 600;
+}

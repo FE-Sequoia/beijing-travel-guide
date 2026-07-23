@@ -1,1 +1,1 @@
-{ "usingComponents": { "place-card": "/components/place-card/index", "empty-state": "/components/empty-state/index" } }
+{ "navigationBarTitleText": "探索", "usingComponents": { "place-card": "/components/place-card/index", "empty-state": "/components/empty-state/index" } }

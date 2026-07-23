@@ -8,9 +8,13 @@ node_modules/
 # IDE
 .vscode/
 .idea/
+.history/
 
 # OS
 .DS_Store
 
 # Logs
 *.log
+
+# WeChat DevTools local overrides
+beijing-travel-mp/project.private.config.json

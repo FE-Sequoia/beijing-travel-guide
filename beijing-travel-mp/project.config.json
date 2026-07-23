@@ -1,11 +1,71 @@
 {
   "description": "北京慢游记个人离线攻略",
-  "packOptions": { "ignore": [] },
-  "setting": { "urlCheck": false, "es6": true, "enhance": true, "minified": true },
+  "packOptions": {
+    "ignore": [
+      { "type": "folder", "value": "tests" },
+      { "type": "folder", "value": "scripts" },
+      { "type": "file", "value": "README.md" }
+    ],
+    "include": []
+  },
+  "setting": {
+    "urlCheck": false,
+    "es6": true,
+    "enhance": true,
+    "minified": true,
+    "postcss": true,
+    "compileWorklet": false,
+    "uglifyFileName": false,
+    "uploadWithSourceMap": true,
+    "packNpmManually": false,
+    "packNpmRelationList": [],
+    "minifyWXSS": true,
+    "minifyWXML": true,
+    "localPlugins": false,
+    "disableUseStrict": false,
+    "useCompilerPlugins": false,
+    "ignoreDevUnusedFiles": true,
+    "ignoreUploadUnusedFiles": true,
+    "coverView": true,
+    "showShadowRootInWxmlPanel": true,
+    "condition": false,
+    "swc": false,
+    "disableSWC": true,
+    "babelSetting": {
+      "ignore": [],
+      "disablePlugins": [],
+      "outputPath": ""
+    }
+  },
   "compileType": "miniprogram",
   "libVersion": "3.7.3",
-  "appid": "touristappid",
+  "appid": "wx2bafcf21bedc5ff3",
   "projectname": "beijing-travel-mp",
   "simulatorType": "wechat",
-  "condition": {}
+  "condition": {
+    "miniprogram": {
+      "list": [
+        {
+          "name": "景点详情-天安门",
+          "pathName": "pages/place-detail/index",
+          "query": "id=tiananmen"
+        },
+        {
+          "name": "攻略详情-最佳时节",
+          "pathName": "pages/guide-detail/index",
+          "query": "id=best-time"
+        },
+        {
+          "name": "行程详情-经典一日",
+          "pathName": "pages/itinerary-detail/index",
+          "query": "days=1"
+        }
+      ]
+    }
+  },
+  "simulatorPluginLibVersion": {},
+  "editorSetting": {
+    "tabIndent": "insertSpaces",
+    "tabSize": 2
+  }
 }

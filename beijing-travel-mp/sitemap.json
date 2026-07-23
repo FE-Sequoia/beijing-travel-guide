@@ -1,1 +1,9 @@
-{ "desc": "北京慢游记本地内容", "rules": [] }
+{
+  "desc": "北京慢游记本地内容，全部页面允许微信索引；详情参考 https://developers.weixin.qq.com/miniprogram/dev/framework/sitemap.html",
+  "rules": [
+    {
+      "action": "allow",
+      "page": "*"
+    }
+  ]
+}

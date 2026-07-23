@@ -101,7 +101,7 @@ export default defineConfig({
                 { text: '西天梵境', link: '/landmarks/beihai/xitianfanjing' }
               ]
             },
-            { text: '景山公园', link: '/landmarks/jingshan' }
+            { text: '景山公园', link: '/landmarks/jingshan/' }
           ]
         },
         {

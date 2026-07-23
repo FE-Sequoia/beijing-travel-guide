@@ -31,7 +31,7 @@ hero:
     <p>每一座都展开为独立导览——点开即见每座殿宇、每道长廊、每处遗址的图文详解</p>
   </header>
   <div class="bj-grid">
-    <a class="bj-card" href="/landmarks/forbidden-city/">
+    <a class="bj-card" href="/beijing-travel-guide/landmarks/forbidden-city/">
       <figure><img src="https://images.unsplash.com/photo-1509265226434-5f4ddbdb2f7a?w=1100&q=80&auto=format" alt="故宫全景" loading="lazy"></figure>
       <div class="bj-card-body">
         <span class="bj-badge">11 个子景点</span>
@@ -40,7 +40,7 @@ hero:
         <span class="bj-more">进入详解 →</span>
       </div>
     </a>
-    <a class="bj-card" href="/landmarks/temple-of-heaven/">
+    <a class="bj-card" href="/beijing-travel-guide/landmarks/temple-of-heaven/">
       <figure><img src="https://images.unsplash.com/photo-1569165755139-296fac054979?w=900&q=80&auto=format" alt="天坛祈年殿" loading="lazy"></figure>
       <div class="bj-card-body">
         <span class="bj-badge">6 个子景点</span>
@@ -49,7 +49,7 @@ hero:
         <span class="bj-more">进入详解 →</span>
       </div>
     </a>
-    <a class="bj-card" href="/landmarks/summer-palace/">
+    <a class="bj-card" href="/beijing-travel-guide/landmarks/summer-palace/">
       <figure><img src="https://images.unsplash.com/photo-1619825479213-62e158b5a79d?w=900&q=80&auto=format" alt="颐和园昆明湖" loading="lazy"></figure>
       <div class="bj-card-body">
         <span class="bj-badge">10 个子景点</span>
@@ -58,7 +58,7 @@ hero:
         <span class="bj-more">进入详解 →</span>
       </div>
     </a>
-    <a class="bj-card" href="/landmarks/yuanmingyuan/">
+    <a class="bj-card" href="/beijing-travel-guide/landmarks/yuanmingyuan/">
       <figure><img src="https://images.unsplash.com/photo-1769865693493-3b876f3361dc?w=1100&q=80&auto=format" alt="圆明园西洋楼遗址" loading="lazy"></figure>
       <div class="bj-card-body">
         <span class="bj-badge">6 个子景点</span>
@@ -77,18 +77,18 @@ hero:
     <p>三十三处殿阁楼台，每一处都有它自己的故事</p>
   </header>
   <div class="bj-chips">
-    <a class="bj-chip" href="/landmarks/forbidden-city/taihe-dian"><i>故宫</i>太和殿</a>
-    <a class="bj-chip" href="/landmarks/forbidden-city/qianqing-gong"><i>故宫</i>乾清宫</a>
-    <a class="bj-chip" href="/landmarks/forbidden-city/zhenbao-guan"><i>故宫</i>珍宝馆</a>
-    <a class="bj-chip" href="/landmarks/forbidden-city/zhongbiao-guan"><i>故宫</i>钟表馆</a>
-    <a class="bj-chip" href="/landmarks/temple-of-heaven/qinian-dian"><i>天坛</i>祈年殿</a>
-    <a class="bj-chip" href="/landmarks/temple-of-heaven/huangqiong-yu"><i>天坛</i>回音壁</a>
-    <a class="bj-chip" href="/landmarks/summer-palace/foxiang-ge"><i>颐和园</i>佛香阁</a>
-    <a class="bj-chip" href="/landmarks/summer-palace/changlang"><i>颐和园</i>长廊</a>
-    <a class="bj-chip" href="/landmarks/summer-palace/kunming-lake"><i>颐和园</i>十七孔桥</a>
-    <a class="bj-chip" href="/landmarks/summer-palace/shifang"><i>颐和园</i>石舫</a>
-    <a class="bj-chip" href="/landmarks/yuanmingyuan/dashuifa"><i>圆明园</i>大水法</a>
-    <a class="bj-chip" href="/landmarks/yuanmingyuan/haiyan-tang"><i>圆明园</i>十二生肖兽首</a>
+    <a class="bj-chip" href="/beijing-travel-guide/landmarks/forbidden-city/taihe-dian"><i>故宫</i>太和殿</a>
+    <a class="bj-chip" href="/beijing-travel-guide/landmarks/forbidden-city/qianqing-gong"><i>故宫</i>乾清宫</a>
+    <a class="bj-chip" href="/beijing-travel-guide/landmarks/forbidden-city/zhenbao-guan"><i>故宫</i>珍宝馆</a>
+    <a class="bj-chip" href="/beijing-travel-guide/landmarks/forbidden-city/zhongbiao-guan"><i>故宫</i>钟表馆</a>
+    <a class="bj-chip" href="/beijing-travel-guide/landmarks/temple-of-heaven/qinian-dian"><i>天坛</i>祈年殿</a>
+    <a class="bj-chip" href="/beijing-travel-guide/landmarks/temple-of-heaven/huangqiong-yu"><i>天坛</i>回音壁</a>
+    <a class="bj-chip" href="/beijing-travel-guide/landmarks/summer-palace/foxiang-ge"><i>颐和园</i>佛香阁</a>
+    <a class="bj-chip" href="/beijing-travel-guide/landmarks/summer-palace/changlang"><i>颐和园</i>长廊</a>
+    <a class="bj-chip" href="/beijing-travel-guide/landmarks/summer-palace/kunming-lake"><i>颐和园</i>十七孔桥</a>
+    <a class="bj-chip" href="/beijing-travel-guide/landmarks/summer-palace/shifang"><i>颐和园</i>石舫</a>
+    <a class="bj-chip" href="/beijing-travel-guide/landmarks/yuanmingyuan/dashuifa"><i>圆明园</i>大水法</a>
+    <a class="bj-chip" href="/beijing-travel-guide/landmarks/yuanmingyuan/haiyan-tang"><i>圆明园</i>十二生肖兽首</a>
   </div>
 </section>
 
@@ -141,12 +141,12 @@ hero:
     <p>门票预约是北京旅游的必修课，交通、路线、吃住一次备齐</p>
   </header>
   <div class="bj-guide-links">
-    <a href="/guide/tickets"><span>🎫</span>门票预约指南</a>
-    <a href="/guide/transportation"><span>🚇</span>交通出行</a>
-    <a href="/guide/routes"><span>🗺️</span>推荐路线</a>
-    <a href="/guide/food"><span>🦆</span>美食地图</a>
-    <a href="/guide/accommodation"><span>🏮</span>住宿建议</a>
-    <a href="/guide/best-time"><span>📅</span>最佳时间</a>
+    <a href="/beijing-travel-guide/guide/tickets"><span>🎫</span>门票预约指南</a>
+    <a href="/beijing-travel-guide/guide/transportation"><span>🚇</span>交通出行</a>
+    <a href="/beijing-travel-guide/guide/routes"><span>🗺️</span>推荐路线</a>
+    <a href="/beijing-travel-guide/guide/food"><span>🦆</span>美食地图</a>
+    <a href="/beijing-travel-guide/guide/accommodation"><span>🏮</span>住宿建议</a>
+    <a href="/beijing-travel-guide/guide/best-time"><span>📅</span>最佳时间</a>
   </div>
 </section>
 

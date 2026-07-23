@@ -10,4 +10,3 @@
 .compact { display:flex; width:100%; min-width:0; }
 .compact .cover { width:190rpx; height:190rpx; aspect-ratio:auto; flex:none; }
 .compact .body { flex:1; }
-.featured { width:560rpx; }

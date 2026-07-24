@@ -5,13 +5,13 @@
     <view class="intro-copy">十二家值得绕路的馆子</view>
   </view>
   <view class="food-grid">
-    <view wx:for="{{foods}}" wx:key="id" class="food-card" data-id="{{item.id}}" bindtap="onFood">
-      <image wx:if="{{!item.coverFailed}}" class="cover" src="{{item.cover}}" mode="aspectFill" data-index="{{index}}" binderror="onCoverError"></image>
-      <view wx:else class="cover fallback">{{item.name}}</view>
+    <view wx:for="{{foods}}" wx:for-item="food" wx:key="id" class="food-card" data-id="{{food.id}}" bindtap="onFood">
+      <image wx:if="{{!food.coverFailed}}" class="cover" src="{{food.cover}}" mode="aspectFill" data-index="{{index}}" binderror="onCoverError"></image>
+      <view wx:else class="cover fallback">{{food.name}}</view>
       <view class="card-body">
-        <view class="food-name">{{item.name}}</view>
-        <view class="rating" aria-label="推荐指数 {{item.rating}} 星">
-          <text wx:for="{{stars}}" wx:key="*this" class="star {{item <= food.rating ? 'active' : ''}}">★</text>
+        <view class="food-name">{{food.name}}</view>
+        <view class="rating" aria-label="推荐指数 {{food.rating}} 星">
+          <text wx:for="{{stars}}" wx:for-item="star" wx:key="*this" class="star {{star <= food.rating ? 'active' : ''}}">★</text>
         </view>
       </view>
     </view>

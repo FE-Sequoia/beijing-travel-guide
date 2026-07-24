@@ -4,6 +4,7 @@ const categories = require('../data/categories');
 const places = require('../data/places');
 const guides = require('../data/guides');
 const itineraries = require('../data/itineraries');
+const foods = require('../data/foods');
 const categoryNames = categories.reduce((result, item) => { result[item.id] = item.name; return result; }, {});
 const withCategoryName = (place) => ({ ...place, categoryName: categoryNames[place.categoryId] || place.categoryId });
 
@@ -30,5 +31,7 @@ function getGuides() { return guides; }
 function getGuideById(id) { return guides.find((guide) => guide.id === id) || null; }
 function getItineraries() { return itineraries.slice().sort((a, b) => a.days - b.days); }
 function getItineraryByDays(days) { return itineraries.find((item) => item.days === Number(days)) || null; }
+function getFoods() { return foods.slice(); }
+function getFoodById(id) { return foods.find((food) => food.id === id) || null; }
 
-module.exports = { getCategories, getPlaces, getPlaceById, getRelatedPlaces, getGuides, getGuideById, getItineraries, getItineraryByDays };
+module.exports = { getCategories, getPlaces, getPlaceById, getRelatedPlaces, getGuides, getGuideById, getItineraries, getItineraryByDays, getFoods, getFoodById };

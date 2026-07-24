@@ -16,6 +16,8 @@ const {
   getItineraries,
   getItineraryByDays,
   getRelatedPlaces,
+  getFoods,
+  getFoodById,
 } = require('../utils/data');
 
 const docsRoot = path.resolve(__dirname, '../../docs');
@@ -84,5 +86,18 @@ assert.strictEqual(getItineraryByDays(4), null, '未配置的天数应返回 nul
 getItineraries().forEach((itinerary) => itinerary.schedule.forEach((day) => day.stops.forEach((stop) => {
   assert.ok(getPlaceById(stop.placeId), `${itinerary.days} 日路线引用了未知景点 ${stop.placeId}`);
 })));
+
+const foods = getFoods();
+assert.strictEqual(foods.length, 12, '美食精选应收录 12 家餐厅');
+assert.strictEqual(new Set(foods.map((food) => food.id)).size, 12, '美食 ID 应保持唯一');
+foods.forEach((food) => {
+  assert.match(food.id, /^food-/, '美食 ID 应使用 food- 前缀');
+  assert.match(food.cover, /^https:\/\//, `${food.name} 应使用网络实拍封面`);
+  assert.ok(Number.isInteger(food.rating) && food.rating >= 1 && food.rating <= 5, `${food.name} 应有 1-5 的推荐指数`);
+  ['name', 'summary', 'signature', 'address', 'tips'].forEach((field) => assert.ok(food[field], `${food.id} 缺少 ${field}`));
+  assert.deepStrictEqual(food.sections.map((section) => section.title), ['美食发展历史', '品牌历史'], `${food.name} 应提供两段历史介绍`);
+});
+assert.strictEqual(getFoodById('missing-food'), null, '未知美食应返回 null');
+assert.strictEqual(getFoodById(foods[0].id).name, foods[0].name, '应能按 ID 查询美食详情');
 
 console.log('data.test.js passed');

@@ -1,20 +1,20 @@
 .detail { width:100%; min-height:100vh; }
-.hero { width:100%; height:430rpx; background:#E8F2EC; }
-.fallback { display:flex; align-items:flex-end; padding:34rpx; color:#FFF; background:linear-gradient(135deg,#2E7D6B,#8BB59D); font-size:34rpx; font-weight:700; }
+.hero { width:100%; height:430rpx; background:var(--soft-green); }
+.fallback { display:flex; align-items:flex-end; padding:34rpx; color:#FFF; background:linear-gradient(135deg,var(--ink-green),#8BB59D); font-size:34rpx; font-weight:700; }
 .body { min-width:0; padding:28rpx 30rpx 60rpx; }
-.category { color:#2E7D6B; font-size:23rpx; }
+.category { color:var(--ink-green); font-size:23rpx; }
 .title-row { display:flex; min-width:0; align-items:center; justify-content:space-between; margin-top:10rpx; }
 .title { min-width:0; font-size:48rpx; font-weight:700; }
 .favorite { width:68rpx; height:68rpx; flex:none; border-radius:50%; background:#F3EFE8; display:flex; align-items:center; justify-content:center; color:#B9513A; font-size:38rpx; }
 .favorite.active { background:#F9E8E2; }
-.summary { color:#718096; font-size:27rpx; line-height:1.7; margin-top:16rpx; }
+.summary { color:var(--muted); font-size:27rpx; line-height:1.7; margin-top:16rpx; }
 .tags { margin-top:18rpx; }
-.tag { display:inline-block; color:#2E7D6B; background:#E8F2EC; border-radius:8rpx; padding:7rpx 12rpx; font-size:21rpx; margin-right:10rpx; }
+.tag { display:inline-block; color:var(--ink-green); background:var(--soft-green); border-radius:8rpx; padding:7rpx 12rpx; font-size:21rpx; margin-right:10rpx; }
 .info { display:flex; flex-wrap:wrap; gap:20rpx 16rpx; min-width:0; margin-top:28rpx; padding:22rpx; background:#FFFCF7; border:1rpx solid #E6DED2; border-radius:16rpx; }
 .info-item { flex:1 1 250rpx; min-width:0; color:#263238; font-size:23rpx; }
-.info-label { color:#718096; font-size:20rpx; margin-bottom:8rpx; }
+.info-label { color:var(--muted); font-size:20rpx; margin-bottom:8rpx; }
 .section { margin-top:36rpx; }
 .section-title { font-size:32rpx; font-weight:700; margin-bottom:12rpx; }
 .copy { color:#48524E; font-size:27rpx; line-height:1.9; white-space:pre-line; }
 .related { margin-top:36rpx; padding:24rpx; background:#FFFCF7; border:1rpx solid #E6DED2; border-radius:16rpx; }
-.related-item { display:flex; justify-content:space-between; align-items:center; min-width:0; padding:20rpx 0; border-top:1rpx solid #E8ECEA; color:#2E7D6B; font-size:27rpx; }
+.related-item { display:flex; justify-content:space-between; align-items:center; min-width:0; padding:20rpx 0; border-top:1rpx solid rgba(38,50,56,.1); color:var(--ink-green); font-size:27rpx; }

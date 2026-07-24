@@ -60,6 +60,18 @@ assert.match(placeCardWxss, /\.card\s*\{[^}]*box-sizing:\s*border-box/s, '隔离
 assert.match(homeWxss, /\.hero\s+\.eyebrow\s*\{[^}]*color:\s*#FFF/s, '首页 Hero 眉题应使用高对比白色');
 assert.match(placeCardWxss, /\.compact\s*\{[^}]*display:\s*block/s, '趣玩网格卡应使用纵向布局');
 
+[
+  'pages/explore/index.wxss',
+  'pages/guides/index.wxss',
+  'pages/itineraries/index.wxss',
+  'pages/place-detail/index.wxss',
+  'pages/guide-detail/index.wxss',
+  'pages/itinerary-detail/index.wxss',
+].forEach((file) => {
+  const source = fs.readFileSync(path.join(root, file), 'utf8');
+  assert.ok(!/#(?:2E7D6B|718096|E8F2EC|FFFDF9)\b/.test(source), `${file} 不应保留旧视觉色值`);
+});
+
 const placeDetailWxss = fs.readFileSync(path.join(root, 'pages/place-detail/index.wxss'), 'utf8');
 const guideDetailWxss = fs.readFileSync(path.join(root, 'pages/guide-detail/index.wxss'), 'utf8');
 assert.match(placeDetailWxss, /\.copy\s*\{[^}]*line-height:\s*1\.9/s, '景点正文应使用舒适行高');

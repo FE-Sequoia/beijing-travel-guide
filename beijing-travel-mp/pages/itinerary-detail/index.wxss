@@ -1,4 +1,4 @@
-.hero { padding:34rpx 30rpx; border-radius:24rpx; color:#FFF; background:linear-gradient(135deg,#2E7D6B,#5E9A83); }
+.hero { padding:34rpx 30rpx; border-radius:24rpx; color:#FFF; background:linear-gradient(135deg,var(--ink-green),#397565); }
 .hero .eyebrow { color:#FFF; opacity:.78; font-size:22rpx; }
 .title { font-size:44rpx; font-weight:700; margin-top:14rpx; }
 .summary { font-size:24rpx; line-height:1.65; margin-top:12rpx; opacity:.92; }
@@ -11,5 +11,5 @@
 .time { width:82rpx; flex:none; color:#B9513A; font-size:22rpx; font-weight:700; }
 .stop-content { flex:1; min-width:0; }
 .place { font-size:28rpx; font-weight:700; }
-.note { color:#718096; font-size:22rpx; line-height:1.55; margin-top:7rpx; }
+.note { color:var(--muted); font-size:22rpx; line-height:1.55; margin-top:7rpx; }
 .arrow { flex:none; margin-left:auto; color:#B9513A; font-size:38rpx; }

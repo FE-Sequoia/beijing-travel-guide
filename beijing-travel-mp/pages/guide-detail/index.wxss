@@ -1,7 +1,7 @@
 .detail { padding-top:54rpx; }
 .icon { font-size:70rpx; }
 .title { font-size:52rpx; font-weight:700; margin-top:16rpx; }
-.summary { color:#718096; font-size:28rpx; line-height:1.7; margin-top:14rpx; }
+.summary { color:var(--muted); font-size:28rpx; line-height:1.7; margin-top:14rpx; }
 .section { margin-top:46rpx; }
 .section-title { font-size:34rpx; font-weight:700; margin-bottom:14rpx; }
 .copy { color:#48524E; font-size:27rpx; line-height:1.9; white-space:pre-line; }

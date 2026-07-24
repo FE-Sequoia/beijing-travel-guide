@@ -1,7 +1,7 @@
 Component({
   properties: {
     place: { type: Object, observer() { this.setData({ coverFailed: false }); } },
-    variant: { type: String, value: 'compact' },
+    variant: { type: String, value: 'standard' },
   },
   data: { coverFailed: false },
   methods: {

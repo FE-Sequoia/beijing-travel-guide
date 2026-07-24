@@ -1,5 +1,5 @@
 .hero { padding:34rpx 30rpx; border-radius:24rpx; color:#FFF; background:linear-gradient(135deg,#2E7D6B,#5E9A83); }
-.eyebrow { opacity:.78; font-size:22rpx; }
+.hero .eyebrow { color:#FFF; opacity:.78; font-size:22rpx; }
 .title { font-size:44rpx; font-weight:700; margin-top:14rpx; }
 .summary { font-size:24rpx; line-height:1.65; margin-top:12rpx; opacity:.92; }
 .tip { margin-top:20rpx; padding:20rpx; border-radius:14rpx; background:#F6EEE4; color:#6D5845; font-size:23rpx; line-height:1.65; }

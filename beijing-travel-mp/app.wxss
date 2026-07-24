@@ -5,7 +5,7 @@ page, view, scroll-view, image, text, input, button { box-sizing:border-box; }
 .muted { color:var(--muted); }
 .green { color:var(--ink-green); }
 .red { color:var(--vermilion); }
-.section-gap { margin-top:42rpx; }
+.section-gap { margin-top:48rpx; }
 .safe-bottom { padding-bottom:calc(32rpx + env(safe-area-inset-bottom)); }
 
 .eyebrow { color:var(--ink-green); font-size:20rpx; font-weight:600; letter-spacing:3rpx; }

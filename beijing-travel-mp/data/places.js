@@ -10,7 +10,7 @@ module.exports = [
     "tags": [
       "近代历史"
     ],
-    "cover": "/assets/hero-emblem.svg",
+    "cover": "https://images.unsplash.com/photo-1583977393611-885b3e5cc701?w=800",
     "featured": false,
     "funRank": 999,
     "info": [
@@ -96,7 +96,7 @@ module.exports = [
     "tags": [
       "近代历史"
     ],
-    "cover": "/assets/hero-emblem.svg",
+    "cover": "https://images.unsplash.com/photo-1583977393611-885b3e5cc701?w=800",
     "featured": false,
     "funRank": 999,
     "info": [
@@ -433,7 +433,7 @@ module.exports = [
     "tags": [
       "近代历史"
     ],
-    "cover": "/assets/hero-emblem.svg",
+    "cover": "https://images.unsplash.com/photo-1583977393611-885b3e5cc701?w=800",
     "featured": false,
     "funRank": 999,
     "info": [
@@ -687,7 +687,7 @@ module.exports = [
     "tags": [
       "近代历史"
     ],
-    "cover": "/assets/hero-emblem.svg",
+    "cover": "https://images.unsplash.com/photo-1583977393611-885b3e5cc701?w=800",
     "featured": false,
     "funRank": 999,
     "info": [
@@ -773,7 +773,7 @@ module.exports = [
     "tags": [
       "近代历史"
     ],
-    "cover": "/assets/hero-emblem.svg",
+    "cover": "https://images.unsplash.com/photo-1583977393611-885b3e5cc701?w=800",
     "featured": false,
     "funRank": 999,
     "info": [
@@ -937,7 +937,7 @@ module.exports = [
     "tags": [
       "近代历史"
     ],
-    "cover": "/assets/hero-emblem.svg",
+    "cover": "https://images.unsplash.com/photo-1583977393611-885b3e5cc701?w=800",
     "featured": false,
     "funRank": 999,
     "info": [
@@ -1282,7 +1282,7 @@ module.exports = [
     "tags": [
       "近代历史"
     ],
-    "cover": "/assets/hero-emblem.svg",
+    "cover": "https://images.unsplash.com/photo-1583977393611-885b3e5cc701?w=800",
     "featured": false,
     "funRank": 999,
     "info": [
@@ -2628,7 +2628,7 @@ module.exports = [
     "tags": [
       "名胜古迹"
     ],
-    "cover": "/assets/hero-image.svg",
+    "cover": "https://images.unsplash.com/photo-1509195070461-b99ef33ceb67?w=800",
     "featured": false,
     "funRank": 999,
     "info": [
@@ -4813,7 +4813,7 @@ module.exports = [
     "tags": [
       "名胜古迹"
     ],
-    "cover": "/assets/hero-image.svg",
+    "cover": "https://images.unsplash.com/photo-1509195070461-b99ef33ceb67?w=800",
     "featured": false,
     "funRank": 999,
     "info": [
@@ -7172,7 +7172,7 @@ module.exports = [
     "tags": [
       "博物馆"
     ],
-    "cover": "/assets/qing-beijing-map.svg",
+    "cover": "https://images.unsplash.com/photo-1701847895783-979e086dae5e?w=800",
     "featured": false,
     "funRank": 999,
     "info": [
@@ -7426,7 +7426,7 @@ module.exports = [
     "tags": [
       "博物馆"
     ],
-    "cover": "/assets/qing-beijing-map.svg",
+    "cover": "https://images.unsplash.com/photo-1701847895783-979e086dae5e?w=800",
     "featured": false,
     "funRank": 999,
     "info": [
@@ -7509,7 +7509,7 @@ module.exports = [
       "历史文化",
       "室内游览"
     ],
-    "cover": "/assets/qing-beijing-map.svg",
+    "cover": "https://images.unsplash.com/photo-1701847895783-979e086dae5e?w=800",
     "featured": true,
     "funRank": 2,
     "info": [
@@ -7595,7 +7595,7 @@ module.exports = [
     "tags": [
       "博物馆"
     ],
-    "cover": "/assets/qing-beijing-map.svg",
+    "cover": "https://images.unsplash.com/photo-1701847895783-979e086dae5e?w=800",
     "featured": false,
     "funRank": 999,
     "info": [
@@ -7759,7 +7759,7 @@ module.exports = [
     "tags": [
       "博物馆"
     ],
-    "cover": "/assets/qing-beijing-map.svg",
+    "cover": "https://images.unsplash.com/photo-1701847895783-979e086dae5e?w=800",
     "featured": false,
     "funRank": 999,
     "info": [
@@ -7845,7 +7845,7 @@ module.exports = [
     "tags": [
       "博物馆"
     ],
-    "cover": "/assets/qing-beijing-map.svg",
+    "cover": "https://images.unsplash.com/photo-1701847895783-979e086dae5e?w=800",
     "featured": false,
     "funRank": 999,
     "info": [
@@ -7935,7 +7935,7 @@ module.exports = [
     "tags": [
       "博物馆"
     ],
-    "cover": "/assets/qing-beijing-map.svg",
+    "cover": "https://images.unsplash.com/photo-1701847895783-979e086dae5e?w=800",
     "featured": false,
     "funRank": 999,
     "info": [
@@ -8025,7 +8025,7 @@ module.exports = [
     "tags": [
       "城市公园"
     ],
-    "cover": "/assets/hero-image.svg",
+    "cover": "https://images.unsplash.com/photo-1736237174975-0be4f327f35d?w=800",
     "featured": false,
     "funRank": 999,
     "info": [
@@ -8267,7 +8267,7 @@ module.exports = [
     "tags": [
       "城市公园"
     ],
-    "cover": "/assets/hero-image.svg",
+    "cover": "https://images.unsplash.com/photo-1736237174975-0be4f327f35d?w=800",
     "featured": false,
     "funRank": 999,
     "info": [
@@ -8349,7 +8349,7 @@ module.exports = [
     "tags": [
       "城市公园"
     ],
-    "cover": "/assets/hero-image.svg",
+    "cover": "https://images.unsplash.com/photo-1736237174975-0be4f327f35d?w=800",
     "featured": false,
     "funRank": 999,
     "info": [
@@ -8427,7 +8427,7 @@ module.exports = [
     "tags": [
       "城市公园"
     ],
-    "cover": "/assets/hero-image.svg",
+    "cover": "https://images.unsplash.com/photo-1736237174975-0be4f327f35d?w=800",
     "featured": false,
     "funRank": 999,
     "info": [
@@ -8506,7 +8506,7 @@ module.exports = [
       "城市视野",
       "四季皆宜"
     ],
-    "cover": "/assets/hero-image.svg",
+    "cover": "https://images.unsplash.com/photo-1736237174975-0be4f327f35d?w=800",
     "featured": true,
     "funRank": 999,
     "info": [
@@ -8588,7 +8588,7 @@ module.exports = [
     "tags": [
       "城市公园"
     ],
-    "cover": "/assets/hero-image.svg",
+    "cover": "https://images.unsplash.com/photo-1736237174975-0be4f327f35d?w=800",
     "featured": false,
     "funRank": 999,
     "info": [
@@ -8674,7 +8674,7 @@ module.exports = [
     "tags": [
       "城市公园"
     ],
-    "cover": "/assets/hero-image.svg",
+    "cover": "https://images.unsplash.com/photo-1736237174975-0be4f327f35d?w=800",
     "featured": false,
     "funRank": 999,
     "info": [
@@ -8752,7 +8752,7 @@ module.exports = [
     "tags": [
       "城市公园"
     ],
-    "cover": "/assets/hero-image.svg",
+    "cover": "https://images.unsplash.com/photo-1736237174975-0be4f327f35d?w=800",
     "featured": false,
     "funRank": 999,
     "info": [
@@ -8982,7 +8982,7 @@ module.exports = [
     "tags": [
       "城市公园"
     ],
-    "cover": "/assets/hero-image.svg",
+    "cover": "https://images.unsplash.com/photo-1736237174975-0be4f327f35d?w=800",
     "featured": false,
     "funRank": 999,
     "info": [
@@ -9064,7 +9064,7 @@ module.exports = [
     "tags": [
       "城市公园"
     ],
-    "cover": "/assets/hero-image.svg",
+    "cover": "https://images.unsplash.com/photo-1736237174975-0be4f327f35d?w=800",
     "featured": false,
     "funRank": 999,
     "info": [
@@ -9150,7 +9150,7 @@ module.exports = [
     "tags": [
       "城市公园"
     ],
-    "cover": "/assets/hero-image.svg",
+    "cover": "https://images.unsplash.com/photo-1736237174975-0be4f327f35d?w=800",
     "featured": false,
     "funRank": 999,
     "info": [
@@ -9232,7 +9232,7 @@ module.exports = [
     "tags": [
       "城市公园"
     ],
-    "cover": "/assets/hero-image.svg",
+    "cover": "https://images.unsplash.com/photo-1736237174975-0be4f327f35d?w=800",
     "featured": false,
     "funRank": 999,
     "info": [
@@ -9318,7 +9318,7 @@ module.exports = [
     "tags": [
       "宗教建筑"
     ],
-    "cover": "/assets/logo.svg",
+    "cover": "https://images.unsplash.com/photo-1782915763074-87f3c2c62fc1?w=800",
     "featured": false,
     "funRank": 999,
     "info": [
@@ -9408,7 +9408,7 @@ module.exports = [
     "tags": [
       "宗教建筑"
     ],
-    "cover": "/assets/logo.svg",
+    "cover": "https://images.unsplash.com/photo-1782915763074-87f3c2c62fc1?w=800",
     "featured": false,
     "funRank": 999,
     "info": [
@@ -9490,7 +9490,7 @@ module.exports = [
     "tags": [
       "宗教建筑"
     ],
-    "cover": "/assets/logo.svg",
+    "cover": "https://images.unsplash.com/photo-1782915763074-87f3c2c62fc1?w=800",
     "featured": false,
     "funRank": 999,
     "info": [
@@ -9556,7 +9556,7 @@ module.exports = [
     "tags": [
       "宗教建筑"
     ],
-    "cover": "/assets/logo.svg",
+    "cover": "https://images.unsplash.com/photo-1782915763074-87f3c2c62fc1?w=800",
     "featured": false,
     "funRank": 999,
     "info": [
@@ -9638,7 +9638,7 @@ module.exports = [
     "tags": [
       "宗教建筑"
     ],
-    "cover": "/assets/logo.svg",
+    "cover": "https://images.unsplash.com/photo-1782915763074-87f3c2c62fc1?w=800",
     "featured": false,
     "funRank": 999,
     "info": [
@@ -9720,7 +9720,7 @@ module.exports = [
     "tags": [
       "宗教建筑"
     ],
-    "cover": "/assets/logo.svg",
+    "cover": "https://images.unsplash.com/photo-1782915763074-87f3c2c62fc1?w=800",
     "featured": false,
     "funRank": 999,
     "info": [
@@ -9806,7 +9806,7 @@ module.exports = [
     "tags": [
       "宗教建筑"
     ],
-    "cover": "/assets/logo.svg",
+    "cover": "https://images.unsplash.com/photo-1782915763074-87f3c2c62fc1?w=800",
     "featured": false,
     "funRank": 999,
     "info": [
@@ -9892,7 +9892,7 @@ module.exports = [
     "tags": [
       "宗教建筑"
     ],
-    "cover": "/assets/logo.svg",
+    "cover": "https://images.unsplash.com/photo-1782915763074-87f3c2c62fc1?w=800",
     "featured": false,
     "funRank": 999,
     "info": [
@@ -9978,7 +9978,7 @@ module.exports = [
     "tags": [
       "宗教建筑"
     ],
-    "cover": "/assets/logo.svg",
+    "cover": "https://images.unsplash.com/photo-1782915763074-87f3c2c62fc1?w=800",
     "featured": false,
     "funRank": 999,
     "info": [
@@ -10060,7 +10060,7 @@ module.exports = [
     "tags": [
       "宗教建筑"
     ],
-    "cover": "/assets/logo.svg",
+    "cover": "https://images.unsplash.com/photo-1782915763074-87f3c2c62fc1?w=800",
     "featured": false,
     "funRank": 999,
     "info": [
@@ -10142,7 +10142,7 @@ module.exports = [
     "tags": [
       "宗教建筑"
     ],
-    "cover": "/assets/logo.svg",
+    "cover": "https://images.unsplash.com/photo-1782915763074-87f3c2c62fc1?w=800",
     "featured": false,
     "funRank": 999,
     "info": [
@@ -10228,7 +10228,7 @@ module.exports = [
     "tags": [
       "宗教建筑"
     ],
-    "cover": "/assets/logo.svg",
+    "cover": "https://images.unsplash.com/photo-1782915763074-87f3c2c62fc1?w=800",
     "featured": false,
     "funRank": 999,
     "info": [
@@ -10306,7 +10306,7 @@ module.exports = [
     "tags": [
       "宗教建筑"
     ],
-    "cover": "/assets/logo.svg",
+    "cover": "https://images.unsplash.com/photo-1782915763074-87f3c2c62fc1?w=800",
     "featured": false,
     "funRank": 999,
     "info": [

@@ -4,11 +4,15 @@ const path = require('path');
 const DOCS_ROOT = path.resolve(__dirname, '../../docs');
 const DATA_ROOT = path.resolve(__dirname, '../data');
 const PLACE_CATEGORIES = {
-  landmarks: { tag: '名胜古迹', fallback: '/assets/hero-image.svg' },
-  history: { tag: '近代历史', fallback: '/assets/hero-emblem.svg' },
-  religion: { tag: '宗教建筑', fallback: '/assets/logo.svg' },
-  museums: { tag: '博物馆', fallback: '/assets/qing-beijing-map.svg' },
-  parks: { tag: '城市公园', fallback: '/assets/hero-image.svg' },
+  landmarks: { tag: '名胜古迹', fallback: 'https://images.unsplash.com/photo-1509195070461-b99ef33ceb67?w=800' },
+  history: { tag: '近代历史', fallback: 'https://images.unsplash.com/photo-1583977393611-885b3e5cc701?w=800' },
+  religion: { tag: '宗教建筑', fallback: 'https://images.unsplash.com/photo-1782915763074-87f3c2c62fc1?w=800' },
+  museums: { tag: '博物馆', fallback: 'https://images.unsplash.com/photo-1701847895783-979e086dae5e?w=800' },
+  parks: { tag: '城市公园', fallback: 'https://images.unsplash.com/photo-1736237174975-0be4f327f35d?w=800' },
+};
+const COVER_OVERRIDES = {
+  'national-museum': 'https://images.unsplash.com/photo-1701847895783-979e086dae5e?w=800',
+  'jingshan-park': 'https://images.unsplash.com/photo-1736237174975-0be4f327f35d?w=800',
 };
 const GUIDE_ICONS = { 'best-time': '🌤️', transportation: '🚇', tickets: '🎫', accommodation: '🛏️', food: '🥢', theater: '🎭', routes: '🗺️', tips: '💡' };
 const FEATURED_IDS = new Set(['tiananmen', 'national-museum', 'forbidden-city', 'cao-xueqin-former-residence']);
@@ -114,7 +118,7 @@ function main() {
       return {
         id, sourcePath: sourcePath(file), parentId: parentId(categoryId, file), name, categoryId,
         summary: summaryOf(markdown, `${name}，等待继续整理详细攻略。`), tags: old.tags && old.tags.length ? old.tags : [PLACE_CATEGORIES[categoryId].tag],
-        cover: coverOf(markdown, PLACE_CATEGORIES[categoryId].fallback), featured: old.featured || FEATURED_IDS.has(id), funRank: old.funRank || 999,
+        cover: COVER_OVERRIDES[id] || coverOf(markdown, PLACE_CATEGORIES[categoryId].fallback), featured: old.featured || FEATURED_IDS.has(id), funRank: old.funRank || 999,
         info: infoOf(markdown), sections: sectionsOf(markdown, name),
       };
     })).sort((a, b) => a.sourcePath.localeCompare(b.sourcePath));

@@ -1,0 +1,14 @@
+<view wx:if="{{food}}" class="detail safe-bottom">
+  <image wx:if="{{!coverFailed}}" class="hero" src="{{food.cover}}" mode="aspectFill" binderror="onCoverError"></image>
+  <view wx:else class="hero fallback">{{food.name}}</view>
+  <view class="body">
+    <view class="eyebrow">BEIJING FOOD EDIT</view>
+    <view class="title-row"><view class="title">{{food.name}}</view><view class="favorite {{favorite ? 'active' : ''}}" bindtap="toggleFavorite">{{favorite ? '♥' : '♡'}}</view></view>
+    <view class="rating"><text wx:for="{{stars}}" wx:key="*this" class="star {{item <= food.rating ? 'active' : ''}}">★</text><text class="rating-copy">精选推荐</text></view>
+    <view class="summary">{{food.summary}}</view>
+    <view class="signature"><view class="meta-label">推荐这样点</view><view class="signature-copy">{{food.signature}}</view></view>
+    <view wx:for="{{food.sections}}" wx:key="title" class="section"><view class="section-title">{{item.title}}</view><view class="copy body-copy">{{item.body}}</view></view>
+    <view class="visit-card"><view class="section-title">就餐地址</view><view class="address">{{food.address}}</view><view class="meta-label tips-label">就餐提示</view><view class="tips">{{food.tips}}</view></view>
+  </view>
+</view>
+<empty-state wx:else title="找不到这家餐厅" description="这条美食内容可能尚未加入本地清单" button-text="返回" bind:actiontap="back"></empty-state>

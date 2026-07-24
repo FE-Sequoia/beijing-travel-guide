@@ -1,1 +1,1 @@
-.empty { text-align:center; padding:90rpx 30rpx; color:#718096; }.mark { font-size:70rpx; color:#B9513A; }.title { color:#263238; font-size:30rpx; margin:16rpx 0 8rpx; }.desc { font-size:23rpx; margin-bottom:20rpx; }button { color:#2E7D6B; background:#E8F2EC; border:0; }
+.empty { text-align:center; padding:90rpx 30rpx; color:var(--muted); }.mark { font-size:70rpx; color:var(--vermilion); }.title { color:var(--ink); font-size:30rpx; margin:16rpx 0 8rpx; }.desc { font-size:23rpx; margin-bottom:20rpx; }button { color:var(--ink-green); background:var(--soft-green); border:0; }

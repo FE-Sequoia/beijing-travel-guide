@@ -67,10 +67,14 @@ assert.match(placeCardWxss, /\.compact\s*\{[^}]*display:\s*block/s, '趣玩网�
   'pages/place-detail/index.wxss',
   'pages/guide-detail/index.wxss',
   'pages/itinerary-detail/index.wxss',
+  'pages/home/index.wxss',
+  'pages/profile/index.wxss',
+  'components/empty-state/index.wxss',
 ].forEach((file) => {
   const source = fs.readFileSync(path.join(root, file), 'utf8');
   assert.ok(!/#(?:2E7D6B|718096|E8F2EC|FFFDF9)\b/.test(source), `${file} 不应保留旧视觉色值`);
 });
+assert.match(placeCardWxss, /\.fallback\s*\{[^}]*box-sizing:\s*border-box/s, '地点卡占位封面应在隔离组件内使用 border-box');
 
 const placeDetailWxss = fs.readFileSync(path.join(root, 'pages/place-detail/index.wxss'), 'utf8');
 const guideDetailWxss = fs.readFileSync(path.join(root, 'pages/guide-detail/index.wxss'), 'utf8');

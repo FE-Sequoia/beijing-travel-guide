@@ -1,4 +1,4 @@
-<scroll-view wx:if="{{place}}" scroll-y class="detail safe-bottom">
+<view wx:if="{{place}}" class="detail safe-bottom">
   <image wx:if="{{!coverFailed}}" class="hero" src="{{place.cover}}" mode="aspectFill" binderror="onCoverError"></image>
   <view wx:else class="hero fallback">{{place.categoryName || '北京慢游记'}}</view>
   <view class="body">
@@ -12,5 +12,5 @@
     <view wx:for="{{place.sections}}" wx:key="title" class="section"><view class="section-title">{{item.title}}</view><view class="copy body-copy">{{item.body}}</view></view>
     <view wx:if="{{relatedPlaces.length}}" class="related"><view class="section-title">关联地点</view><view wx:for="{{relatedPlaces}}" wx:key="id" class="related-item" data-id="{{item.id}}" bindtap="onRelated"><text>{{item.name}}</text><text>›</text></view></view>
   </view>
-</scroll-view>
+</view>
 <empty-state wx:else title="找不到这处风景" description="这条内容可能还没有加入本地攻略" button-text="返回" bind:actiontap="back"></empty-state>

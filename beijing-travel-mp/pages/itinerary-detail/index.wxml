@@ -1,6 +1,6 @@
-<scroll-view wx:if="{{itinerary}}" scroll-y class="page safe-bottom">
+<view wx:if="{{itinerary}}" class="page safe-bottom">
   <view class="hero"><view class="eyebrow">{{itinerary.theme}}</view><view class="title">{{itinerary.title}}</view><view class="summary">{{itinerary.summary}}</view></view>
   <view class="tip body-copy">{{itinerary.tips}}</view>
   <view wx:for="{{schedule}}" wx:key="day" class="day"><view class="day-title">Day {{item.day}} · {{item.title}}</view><view class="stops"><view wx:for="{{item.stops}}" wx:for-item="stop" wx:key="placeId" class="stop" data-id="{{stop.placeId}}" bindtap="onPlace"><view class="time">{{stop.time}}</view><view class="stop-content"><view class="place">{{stop.place.name}}</view><view class="note">{{stop.note}}</view></view><text class="arrow">›</text></view></view></view>
-</scroll-view>
+</view>
 <empty-state wx:else title="找不到这条行程" description="它可能还没有加入本地攻略" button-text="返回" bind:actiontap="back"></empty-state>

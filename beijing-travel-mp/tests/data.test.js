@@ -90,6 +90,8 @@ getItineraries().forEach((itinerary) => itinerary.schedule.forEach((day) => day.
 const foods = getFoods();
 assert.strictEqual(foods.length, 12, '美食精选应收录 12 家餐厅');
 assert.strictEqual(new Set(foods.map((food) => food.id)).size, 12, '美食 ID 应保持唯一');
+const placeIds = new Set(allPlaces.map((place) => place.id));
+assert.ok(foods.every((food) => !placeIds.has(food.id)), '美食 ID 不应与景点 ID 冲突，以保证共享收藏存储可区分内容类型');
 foods.forEach((food) => {
   assert.match(food.id, /^food-/, '美食 ID 应使用 food- 前缀');
   assert.match(food.cover, /^https:\/\//, `${food.name} 应使用网络实拍封面`);

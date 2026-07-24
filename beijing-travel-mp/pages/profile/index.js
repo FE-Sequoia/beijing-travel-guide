@@ -1,2 +1,31 @@
-const { getPlaces, getFoods } = require('../../utils/data'); const storage = require('../../utils/storage');
-Page({ data: { favorites: [], history: [] }, onShow() { this.refresh(); }, refresh() { const places = getPlaces(); const foods = getFoods(); const resolve = (ids) => ids.map((id) => { const place = places.find((item) => item.id === id); if (place) return { ...place, contentType: 'place' }; const food = foods.find((item) => item.id === id); return food ? { ...food, contentType: 'food' } : null; }).filter(Boolean); this.setData({ favorites: resolve(storage.getFavorites()), history: resolve(storage.getHistory()) }); }, onPlace(e) { wx.navigateTo({ url: '/pages/place-detail/index?id=' + e.detail.id }); }, onFood(e) { wx.navigateTo({ url: '/pages/food-detail/index?id=' + e.currentTarget.dataset.id }); }, clearFavorites() { wx.showModal({ title: '清空所有收藏？', content: '清空后无法恢复。', success: (res) => { if (res.confirm) { storage.clearFavorites(); this.refresh(); } } }); }, clearHistory() { wx.showModal({ title: '清空阅读历史？', content: '清空后无法恢复。', success: (res) => { if (res.confirm) { storage.clearHistory(); this.refresh(); } } }); } });
+const { getPlaces, getFoods } = require('../../utils/data');
+const storage = require('../../utils/storage');
+
+Page({
+  data: { favorites: [], history: [] },
+  onShow() { this.refresh(); },
+  refresh() {
+    const places = getPlaces();
+    const foods = getFoods();
+    const resolve = (ids) => ids.map((id) => {
+      const place = places.find((item) => item.id === id);
+      if (place) return { ...place, contentType: 'place' };
+      const food = foods.find((item) => item.id === id);
+      return food ? { ...food, contentType: 'food', coverFailed: false } : null;
+    }).filter(Boolean);
+    this.setData({ favorites: resolve(storage.getFavorites()), history: resolve(storage.getHistory()) });
+  },
+  onPlace(e) { wx.navigateTo({ url: '/pages/place-detail/index?id=' + e.detail.id }); },
+  onFood(e) { wx.navigateTo({ url: '/pages/food-detail/index?id=' + e.currentTarget.dataset.id }); },
+  onFoodCoverError(e) {
+    const { scope, index } = e.currentTarget.dataset;
+    if (scope !== 'favorites' && scope !== 'history') return;
+    this.setData({ [`${scope}[${index}].coverFailed`]: true });
+  },
+  clearFavorites() {
+    wx.showModal({ title: '清空所有收藏？', content: '清空后无法恢复。', success: (res) => { if (res.confirm) { storage.clearFavorites(); this.refresh(); } } });
+  },
+  clearHistory() {
+    wx.showModal({ title: '清空阅读历史？', content: '清空后无法恢复。', success: (res) => { if (res.confirm) { storage.clearHistory(); this.refresh(); } } });
+  },
+});

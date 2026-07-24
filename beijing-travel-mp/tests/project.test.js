@@ -42,6 +42,7 @@ const homeWxss = fs.readFileSync(path.join(root, 'pages/home/index.wxss'), 'utf8
 const homeJs = fs.readFileSync(path.join(root, 'pages/home/index.js'), 'utf8');
 const exploreJs = fs.readFileSync(path.join(root, 'pages/explore/index.js'), 'utf8');
 const exploreWxml = fs.readFileSync(path.join(root, 'pages/explore/index.wxml'), 'utf8');
+const exploreWxss = fs.readFileSync(path.join(root, 'pages/explore/index.wxss'), 'utf8');
 const guidesWxml = fs.readFileSync(path.join(root, 'pages/guides/index.wxml'), 'utf8');
 const profileWxml = fs.readFileSync(path.join(root, 'pages/profile/index.wxml'), 'utf8');
 const appWxss = fs.readFileSync(path.join(root, 'app.wxss'), 'utf8');
@@ -69,6 +70,9 @@ assert.match(homeWxss, /\.hero\s+\.eyebrow\s*\{[^}]*color:\s*#FFF/s, '首页 Her
 assert.match(placeCardWxss, /\.compact\s*\{[^}]*display:\s*block/s, '趣玩网格卡应使用纵向布局');
 assert.match(homeWxml, /class="search-icon"/, '首页搜索入口应使用可控尺寸的图标容器');
 assert.match(exploreWxml, /class="search-icon"/, '探索页搜索框应使用可控尺寸的图标容器');
+assert.match(exploreWxss, /\.search-box\s*\{[^}]*height:\s*104rpx/s, '探索页搜索框应提供足够的固定触控高度');
+assert.match(exploreWxss, /\.search-icon\s*\{[^}]*width:\s*32rpx[^}]*height:\s*32rpx/s, '探索页搜索图标应使用清晰的固定尺寸');
+assert.match(exploreWxss, /\.search-box input\s*\{[^}]*height:\s*100%/s, '探索页输入区域应填满搜索框高度');
 assert.match(homeWxml, /action-text="全部推荐"\s+bind:actiontap="onAllRecommendations"/, '首页趣玩“全部推荐”应可跳转到探索页');
 assert.match(homeJs, /onAllRecommendations\(\)/, '首页应提供全部推荐跳转处理函数');
 assert.ok(!homeWxml.startsWith('<scroll-view'), '首页应使用页面原生滚动，避免根 scroll-view 兼容问题');

@@ -27,8 +27,7 @@
       { "pagePath": "pages/home/index", "text": "首页" },
       { "pagePath": "pages/explore/index", "text": "探索" },
       { "pagePath": "pages/food/index", "text": "美食" },
-      { "pagePath": "pages/guides/index", "text": "攻略" },
-      { "pagePath": "pages/profile/index", "text": "我的" }
+      { "pagePath": "pages/guides/index", "text": "攻略" }
     ]
   },
   "style": "v2",

@@ -2,7 +2,7 @@
 
 /* 路线规划入口卡片 - 突出样式 */
 .itinerary-entry { display:flex; align-items:center; width:100%; padding:28rpx 24rpx; margin-bottom:24rpx; background: linear-gradient(135deg, #1F5B4F 0%, #2d7a6a 100%); border-radius: 20rpx; box-shadow: 0 4rpx 16rpx rgba(31, 91, 79, 0.25); }
-.itinerary-entry .entry-icon { width:80rpx; height:80rpx; flex:none; display:flex; align-items:center; justify-content:center; background:rgba(255,255,255,0.15); border-radius:20rpx; font-size:40rpx; }
+.itinerary-entry .entry-icon { width:96rpx; height:96rpx; flex:none; display:flex; align-items:center; justify-content:center; background:rgba(255,255,255,0.15); border-radius:24rpx; font-size:48rpx; }
 .itinerary-entry .entry-content { flex:1; min-width:0; margin-left:20rpx; }
 .itinerary-entry .entry-title { font-size:32rpx; font-weight:700; color:#fff; }
 .itinerary-entry .entry-desc { color:rgba(255,255,255,0.85); font-size:24rpx; margin-top:8rpx; }

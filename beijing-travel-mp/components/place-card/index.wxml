@@ -1,4 +1,4 @@
-<view class="card {{variant}}" bindtap="onTap">
+<view class="card {{variant}}" catchtap="onTap">
   <image wx:if="{{!coverFailed}}" class="cover" src="{{place.cover}}" mode="aspectFill" binderror="onCoverError"></image>
   <view wx:else class="cover fallback"><text>{{place.categoryName || '北京'}}</text></view>
   <view class="body">

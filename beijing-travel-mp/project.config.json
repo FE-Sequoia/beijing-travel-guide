@@ -2,9 +2,18 @@
   "description": "北京慢游记个人离线攻略",
   "packOptions": {
     "ignore": [
-      { "type": "folder", "value": "tests" },
-      { "type": "folder", "value": "scripts" },
-      { "type": "file", "value": "README.md" }
+      {
+        "value": "tests",
+        "type": "folder"
+      },
+      {
+        "value": "scripts",
+        "type": "folder"
+      },
+      {
+        "value": "README.md",
+        "type": "file"
+      }
     ],
     "include": []
   },

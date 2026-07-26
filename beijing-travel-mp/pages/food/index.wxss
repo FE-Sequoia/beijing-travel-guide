@@ -5,7 +5,7 @@
 .intro-copy { margin-top:8rpx; font-size:28rpx; font-weight:700; }
 .food-grid { display:grid; grid-template-columns:repeat(2, minmax(0, 1fr)); gap:20rpx; width:100%; }
 .food-card { overflow:hidden; min-width:0; background:var(--surface); border:1rpx solid rgba(38,50,56,.07); border-radius:18rpx; box-shadow:0 8rpx 22rpx rgba(38,50,56,.06); }
-.cover { display:block; width:100%; height:210rpx; background:var(--soft-green); }
+.cover { display:block; width:100%; height:auto; aspect-ratio: 1; background:var(--soft-green); }
 .fallback { display:flex; align-items:flex-end; box-sizing:border-box; padding:16rpx; color:#FFF; background:linear-gradient(135deg,#B9513A,#D58467); font-size:23rpx; font-weight:700; line-height:1.4; }
 .card-body { min-width:0; padding:17rpx 16rpx 18rpx; }
 .food-name { overflow:hidden; color:var(--ink); font-size:26rpx; font-weight:700; line-height:1.45; text-overflow:ellipsis; white-space:nowrap; }

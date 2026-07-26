@@ -7,7 +7,7 @@
 .day-title { font-size:31rpx; font-weight:700; margin-bottom:15rpx; }
 .stops { display:grid; grid-template-columns:repeat(2, minmax(0, 1fr)); gap:18rpx; }
 .stop { overflow:hidden; background:#FFFCF7; border:1rpx solid #E6DED2; border-radius:16rpx; }
-.stop-image { width:100%; aspect-ratio:4 / 3; display:block; background:#f0f0f0; }
+.stop-image { width:100%; height:auto; aspect-ratio:1 / 1; display:block; background:#f0f0f0; }
 .stop-content { padding:20rpx; }
 .time { display:inline-block; color:#B9513A; font-size:22rpx; font-weight:700; margin-bottom:10rpx; }
 .place { font-size:30rpx; font-weight:700; }

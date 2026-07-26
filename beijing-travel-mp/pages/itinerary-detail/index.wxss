@@ -5,9 +5,9 @@
 .tip { margin-top:20rpx; padding:20rpx; border-radius:14rpx; background:#F6EEE4; color:#6D5845; font-size:23rpx; line-height:1.65; }
 .day { margin-top:34rpx; }
 .day-title { font-size:31rpx; font-weight:700; margin-bottom:15rpx; }
-.stops { display:flex; flex-direction:column; gap:20rpx; }
+.stops { display:grid; grid-template-columns:repeat(2, minmax(0, 1fr)); gap:18rpx; }
 .stop { overflow:hidden; background:#FFFCF7; border:1rpx solid #E6DED2; border-radius:16rpx; }
-.stop-image { width:100%; height:auto; display:block; background:#f0f0f0; }
+.stop-image { width:100%; aspect-ratio:4 / 3; display:block; background:#f0f0f0; }
 .stop-content { padding:20rpx; }
 .time { display:inline-block; color:#B9513A; font-size:22rpx; font-weight:700; margin-bottom:10rpx; }
 .place { font-size:30rpx; font-weight:700; }

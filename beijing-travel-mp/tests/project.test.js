@@ -113,8 +113,8 @@ assert.match(profileWxml, /food-saved-fallback/, '我的页面美食缩略图应
 let profilePage;
 let navigationUrl = '';
 const profileStorage = {
-  getFavorites: () => ['forbidden-city', 'food-quanjude-qianmen'],
-  getHistory: () => ['food-quanjude-qianmen', 'forbidden-city'],
+  getFavorites: () => ['forbidden-city', 'food-donglaishun-wangfujing'],
+  getHistory: () => ['food-donglaishun-wangfujing', 'forbidden-city'],
   clearFavorites() {},
   clearHistory() {},
 };
@@ -134,8 +134,8 @@ const profileContext = {
 profilePage.refresh.call(profileContext);
 assert.deepStrictEqual(profileContext.data.favorites.map((item) => item.contentType), ['place', 'food'], '个人页应同时解析景点与美食收藏');
 assert.deepStrictEqual(profileContext.data.history.map((item) => item.contentType), ['food', 'place'], '个人页应保留混合浏览记录顺序');
-profilePage.onFood({ currentTarget: { dataset: { id: 'food-quanjude-qianmen' } } });
-assert.strictEqual(navigationUrl, '/pages/food-detail/index?id=food-quanjude-qianmen', '个人页美食条目应打开对应详情页');
+profilePage.onFood({ currentTarget: { dataset: { id: 'food-donglaishun-wangfujing' } } });
+assert.strictEqual(navigationUrl, '/pages/food-detail/index?id=food-donglaishun-wangfujing', '个人页美食条目应打开对应详情页');
 
 [
   'pages/explore/index.wxss',

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 800 900" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="900" fill="#FAFAFA"/>
+  
+  <text x="400" y="40" text-anchor="middle" font-size="24" font-weight="bold" fill="#333">
+    清代北京城平面图
+  </text>
+  <text x="400" y="65" text-anchor="middle" font-size="12" fill="#666">
+    顺治至宣统时期（1644-1911）
+  </text>
+  
+  <g transform="translate(150, 100)">
+    <rect x="180" y="350" width="140" height="60" fill="none" stroke="#5D4037" stroke-width="6"/>
+    <rect x="185" y="355" width="130" height="50" fill="#FFEBEE" opacity="0.7"/>
+    
+    <rect x="230" y="400" width="40" height="30" fill="#B71C1C"/>
+    <text x="250" y="445" text-anchor="middle" font-size="9" fill="#8B0000">午门</text>
+    
+    <rect x="230" y="320" width="40" height="25" fill="#D32F2F"/>
+    <text x="250" y="335" text-anchor="middle" font-size="7" fill="#FFF">太和殿</text>
+    
+    <rect x="235" y="285" width="30" height="20" fill="#E53935"/>
+    <text x="250" y="298" text-anchor="middle" font-size="6" fill="#FFF">中和殿</text>
+    
+    <rect x="232" y="255" width="36" height="22" fill="#D32F2F"/>
+    <text x="250" y="270" text-anchor="middle" font-size="7" fill="#FFF">保和殿</text>
+    
+    <rect x="232" y="225" width="36" height="22" fill="#C62828"/>
+    <text x="250" y="240" text-anchor="middle" font-size="7" fill="#FFF">乾清宫</text>
+    
+    <rect x="238" y="195" width="24" height="20" fill="#B71C1C"/>
+    <text x="250" y="185" text-anchor="middle" font-size="8" fill="#8B0000">神武门</text>
+    
+    <text x="250" y="280" text-anchor="middle" font-size="10" fill="#8B0000" font-weight="bold">紫禁城</text>
+    
+    <rect x="120" y="180" width="260" height="280" fill="none" stroke="#FF8F00" stroke-width="4"/>
+    <rect x="122" y="182" width="256" height="276" fill="#FFF3E0" opacity="0.6"/>
+    
+    <rect x="238" y="470" width="24" height="18" fill="#D32F2F"/>
+    <text x="250" y="465" text-anchor="middle" font-size="8" fill="#C62828">天安门</text>
+    
+    <text x="250" y="380" text-anchor="middle" font-size="10" fill="#E65100">皇城</text>
+    
+    <rect x="0" y="0" width="500" height="550" fill="none" stroke="#8D6E63" stroke-width="10"/>
+    
+    <rect x="238" y="535" width="24" height="18" fill="#5D4037"/>
+    <text x="250" y="565" text-anchor="middle" font-size="8" fill="#333">正阳门</text>
+    
+    <rect x="230" y="-25" width="40" height="20" fill="#5D4037"/>
+    <text x="250" y="-35" text-anchor="middle" font-size="8" fill="#333">钟鼓楼</text>
+    
+    <circle cx="250" cy="140" r="3" fill="#4CAF50"/>
+    <text x="250" y="155" text-anchor="middle" font-size="8" fill="#2E7D32">景山</text>
+    
+    <text x="250" y="300" text-anchor="middle" font-size="12" fill="#2E7D32" font-weight="bold">内城</text>
+  </g>
+  
+  <g transform="translate(150, 680)">
+    <rect x="0" y="0" width="500" height="150" fill="none" stroke="#8D6E63" stroke-width="6"/>
+    
+    <rect x="230" y="130" width="40" height="20" fill="#5D4037"/>
+    <text x="250" y="165" text-anchor="middle" font-size="9" fill="#333">永定门</text>
+    
+    <circle cx="120" cy="50" r="30" fill="none" stroke="#1976D2" stroke-width="2"/>
+    <text x="120" y="95" text-anchor="middle" font-size="10" fill="#1565C0">天坛</text>
+    
+    <rect x="320" y="30" width="60" height="50" fill="none" stroke="#388E3C" stroke-width="2"/>
+    <text x="350" y="95" text-anchor="middle" font-size="10" fill="#2E7D32">先农坛</text>
+    
+    <text x="250" y="75" text-anchor="middle" font-size="11" fill="#F57C00">外城</text>
+  </g>
+  
+  <line x1="400" y1="100" x2="400" y2="830" stroke="#D32F2F" stroke-width="2" stroke-dasharray="8,4" opacity="0.5"/>
+  <text x="410" y="500" font-size="10" fill="#C62828" transform="rotate(90, 410, 500)">中轴线</text>
+  
+  <g transform="translate(680, 150)">
+    <rect x="-70" y="-10" width="160" height="200" fill="#FFF" stroke="#DDD" stroke-width="1"/>
+    <text x="10" y="15" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">图例</text>
+    
+    <rect x="-50" y="30" width="20" height="8" fill="none" stroke="#C62828" stroke-width="4"/>
+    <text x="-20" y="38" font-size="9" fill="#666">紫禁城</text>
+    
+    <rect x="-50" y="55" width="20" height="8" fill="none" stroke="#FF8F00" stroke-width="3"/>
+    <text x="-20" y="63" font-size="9" fill="#666">皇城</text>
+    
+    <rect x="-50" y="80" width="20" height="8" fill="none" stroke="#8D6E63" stroke-width="3"/>
+    <text x="-20" y="88" font-size="9" fill="#666">城墙</text>
+    
+    <rect x="-50" y="110" width="15" height="10" fill="#5D4037"/>
+    <text x="-20" y="118" font-size="9" fill="#666">城门</text>
+    
+    <circle cx="-42" cy="145" r="8" fill="none" stroke="#1976D2" stroke-width="1.5"/>
+    <text x="-20" y="148" font-size="9" fill="#666">天坛</text>
+  </g>
+  
+  <g transform="translate(50, 860)">
+    <rect x="0" y="0" width="700" height="30" fill="#F5F5F5" stroke="#DDD" stroke-width="1"/>
+    <text x="20" y="20" font-size="11" fill="#666">
+      清代北京城：紫禁城→皇城→内城→外城，四重城郭，中轴线贯穿南北
+    </text>
+  </g>
+</svg>

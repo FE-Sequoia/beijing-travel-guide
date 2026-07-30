@@ -2,7 +2,7 @@
   <view class="page-heading">吃在北京<text>从一口京味，读懂一座城的日常</text></view>
   <view class="intro-card">
     <view class="intro-kicker">LOCAL EDITS</view>
-    <view class="intro-copy">十二家值得绕路的馆子</view>
+    <view class="intro-copy">十三家值得绕路的馆子</view>
   </view>
   <view class="food-grid">
     <view wx:for="{{foods}}" wx:for-item="food" wx:key="id" class="food-card" data-id="{{food.id}}" bindtap="onFood">

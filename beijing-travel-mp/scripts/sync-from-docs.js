@@ -101,12 +101,11 @@ function parentId(categoryId, file) {
 }
 function writeData(name, records) {
   const json = `${JSON.stringify(records, null, 2)}\n`;
-  fs.writeFileSync(path.join(DATA_ROOT, `${name}.json`), json, 'utf8');
-  fs.writeFileSync(path.join(DATA_ROOT, `${name}.js`), `// 由 scripts/sync-from-docs.js 自动生成，请勿手动编辑。\nmodule.exports = ${JSON.stringify(records, null, 2)};\n`, 'utf8');
+  fs.writeFileSync(path.join(DATA_ROOT, `${name}.js`), `// 由 scripts/sync-from-docs.js 自动生成，请勿手动编辑。\nmodule.exports = ${json};\n`, 'utf8');
 }
 
 function main() {
-  const previous = JSON.parse(fs.readFileSync(path.join(DATA_ROOT, 'places.json'), 'utf8'));
+  const previous = require(path.join(DATA_ROOT, 'places'));
   const previousById = new Map(previous.map((place) => [place.id, place]));
   const places = Object.keys(PLACE_CATEGORIES).flatMap((categoryId) => listMarkdownFiles(path.join(DOCS_ROOT, categoryId))
     .filter((file) => sourcePath(file) !== `${categoryId}/index.md`)

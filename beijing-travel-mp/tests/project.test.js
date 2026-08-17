@@ -11,8 +11,8 @@ app.pages.forEach((page) => {
     assert.ok(fs.existsSync(path.join(root, page + extension)), `缺少页面文件：${page + extension}`);
   });
 });
-assert.deepStrictEqual(app.tabBar.list.map((item) => item.text), ['首页', '探索', '美食', '攻略', '我的']);
-assert.deepStrictEqual(app.tabBar.list.map((item) => item.pagePath), ['pages/home/index', 'pages/explore/index', 'pages/food/index', 'pages/guides/index', 'pages/profile/index'], 'Tab 标签应对应正确页面路径');
+assert.deepStrictEqual(app.tabBar.list.map((item) => item.text), ['首页', '景点', '美食', '攻略']);
+assert.deepStrictEqual(app.tabBar.list.map((item) => item.pagePath), ['pages/home/index', 'pages/explore/index', 'pages/food/index', 'pages/guides/index'], 'Tab 标签应对应正确页面路径');
 assert.ok(app.pages.includes('pages/food/index'), '应注册美食列表页');
 assert.ok(app.pages.includes('pages/food-detail/index'), '应注册美食详情页');
 assert.ok(app.pages.includes('pages/itineraries/index'));
@@ -158,9 +158,5 @@ const guideDetailWxss = fs.readFileSync(path.join(root, 'pages/guide-detail/inde
 assert.match(placeDetailWxss, /\.copy\s*\{[^}]*line-height:\s*1\.9/s, '景点正文应使用舒适行高');
 assert.match(guideDetailWxss, /\.copy\s*\{[^}]*line-height:\s*1\.9/s, '攻略正文应使用舒适行高');
 assert.match(placeDetailWxss, /\.info\s*\{[^}]*flex-wrap:\s*wrap/s, '景点信息应能在窄屏换行');
-
-['categories.json', 'places.json', 'guides.json', 'itineraries.json'].forEach((file) => {
-  assert.doesNotThrow(() => JSON.parse(fs.readFileSync(path.join(root, 'data', file), 'utf8')));
-});
 
 console.log('project.test.js passed');

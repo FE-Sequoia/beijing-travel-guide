@@ -71,11 +71,6 @@ assert.ok(wumen.summary && wumen.sections.length > 0, '转换后的子景点应�
 assert.ok(getRelatedPlaces(wumen).some((place) => place.id === 'forbidden-city'), '子景点详情应能找到父级地点');
 assert.ok(getRelatedPlaces(getPlaceById('forbidden-city')).some((place) => place.id === wumen.id), '父级地点详情应能找到子景点');
 
-['places', 'guides'].forEach((name) => {
-  const json = JSON.parse(fs.readFileSync(path.join(__dirname, `../data/${name}.json`), 'utf8'));
-  assert.deepStrictEqual(require(`../data/${name}`), json, `${name}.js 应与 ${name}.json 保持一致`);
-});
-
 assert.deepStrictEqual(
   getItineraries().map((item) => item.days),
   [1, 2, 3, 5, 7],

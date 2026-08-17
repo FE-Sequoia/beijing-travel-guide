@@ -25,7 +25,7 @@
     "borderStyle": "white",
     "list": [
       { "pagePath": "pages/home/index", "text": "首页", "iconPath": "assets/tabbar/home.png", "selectedIconPath": "assets/tabbar/home_selected.png" },
-      { "pagePath": "pages/explore/index", "text": "探索", "iconPath": "assets/tabbar/tansuo.png", "selectedIconPath": "assets/tabbar/tansuo_selected.png" },
+      { "pagePath": "pages/explore/index", "text": "景点", "iconPath": "assets/tabbar/tansuo.png", "selectedIconPath": "assets/tabbar/tansuo_selected.png" },
       { "pagePath": "pages/food/index", "text": "美食", "iconPath": "assets/tabbar/meishi.png", "selectedIconPath": "assets/tabbar/meishi_selected.png" },
       { "pagePath": "pages/guides/index", "text": "攻略", "iconPath": "assets/tabbar/gonglue.png", "selectedIconPath": "assets/tabbar/gonglue_selected.png" }
     ]

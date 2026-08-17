@@ -4,11 +4,11 @@ const path = require('path');
 const DOCS_ROOT = path.resolve(__dirname, '../../docs');
 const DATA_ROOT = path.resolve(__dirname, '../data');
 const PLACE_CATEGORIES = {
-  landmarks: { tag: '名胜古迹', fallback: 'https://images.unsplash.com/photo-1509195070461-b99ef33ceb67?w=800' },
-  history: { tag: '近代历史', fallback: 'https://images.unsplash.com/photo-1583977393611-885b3e5cc701?w=800' },
-  religion: { tag: '宗教建筑', fallback: 'https://images.unsplash.com/photo-1782915763074-87f3c2c62fc1?w=800' },
-  museums: { tag: '博物馆', fallback: 'https://images.unsplash.com/photo-1701847895783-979e086dae5e?w=800' },
-  parks: { tag: '城市公园', fallback: 'https://images.unsplash.com/photo-1736237174975-0be4f327f35d?w=800' },
+  landmarks: { tag: '必玩景点', fallback: 'https://images.unsplash.com/photo-1509195070461-b99ef33ceb67?w=800' },
+  history: { tag: '热门景点', fallback: 'https://images.unsplash.com/photo-1583977393611-885b3e5cc701?w=800' },
+  religion: { tag: '特色景点', fallback: 'https://images.unsplash.com/photo-1782915763074-87f3c2c62fc1?w=800' },
+  museums: { tag: '商圈夜景', fallback: 'https://images.unsplash.com/photo-1701847895783-979e086dae5e?w=800' },
+  parks: { tag: '公园漫步', fallback: 'https://images.unsplash.com/photo-1736237174975-0be4f327f35d?w=800' },
 };
 const COVER_OVERRIDES = {
   'national-museum': 'https://images.unsplash.com/photo-1701847895783-979e086dae5e?w=800',

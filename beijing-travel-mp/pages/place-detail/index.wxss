@@ -3,10 +3,8 @@
 .fallback { display:flex; align-items:flex-end; padding:34rpx; color:#FFF; background:linear-gradient(135deg,var(--ink-green),#8BB59D); font-size:34rpx; font-weight:700; }
 .body { min-width:0; padding:28rpx 30rpx 60rpx; }
 .category { color:var(--ink-green); font-size:23rpx; }
-.title-row { display:flex; min-width:0; align-items:center; justify-content:space-between; margin-top:10rpx; }
+.title-row { display:flex; min-width:0; align-items:center; margin-top:10rpx; }
 .title { min-width:0; font-size:48rpx; font-weight:700; }
-.favorite { width:68rpx; height:68rpx; flex:none; border-radius:50%; background:#F3EFE8; display:flex; align-items:center; justify-content:center; color:#B9513A; font-size:38rpx; }
-.favorite.active { background:#F9E8E2; }
 .summary { color:var(--muted); font-size:27rpx; line-height:1.7; margin-top:16rpx; }
 .tags { margin-top:18rpx; }
 .tag { display:inline-block; color:var(--ink-green); background:var(--soft-green); border-radius:8rpx; padding:7rpx 12rpx; font-size:21rpx; margin-right:10rpx; }

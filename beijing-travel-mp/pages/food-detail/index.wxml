@@ -3,7 +3,7 @@
   <view wx:else class="hero fallback">{{food.name}}</view>
   <view class="body">
     <view class="eyebrow">BEIJING FOOD EDIT</view>
-    <view class="title-row"><view class="title">{{food.name}}</view><view class="favorite {{favorite ? 'active' : ''}}" bindtap="toggleFavorite">{{favorite ? '♥' : '♡'}}</view></view>
+    <view class="title-row"><view class="title">{{food.name}}</view></view>
     <view class="rating"><text wx:for="{{stars}}" wx:key="*this" class="star {{item <= food.rating ? 'active' : ''}}">★</text><text class="rating-copy">精选推荐</text></view>
     <view class="summary">{{food.summary}}</view>
     <view class="signature"><view class="meta-label">推荐这样点</view><view class="signature-copy">{{food.signature}}</view></view>

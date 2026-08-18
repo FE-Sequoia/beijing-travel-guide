@@ -1,7 +1,6 @@
 const assert = require('assert');
 const fs = require('fs');
 const path = require('path');
-const vm = require('vm');
 
 const root = path.resolve(__dirname, '..');
 const app = JSON.parse(fs.readFileSync(path.join(root, 'app.json'), 'utf8'));
@@ -48,7 +47,6 @@ const exploreJs = fs.readFileSync(path.join(root, 'pages/explore/index.js'), 'ut
 const exploreWxml = fs.readFileSync(path.join(root, 'pages/explore/index.wxml'), 'utf8');
 const exploreWxss = fs.readFileSync(path.join(root, 'pages/explore/index.wxss'), 'utf8');
 const guidesWxml = fs.readFileSync(path.join(root, 'pages/guides/index.wxml'), 'utf8');
-const profileWxml = fs.readFileSync(path.join(root, 'pages/profile/index.wxml'), 'utf8');
 const appWxss = fs.readFileSync(path.join(root, 'app.wxss'), 'utf8');
 assert.ok(homeWxml.includes('class="category-grid"'), '首页分类应使用六宫格容器');
 assert.ok(!homeWxml.includes('scroll-x class="categories"'), '首页分类不应横向滚动');
@@ -82,7 +80,6 @@ assert.match(homeJs, /onAllRecommendations\(\)/, '首页应提供全部推荐跳
 assert.ok(!homeWxml.startsWith('<scroll-view'), '首页应使用页面原生滚动，避免根 scroll-view 兼容问题');
 assert.ok(!exploreWxml.startsWith('<scroll-view'), '探索页应使用页面原生滚动，避免根 scroll-view 兼容问题');
 assert.ok(!guidesWxml.startsWith('<scroll-view'), '攻略列表应使用页面原生滚动，确保点击事件可触发');
-assert.ok(!profileWxml.startsWith('<scroll-view'), '我的页面应使用页面原生滚动，确保空状态正常渲染');
 
 const foodWxml = fs.readFileSync(path.join(root, 'pages/food/index.wxml'), 'utf8');
 const foodWxss = fs.readFileSync(path.join(root, 'pages/food/index.wxss'), 'utf8');
@@ -98,44 +95,9 @@ assert.match(foodWxml, /wx:for-item="star"/, '星级循环应使用独立变量'
 assert.match(foodWxml, /star <= food\.rating/, '星级状态应按当前餐厅的推荐指数计算');
 assert.match(foodDetailWxml, /wx:for="\{\{food\.sections\}\}"/, '详情页应循环展示美食历史区块');
 assert.match(foodDetailWxml, /就餐地址/, '详情页应展示就餐地址');
-assert.match(foodDetailJs, /toggleFavorite\(\)/, '详情页应支持收藏');
 assert.match(foodDetailJs, /onCoverError\(\)/, '详情页应处理封面加载失败');
 assert.ok(!foodWxml.startsWith('<scroll-view'), '美食列表应使用原生页面滚动');
 assert.ok(!foodDetailWxml.startsWith('<scroll-view'), '美食详情应使用原生页面滚动');
-
-const profileJs = fs.readFileSync(path.join(root, 'pages/profile/index.js'), 'utf8');
-assert.match(profileJs, /getFoods/, '我的页面应加载美食数据以解析美食收藏');
-assert.match(profileJs, /onFood\(/, '我的页面应支持打开已收藏的美食');
-assert.match(profileJs, /onFoodCoverError\(/, '我的页面应处理美食缩略图加载失败');
-assert.match(profileWxml, /bindtap="onFood"/, '我的页面中的美食收藏应可进入详情');
-assert.match(profileWxml, /binderror="onFoodCoverError"/, '我的页面美食缩略图应绑定加载失败处理');
-assert.match(profileWxml, /food-saved-fallback/, '我的页面美食缩略图应提供文字兜底');
-let profilePage;
-let navigationUrl = '';
-const profileStorage = {
-  getFavorites: () => ['forbidden-city', 'food-donglaishun-wangfujing'],
-  getHistory: () => ['food-donglaishun-wangfujing', 'forbidden-city'],
-  clearFavorites() {},
-  clearHistory() {},
-};
-vm.runInNewContext(profileJs, {
-  Page(config) { profilePage = config; },
-  require(request) {
-    if (request === '../../utils/data') return require('../utils/data');
-    if (request === '../../utils/storage') return profileStorage;
-    throw new Error(`未知依赖：${request}`);
-  },
-  wx: { navigateTo(options) { navigationUrl = options.url; }, showModal() {} },
-});
-const profileContext = {
-  data: { favorites: [], history: [] },
-  setData(update) { Object.assign(this.data, update); },
-};
-profilePage.refresh.call(profileContext);
-assert.deepStrictEqual(profileContext.data.favorites.map((item) => item.contentType), ['place', 'food'], '个人页应同时解析景点与美食收藏');
-assert.deepStrictEqual(profileContext.data.history.map((item) => item.contentType), ['food', 'place'], '个人页应保留混合浏览记录顺序');
-profilePage.onFood({ currentTarget: { dataset: { id: 'food-donglaishun-wangfujing' } } });
-assert.strictEqual(navigationUrl, '/pages/food-detail/index?id=food-donglaishun-wangfujing', '个人页美食条目应打开对应详情页');
 
 [
   'pages/explore/index.wxss',
@@ -145,7 +107,6 @@ assert.strictEqual(navigationUrl, '/pages/food-detail/index?id=food-donglaishun-
   'pages/guide-detail/index.wxss',
   'pages/itinerary-detail/index.wxss',
   'pages/home/index.wxss',
-  'pages/profile/index.wxss',
   'components/empty-state/index.wxss',
 ].forEach((file) => {
   const source = fs.readFileSync(path.join(root, file), 'utf8');

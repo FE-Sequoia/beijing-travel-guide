@@ -9,7 +9,7 @@
       <view class="tags"><text wx:for="{{place.tags}}" wx:key="*this" class="tag">{{item}}</text></view>
     </view>
     <view wx:if="{{place.info.length}}" class="info"><view wx:for="{{place.info}}" wx:key="label" class="info-item"><view class="info-label">{{item.label}}</view><view>{{item.value}}</view></view></view>
-    <view wx:for="{{place.sections}}" wx:key="title" class="section"><view class="section-title">{{item.title}}</view><view class="copy body-copy">{{item.body}}</view></view>
+    <view wx:for="{{place.sections}}" wx:key="title" class="section"><view class="section-title">{{item.title}}</view><view wx:for="{{item.paragraphs}}" wx:key="*this" class="copy">{{item}}</view></view>
     <view wx:if="{{relatedPlaces.length}}" class="related"><view class="section-title">关联地点</view><view wx:for="{{relatedPlaces}}" wx:key="id" class="related-item" data-id="{{item.id}}" bindtap="onRelated"><text>{{item.name}}</text><text>›</text></view></view>
   </view>
 </view>

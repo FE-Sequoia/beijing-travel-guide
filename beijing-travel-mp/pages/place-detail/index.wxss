@@ -15,6 +15,7 @@
 .info-label { color:var(--muted); font-size:20rpx; margin-bottom:8rpx; }
 .section { margin-top:28rpx; }
 .section-title { font-size:32rpx; font-weight:700; margin-bottom:10rpx; }
-.copy { color:#48524E; font-size:27rpx; line-height:1.6; white-space:pre-line; }
+.copy { color:#48524E; font-size:27rpx; line-height:1.6; margin-bottom:10rpx; white-space:pre-line; }
+.copy:last-child { margin-bottom:0; }
 .related { margin-top:36rpx; padding:24rpx; background:#FFFCF7; border:1rpx solid #E6DED2; border-radius:16rpx; }
 .related-item { display:flex; justify-content:space-between; align-items:center; min-width:0; padding:20rpx 0; border-top:1rpx solid rgba(38,50,56,.1); color:var(--ink-green); font-size:27rpx; }

@@ -60,7 +60,7 @@ const CATEGORY_ID_OVERRIDES = {
   'blue-harbor': 'museums',
   'guomao-viewing-deck': 'museums',
 };
-const GUIDE_ICONS = { 'best-time': '🌤️', transportation: '🚇', tickets: '🎫', accommodation: '🛏️', food: '🥢', theater: '🎭', routes: '🗺️', tips: '💡' };
+const GUIDE_ICONS = { 'best-time': '🌤️', transportation: '🚇', tickets: '🎫', accommodation: '🛏️', theater: '🎭', routes: '🗺️', tips: '💡', nightlife: '🌙', cycling: '🚲', suburban: '🏔️' };
 const FEATURED_IDS = new Set(['tiananmen', 'forbidden-city', 'jingshan-park', 'national-museum', '798-art-zone', 'yonghegong', 'landmarks-gongwangfu', 'landmarks-shichahai']);
 const EXCLUDED_SOURCES = new Set([
   'history/anti-japanese-war.md',

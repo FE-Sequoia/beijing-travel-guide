@@ -9,6 +9,9 @@
 - [门票预约](/guide/tickets)
 - [推荐路线](/guide/routes)
 - [住宿建议](/guide/accommodation)
+- [夜游指南](/guide/nightlife)
+- [骑行指南](/guide/cycling)
+- [京郊周边游](/guide/suburban)
 - [注意事项](/guide/tips)
 
 ## 快速导航

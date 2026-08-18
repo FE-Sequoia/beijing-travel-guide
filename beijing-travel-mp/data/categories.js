@@ -1,7 +1,7 @@
 // 小程序静态数据模块：避免部分开发者工具对 require(JSON) 的兼容问题。
 module.exports = [
   {
-    "id": "landmarks",
+    "id": "featured",
     "name": "必玩景点",
     "emoji": "🏛️",
     "color": "#E9F2EE"

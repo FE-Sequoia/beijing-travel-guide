@@ -6,14 +6,16 @@ const guides = require('../data/guides');
 const itineraries = require('../data/itineraries');
 const foods = require('../data/foods');
 const categoryNames = categories.reduce((result, item) => { result[item.id] = item.name; return result; }, {});
+categoryNames.landmarks = '名胜古迹';
 const withCategoryName = (place) => ({ ...place, categoryName: categoryNames[place.categoryId] || place.categoryId });
 
 function getCategories() { return categories; }
 function getPlaces(options = {}) {
   const keyword = (options.keyword || '').trim().toLowerCase();
   return places.filter((place) => {
-    if (options.categoryId && place.categoryId !== options.categoryId) return false;
     if (options.featured && !place.featured) return false;
+    if (options.categoryId === 'featured') { if (!place.featured) return false; }
+    else if (options.categoryId && place.categoryId !== options.categoryId) return false;
     if (!keyword) return true;
     const haystack = [place.name, place.summary, ...(place.tags || [])].join(' ').toLowerCase();
     return haystack.includes(keyword);

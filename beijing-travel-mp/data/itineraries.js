@@ -76,12 +76,12 @@ module.exports = [
         "stops": [
           {
             "time": "上午",
-            "placeId": "history-summer-palace",
+            "placeId": "summer-palace",
             "note": "园区面积大，建议只选一条主线。"
           },
           {
             "time": "午后",
-            "placeId": "history-yuanmingyuan-ruins",
+            "placeId": "yuanmingyuan",
             "note": "与颐和园同日安排时注意体力。"
           },
           {
@@ -128,12 +128,12 @@ module.exports = [
         "stops": [
           {
             "time": "上午",
-            "placeId": "history-summer-palace",
+            "placeId": "summer-palace",
             "note": "重点游览长廊与昆明湖一带。"
           },
           {
             "time": "午后",
-            "placeId": "history-yuanmingyuan-ruins",
+            "placeId": "yuanmingyuan",
             "note": "从遗址中读一段近代史。"
           }
         ]
@@ -196,12 +196,12 @@ module.exports = [
         "stops": [
           {
             "time": "上午",
-            "placeId": "history-summer-palace",
+            "placeId": "summer-palace",
             "note": "主线游览。"
           },
           {
             "time": "午后",
-            "placeId": "history-yuanmingyuan-ruins",
+            "placeId": "yuanmingyuan",
             "note": "遗址漫步。"
           }
         ]
@@ -307,12 +307,12 @@ module.exports = [
         "stops": [
           {
             "time": "上午",
-            "placeId": "history-summer-palace",
+            "placeId": "summer-palace",
             "note": "颐和园主线。"
           },
           {
             "time": "午后",
-            "placeId": "history-yuanmingyuan-ruins",
+            "placeId": "yuanmingyuan",
             "note": "圆明园遗址。"
           }
         ]

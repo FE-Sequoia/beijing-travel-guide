@@ -15,13 +15,19 @@ const {
   getGuideById,
   getItineraries,
   getItineraryByDays,
-  getRelatedPlaces,
   getFoods,
   getFoodById,
 } = require('../utils/data');
 
+const { EXCLUDED_SOURCES } = require('../scripts/sync-from-docs');
 const docsRoot = path.resolve(__dirname, '../../docs');
 const placeCategories = ['landmarks', 'museums', 'parks', 'religion', 'history'];
+function isFirstLevel(categoryId, file) {
+  const relative = path.relative(path.join(docsRoot, categoryId), file).split(path.sep).join('/');
+  if (relative === 'index.md') return false;
+  if (relative.endsWith('/index.md')) return true;
+  return !relative.includes('/');
+}
 function eligibleMarkdown(categoryId) {
   const categoryRoot = path.join(docsRoot, categoryId);
   const files = [];
@@ -30,8 +36,8 @@ function eligibleMarkdown(categoryId) {
       const file = path.join(dir, entry.name);
       if (entry.isDirectory()) return walk(file);
       if (!entry.name.endsWith('.md')) return;
-      if (path.relative(categoryRoot, file) === 'index.md') return;
-      files.push(path.relative(docsRoot, file).split(path.sep).join('/'));
+      const source = path.relative(docsRoot, file).split(path.sep).join('/');
+      if (isFirstLevel(categoryId, file) && !EXCLUDED_SOURCES.has(source)) files.push(source);
     });
   }
   walk(categoryRoot);
@@ -39,8 +45,14 @@ function eligibleMarkdown(categoryId) {
 }
 
 assert.ok(getCategories().length > 0, '分类数据应可读取');
+assert.ok(getCategories().some((category) => category.id === 'featured'), '必玩景点应为独立分类');
 assert.ok(getPlaces({ categoryId: 'museums' }).every((place) => place.categoryId === 'museums'));
 assert.ok(getPlaces({ featured: true }).every((place) => place.featured), '趣玩查询只能返回推荐景点');
+assert.deepStrictEqual(
+  getPlaces({ categoryId: 'featured' }).map((place) => place.id),
+  getPlaces({ featured: true }).map((place) => place.id),
+  '必玩景点分类应返回与推荐标记一致的景点',
+);
 assert.ok(getPlaces({ keyword: '故宫' }).some((place) => place.id === 'forbidden-city'), '关键词应匹配景点名称');
 assert.deepStrictEqual(
   getPlaces({ categoryId: 'museums', sort: 'name' }).map((place) => place.name),
@@ -63,13 +75,9 @@ const allPlaces = getPlaces();
 assert.ok(allPlaces.every((place) => /^https:\/\//.test(place.cover)), '所有地点封面都应使用网络实拍图，不应回退到本地 SVG 占位图');
 assert.strictEqual(getPlaceById('national-museum').cover, 'https://images.unsplash.com/photo-1701847895783-979e086dae5e?w=800', '中国国家博物馆应使用网络实拍封面');
 assert.strictEqual(getPlaceById('jingshan-park').cover, 'https://images.unsplash.com/photo-1736237174975-0be4f327f35d?w=800', '景山公园应使用网络实拍封面');
-const wumen = syncedPlaces.find((place) => place.sourcePath === 'landmarks/forbidden-city/wumen.md');
-assert.ok(wumen, '故宫子景点应成为独立条目');
-assert.strictEqual(wumen.parentId, 'forbidden-city', '故宫子景点应关联到父级景点');
+assert.ok(syncedPlaces.every((place) => place.parentId === ''), '景点数据应只保留一级景点');
 assert.strictEqual(getPlaceById('forbidden-city').parentId, '', '目录首页生成的父级景点不应关联到自身');
-assert.ok(wumen.summary && wumen.sections.length > 0, '转换后的子景点应具有可阅读详情');
-assert.ok(getRelatedPlaces(wumen).some((place) => place.id === 'forbidden-city'), '子景点详情应能找到父级地点');
-assert.ok(getRelatedPlaces(getPlaceById('forbidden-city')).some((place) => place.id === wumen.id), '父级地点详情应能找到子景点');
+assert.ok(getPlaceById('forbidden-city').summary && getPlaceById('forbidden-city').sections.length > 0, '一级景点应具有可阅读详情');
 
 assert.deepStrictEqual(
   getItineraries().map((item) => item.days),

@@ -13,9 +13,57 @@ const PLACE_CATEGORIES = {
 const COVER_OVERRIDES = {
   'national-museum': 'https://images.unsplash.com/photo-1701847895783-979e086dae5e?w=800',
   'jingshan-park': 'https://images.unsplash.com/photo-1736237174975-0be4f327f35d?w=800',
+  '798-art-zone': 'https://images.unsplash.com/photo-1639303638626-2003b9ac307e?w=800',
+  'dashilan': 'https://images.unsplash.com/photo-1609788402404-5f5fac3f99a1?w=800',
+  'landmarks-gongwangfu': 'https://images.unsplash.com/photo-1757229238044-499fafb313e1?w=800',
+  'guozijian': 'https://images.unsplash.com/photo-1662165572076-fc1b28adf342?w=800',
+  'landmarks-nanluoguxiang': 'https://images.unsplash.com/photo-1590301729964-23833732ee04?w=800',
+  'national-theatre': 'https://images.unsplash.com/photo-1643578006768-ebeb3a175965?w=800',
+  'niaochao': 'https://images.unsplash.com/photo-1748015331424-e1a00584a42d?w=800',
+  'panjiayuan': 'https://images.unsplash.com/photo-1587825338028-f1d568e0dbb3?w=800',
+  'landmarks-qianmen': 'https://images.unsplash.com/photo-1662791950162-001406e3aedb?w=800',
+  'landmarks-shichahai': 'https://images.unsplash.com/photo-1613798518288-2e2ae91220ea?w=800',
+  'zhengyangmen': 'https://images.unsplash.com/photo-1609788402404-5f5fac3f99a1?w=800',
+  'zhonglou': 'https://images.unsplash.com/photo-1770944272463-38544f2f591f?w=800',
+  'botanical-garden': 'https://images.unsplash.com/photo-1779126745580-a44077b3f71c?w=800',
+  'xiangshan': 'https://images.unsplash.com/photo-1557228682-652da9b4cc60?w=800',
 };
 const GUIDE_ICONS = { 'best-time': '🌤️', transportation: '🚇', tickets: '🎫', accommodation: '🛏️', food: '🥢', theater: '🎭', routes: '🗺️', tips: '💡' };
-const FEATURED_IDS = new Set(['tiananmen', 'national-museum', 'forbidden-city', 'cao-xueqin-former-residence']);
+const FEATURED_IDS = new Set(['tiananmen', 'forbidden-city', 'jingshan-park', 'national-museum', '798-art-zone', 'yonghegong', 'landmarks-gongwangfu', 'landmarks-shichahai']);
+const EXCLUDED_SOURCES = new Set([
+  'history/anti-japanese-war.md',
+  'history/cai-yuanpei.md',
+  'history/guo-moruo-residence.md',
+  'history/lugou-bridge.md',
+  'history/mao-dun-residence.md',
+  'history/mausoleum.md',
+  'history/monument.md',
+  'history/national-museum.md',
+  'history/soong-ching-ling-residence.md',
+  'history/summer-palace.md',
+  'history/yuanmingyuan-ruins.md',
+  'landmarks/juyongguan.md',
+  'landmarks/lao-she-teahouse.md',
+  'museums/laoshe.md',
+  'museums/lu-xun.md',
+  'museums/military.md',
+  'museums/natural-history.md',
+  'museums/paleo-zoo.md',
+  'museums/planetarium.md',
+  'museums/science-center.md',
+  'parks/beijing-zoo.md',
+  'parks/cultural-palace.md',
+  'parks/wenyuhe.md',
+  'parks/zizhuyuan.md',
+  'religion/catholic-churches.md',
+  'religion/dongyuemiao.md',
+  'religion/fayuan.md',
+  'religion/guangji.md',
+  'religion/huoshen.md',
+  'religion/jietai.md',
+  'religion/nantang.md',
+  'religion/tanzhe.md',
+]);
 const LEGACY_IDS = {
   'history/tiananmen-square.md': 'tiananmen',
   'museums/national-museum.md': 'national-museum',
@@ -108,7 +156,7 @@ function main() {
   const previous = require(path.join(DATA_ROOT, 'places'));
   const previousById = new Map(previous.map((place) => [place.id, place]));
   const places = Object.keys(PLACE_CATEGORIES).flatMap((categoryId) => listMarkdownFiles(path.join(DOCS_ROOT, categoryId))
-    .filter((file) => sourcePath(file) !== `${categoryId}/index.md`)
+    .filter((file) => sourcePath(file) !== `${categoryId}/index.md` && !EXCLUDED_SOURCES.has(sourcePath(file)))
     .map((file) => {
       const markdown = fs.readFileSync(file, 'utf8');
       const id = canonicalId(categoryId, file);
@@ -117,10 +165,10 @@ function main() {
       return {
         id, sourcePath: sourcePath(file), parentId: parentId(categoryId, file), name, categoryId,
         summary: summaryOf(markdown, `${name}，等待继续整理详细攻略。`), tags: old.tags && old.tags.length ? old.tags : [PLACE_CATEGORIES[categoryId].tag],
-        cover: COVER_OVERRIDES[id] || coverOf(markdown, PLACE_CATEGORIES[categoryId].fallback), featured: old.featured || FEATURED_IDS.has(id), funRank: old.funRank || 999,
+        cover: COVER_OVERRIDES[id] || coverOf(markdown, PLACE_CATEGORIES[categoryId].fallback), featured: FEATURED_IDS.has(id), funRank: old.funRank || 999,
         info: infoOf(markdown), sections: sectionsOf(markdown, name),
       };
-    })).sort((a, b) => a.sourcePath.localeCompare(b.sourcePath));
+    })).filter((place) => place.parentId === '').sort((a, b) => a.sourcePath.localeCompare(b.sourcePath));
   const guides = listMarkdownFiles(path.join(DOCS_ROOT, 'guide')).filter((file) => sourcePath(file) !== 'guide/index.md')
     .map((file) => {
       const markdown = fs.readFileSync(file, 'utf8');
@@ -133,4 +181,5 @@ function main() {
   console.log(`Synced ${places.length} places and ${guides.length} guides from docs.`);
 }
 
-main();
+if (require.main === module) main();
+module.exports = { EXCLUDED_SOURCES };

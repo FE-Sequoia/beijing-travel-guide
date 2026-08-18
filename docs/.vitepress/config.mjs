@@ -131,6 +131,8 @@ export default defineConfig({
           items: [
             { text: '什刹海', link: '/landmarks/shichahai' },
             { text: '南锣鼓巷', link: '/landmarks/nanluoguxiang' },
+            { text: '五道营胡同', link: '/landmarks/wudaoying-hutong' },
+            { text: '杨梅竹斜街', link: '/landmarks/yangmeizhu-xiejie' },
             { text: '前门大街', link: '/landmarks/qianmen' },
             { text: '大栅栏', link: '/landmarks/dashilan' },
             { text: '琉璃厂', link: '/landmarks/liulichang' },
@@ -154,7 +156,20 @@ export default defineConfig({
           items: [
             { text: '鸟巢与水立方', link: '/landmarks/niaochao' },
             { text: '国家大剧院', link: '/landmarks/national-theatre' },
-            { text: '798艺术区', link: '/landmarks/798-art-zone' }
+            { text: '798艺术区', link: '/landmarks/798-art-zone' },
+            { text: '首钢园', link: '/landmarks/shougang' },
+            { text: '亮马河国际风情水岸', link: '/landmarks/liangma-river' }
+          ]
+        },
+        {
+          text: '商圈夜景',
+          collapsed: false,
+          items: [
+            { text: '王府井步行街', link: '/landmarks/wangfujing' },
+            { text: '三里屯太古里', link: '/landmarks/sanlitun' },
+            { text: '蓝色港湾', link: '/landmarks/blue-harbor' },
+            { text: '北京合生汇', link: '/landmarks/heshenghui' },
+            { text: '华熙live五棵松', link: '/landmarks/huaxi' }
           ]
         },
         {

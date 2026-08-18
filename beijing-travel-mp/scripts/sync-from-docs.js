@@ -45,6 +45,19 @@ const CATEGORY_MEMBERS = {
   religion: ['dongjiaominxiang', 'guozijian', 'wudaoying-hutong', 'yangmeizhu-xiejie', 'liangma-river', 'shougang'],
   museums: ['wangfujing', 'heshenghui', 'sanlitun', 'huaxi', 'blue-harbor'],
 };
+// 精选分类景点文档存放于 Web 语义更合适的 landmarks/ 目录，
+// 这里覆盖其 categoryId，保证小程序内仍归属特色景点/商圈夜景。
+const CATEGORY_ID_OVERRIDES = {
+  'wudaoying-hutong': 'religion',
+  'yangmeizhu-xiejie': 'religion',
+  'liangma-river': 'religion',
+  'shougang': 'religion',
+  'wangfujing': 'museums',
+  'heshenghui': 'museums',
+  'sanlitun': 'museums',
+  'huaxi': 'museums',
+  'blue-harbor': 'museums',
+};
 const GUIDE_ICONS = { 'best-time': '🌤️', transportation: '🚇', tickets: '🎫', accommodation: '🛏️', food: '🥢', theater: '🎭', routes: '🗺️', tips: '💡' };
 const FEATURED_IDS = new Set(['tiananmen', 'forbidden-city', 'jingshan-park', 'national-museum', '798-art-zone', 'yonghegong', 'landmarks-gongwangfu', 'landmarks-shichahai']);
 const EXCLUDED_SOURCES = new Set([
@@ -197,10 +210,11 @@ function main() {
       const id = canonicalId(categoryId, file);
       const old = previousById.get(id) || {};
       const name = titleOf(markdown, id);
+      const effectiveCategoryId = CATEGORY_ID_OVERRIDES[id] || categoryId;
       return {
-        id, sourcePath: sourcePath(file), parentId: parentId(categoryId, file), name, categoryId,
-        categories: categoriesOf(categoryId, id),
-        summary: summaryOf(markdown, `${name}，等待继续整理详细攻略。`), tags: old.tags && old.tags.length ? old.tags : [PLACE_CATEGORIES[categoryId].tag],
+        id, sourcePath: sourcePath(file), parentId: parentId(categoryId, file), name, categoryId: effectiveCategoryId,
+        categories: categoriesOf(effectiveCategoryId, id),
+        summary: summaryOf(markdown, `${name}，等待继续整理详细攻略。`), tags: old.tags && old.tags.length ? old.tags : [PLACE_CATEGORIES[effectiveCategoryId].tag],
         cover: COVER_OVERRIDES[id] || coverOf(markdown, PLACE_CATEGORIES[categoryId].fallback), featured: FEATURED_IDS.has(id), funRank: old.funRank || 999,
         info: infoOf(markdown), sections: sectionsOf(markdown, name),
       };

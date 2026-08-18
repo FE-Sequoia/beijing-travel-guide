@@ -371,7 +371,7 @@ module.exports = [
         "stops": [
           {
             "time": "上午",
-            "placeId": "guozijian",
+            "placeId": "zhonglou",
             "note": "选一处小而安静的文化停留。"
           },
           {

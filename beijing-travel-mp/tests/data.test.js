@@ -65,6 +65,9 @@ assert.ok(getPlaces().every((place) => !['cao-xueqin-former-residence', 'peking-
 assert.ok(getPlaces().every((place) => Array.isArray(place.categories)), '每个景点都应具备分类成员数组');
 assert.ok(getPlaces().every((place) => place.categories.length > 0 || place.featured), '非必玩景点应归属至少一个分类');
 assert.ok(getPlaces({ categoryId: 'museums' }).every((place) => place.categoryId === 'museums'));
+assert.ok(['tiananmen', 'yonghegong', 'national-museum'].every((id) => getPlaceById(id).categoryName === '必玩景点'), '仅归入必玩景点的地点徽标不应显示原目录分类');
+assert.ok(['wudaoying-hutong', 'yangmeizhu-xiejie', 'liangma-river', 'shougang'].every((id) => getPlaceById(id).categoryName === '特色景点'), '新特色景点徽标应为特色景点');
+assert.ok(['wangfujing', 'heshenghui', 'sanlitun', 'huaxi', 'blue-harbor'].every((id) => getPlaceById(id).categoryName === '商圈夜景'), '新商圈夜景徽标应为商圈夜景');
 assert.ok(getPlaces({ featured: true }).every((place) => place.featured), '趣玩查询只能返回推荐景点');
 assert.deepStrictEqual(
   getPlaces({ categoryId: 'featured' }).map((place) => place.id),

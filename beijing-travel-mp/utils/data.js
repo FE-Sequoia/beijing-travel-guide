@@ -7,7 +7,12 @@ const itineraries = require('../data/itineraries');
 const foods = require('../data/foods');
 const categoryNames = categories.reduce((result, item) => { result[item.id] = item.name; return result; }, {});
 categoryNames.landmarks = '名胜古迹';
-const withCategoryName = (place) => ({ ...place, categoryName: categoryNames[place.categoryId] || place.categoryId });
+const withCategoryName = (place) => {
+  const primary = place.categories && place.categories.includes(place.categoryId)
+    ? place.categoryId
+    : (place.categories && place.categories.length ? place.categories[0] : (place.featured ? 'featured' : place.categoryId));
+  return { ...place, categoryName: categoryNames[primary] || primary };
+};
 
 function getCategories() { return categories; }
 function getPlaces(options = {}) {

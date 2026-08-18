@@ -78,6 +78,8 @@ const EXCLUDED_SOURCES = new Set([
   'history/yuanmingyuan-ruins.md',
   'landmarks/juyongguan.md',
   'landmarks/lao-she-teahouse.md',
+  'landmarks/summer-palace/index.md',
+  'landmarks/yuanmingyuan/index.md',
   'museums/capital-museum.md',
   'museums/laoshe.md',
   'museums/lu-xun.md',

@@ -40,7 +40,7 @@ module.exports = [
     "id": "highlights-2-days",
     "days": 2,
     "title": "两日精华慢游",
-    "summary": "一天走皇城，一天看园林，把步行量控制在舒服的节奏。",
+    "summary": "一天走皇城，一天逛古寺与学府，把步行量控制在舒服的节奏。",
     "theme": "初次到访",
     "tips": "第二天路线较长，优先地铁接驳，体力不足时可省略最后一站。",
     "schedule": [
@@ -72,17 +72,17 @@ module.exports = [
       },
       {
         "day": 2,
-        "title": "园林与学府",
+        "title": "古寺与学府",
         "stops": [
           {
             "time": "上午",
-            "placeId": "summer-palace",
-            "note": "园区面积大，建议只选一条主线。"
+            "placeId": "yonghegong",
+            "note": "雍和宫五进院落，慢慢看。"
           },
           {
             "time": "午后",
-            "placeId": "yuanmingyuan",
-            "note": "与颐和园同日安排时注意体力。"
+            "placeId": "guozijian",
+            "note": "孔庙与国子监一街之隔，看辟雍大殿。"
           },
           {
             "time": "傍晚",
@@ -97,7 +97,7 @@ module.exports = [
     "id": "classic-3-days",
     "days": 3,
     "title": "三日北京经典线",
-    "summary": "中轴线、园林和城市历史各留一天，第一次来也不会太赶。",
+    "summary": "中轴线、古寺学府和城市历史各留一天，第一次来也不会太赶。",
     "theme": "经典全览",
     "tips": "第三天可根据天气在室内博物馆与户外公园之间互换。",
     "schedule": [
@@ -124,17 +124,17 @@ module.exports = [
       },
       {
         "day": 2,
-        "title": "园林回响",
+        "title": "古寺与学府",
         "stops": [
           {
             "time": "上午",
-            "placeId": "summer-palace",
-            "note": "重点游览长廊与昆明湖一带。"
+            "placeId": "yonghegong",
+            "note": "重点游览中轴大殿与藏宝阁一带。"
           },
           {
             "time": "午后",
-            "placeId": "yuanmingyuan",
-            "note": "从遗址中读一段近代史。"
+            "placeId": "guozijian",
+            "note": "从国学殿堂中读一段文教史。"
           }
         ]
       },
@@ -192,17 +192,17 @@ module.exports = [
       },
       {
         "day": 2,
-        "title": "园林湖光",
+        "title": "山色与花木",
         "stops": [
           {
             "time": "上午",
-            "placeId": "summer-palace",
-            "note": "主线游览。"
+            "placeId": "xiangshan",
+            "note": "登高看西山，秋色尤佳。"
           },
           {
             "time": "午后",
-            "placeId": "yuanmingyuan",
-            "note": "遗址漫步。"
+            "placeId": "botanical-garden",
+            "note": "从植物园缓行下山。"
           }
         ]
       },
@@ -265,7 +265,7 @@ module.exports = [
     "id": "complete-7-days",
     "days": 7,
     "title": "七日从容北京",
-    "summary": "适合第一次深入停留：经典、园林、博物馆、胡同与公园都有余白。",
+    "summary": "适合第一次深入停留：经典、古寺学府、山色花木、博物馆、胡同与公园都有余白。",
     "theme": "全景慢游",
     "tips": "把预约制场馆优先固定，再把公园和街巷作为可替换的弹性日程。",
     "schedule": [
@@ -303,17 +303,17 @@ module.exports = [
       },
       {
         "day": 3,
-        "title": "园林",
+        "title": "山色与花木",
         "stops": [
           {
             "time": "上午",
-            "placeId": "summer-palace",
-            "note": "颐和园主线。"
+            "placeId": "xiangshan",
+            "note": "香山登高，看西山余脉。"
           },
           {
             "time": "午后",
-            "placeId": "yuanmingyuan",
-            "note": "圆明园遗址。"
+            "placeId": "botanical-garden",
+            "note": "植物园缓步。"
           }
         ]
       },

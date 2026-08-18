@@ -169,7 +169,8 @@ export default defineConfig({
             { text: '三里屯太古里', link: '/landmarks/sanlitun' },
             { text: '蓝色港湾', link: '/landmarks/blue-harbor' },
             { text: '北京合生汇', link: '/landmarks/heshenghui' },
-            { text: '华熙live五棵松', link: '/landmarks/huaxi' }
+            { text: '华熙live五棵松', link: '/landmarks/huaxi' },
+            { text: '国贸商城观景台', link: '/landmarks/guomao-viewing-deck' }
           ]
         },
         {

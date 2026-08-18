@@ -36,6 +36,7 @@ const COVER_OVERRIDES = {
   'sanlitun': 'https://images.unsplash.com/photo-1531058020387-3be344556be6?w=800',
   'huaxi': 'https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=800',
   'blue-harbor': 'https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=800',
+  'guomao-viewing-deck': 'https://images.unsplash.com/photo-1611416457332-946853cc75d6?w=800',
 };
 // 精选分类改为显式成员表：热门景点/特色景点/商圈夜景 不再由 docs 目录决定，
 // 一个景点可同时属于多个分类（公园漫步等目录类分类仍由目录决定）。
@@ -43,7 +44,7 @@ const CURATED_CATEGORIES = ['history', 'religion', 'museums'];
 const CATEGORY_MEMBERS = {
   history: ['parks-temple-heaven', 'landmarks-nanluoguxiang', 'niaochao'],
   religion: ['dongjiaominxiang', 'guozijian', 'wudaoying-hutong', 'yangmeizhu-xiejie', 'liangma-river', 'shougang'],
-  museums: ['wangfujing', 'heshenghui', 'sanlitun', 'huaxi', 'blue-harbor'],
+  museums: ['wangfujing', 'heshenghui', 'sanlitun', 'huaxi', 'blue-harbor', 'guomao-viewing-deck'],
 };
 // 精选分类景点文档存放于 Web 语义更合适的 landmarks/ 目录，
 // 这里覆盖其 categoryId，保证小程序内仍归属特色景点/商圈夜景。
@@ -57,6 +58,7 @@ const CATEGORY_ID_OVERRIDES = {
   'sanlitun': 'museums',
   'huaxi': 'museums',
   'blue-harbor': 'museums',
+  'guomao-viewing-deck': 'museums',
 };
 const GUIDE_ICONS = { 'best-time': '🌤️', transportation: '🚇', tickets: '🎫', accommodation: '🛏️', food: '🥢', theater: '🎭', routes: '🗺️', tips: '💡' };
 const FEATURED_IDS = new Set(['tiananmen', 'forbidden-city', 'jingshan-park', 'national-museum', '798-art-zone', 'yonghegong', 'landmarks-gongwangfu', 'landmarks-shichahai']);

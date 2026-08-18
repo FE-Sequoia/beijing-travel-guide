@@ -58,7 +58,7 @@ assert.deepStrictEqual(
 );
 assert.deepStrictEqual(
   getPlaces({ categoryId: 'museums' }).map((place) => place.id).sort(),
-  ['blue-harbor', 'heshenghui', 'huaxi', 'sanlitun', 'wangfujing'],
+  ['blue-harbor', 'guomao-viewing-deck', 'heshenghui', 'huaxi', 'sanlitun', 'wangfujing'],
   '商圈夜景应仅收录精选成员',
 );
 assert.ok(getPlaces().every((place) => !['cao-xueqin-former-residence', 'peking-university-red', 'lao-she-residence', 'lu-xun-residence', 'baiyunguan', 'beitang', 'dongtang', 'xitang', 'capital-museum', 'museums-palace-museum'].includes(place.id)), '被移除的旧分类景点不应出现在小程序数据中');

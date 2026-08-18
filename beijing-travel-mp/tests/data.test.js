@@ -18,6 +18,7 @@ const {
   getItineraryByDays,
   getFoods,
   getFoodById,
+  searchAll,
 } = require('../utils/data');
 
 const { EXCLUDED_SOURCES } = require('../scripts/sync-from-docs');
@@ -84,6 +85,12 @@ assert.deepStrictEqual(
 assert.strictEqual(getPlaceById('missing-place'), null, '未知景点应返回 null');
 assert.ok(getGuides().length >= 7, '应提供基础行前攻略');
 assert.strictEqual(getGuideById('missing-guide'), null, '未知攻略应返回 null');
+assert.deepStrictEqual(searchAll(''), { places: [], guides: [], foods: [], itineraries: [] }, '空关键词不应返回搜索结果');
+assert.ok(searchAll('长城').places.some((place) => place.id === 'badaling'), '搜索应命中景点名称');
+assert.ok(searchAll('预约').guides.some((guide) => guide.id === 'tickets'), '搜索应命中攻略标题');
+assert.ok(searchAll('烤鸭').foods.some((food) => food.id === 'food-bianyifang-xianyukou'), '搜索应命中美食特色菜');
+assert.ok(searchAll('长城').itineraries.some((item) => item.days === 3), '搜索应命中包含该景点的行程');
+assert.ok(searchAll('长城').itineraries.every((item) => Array.isArray(item.placeNames)), '行程搜索结果应附带途经景点名');
 
 const expectedPlaceSources = placeCategories.flatMap(eligibleMarkdown).sort();
 const expectedGuideSources = eligibleMarkdown('guide');

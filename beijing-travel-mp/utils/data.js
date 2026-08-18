@@ -43,5 +43,25 @@ function getItineraries() { return itineraries.slice().sort((a, b) => a.days - b
 function getItineraryByDays(days) { return itineraries.find((item) => item.days === Number(days)) || null; }
 function getFoods() { return foods.slice(); }
 function getFoodById(id) { return foods.find((food) => food.id === id) || null; }
+function searchAll(keyword) {
+  const kw = (keyword || '').trim().toLowerCase();
+  if (!kw) return { places: [], guides: [], foods: [], itineraries: [] };
+  const hit = (text) => (text || '').toLowerCase().includes(kw);
+  return {
+    places: getPlaces({ keyword: kw }),
+    guides: guides.filter((guide) => hit(guide.title) || hit(guide.summary) || guide.sections.some((section) => hit(section.title))),
+    foods: foods.filter((food) => hit(food.name) || hit(food.summary) || hit(food.signature) || food.sections.some((section) => hit(section.title))),
+    itineraries: itineraries.filter((itinerary) => hit(itinerary.title) || hit(itinerary.summary) || itinerary.schedule.some((day) => day.stops.some((stop) => {
+      const place = places.find((item) => item.id === stop.placeId);
+      return hit(stop.note) || (place && hit(place.name));
+    }))).map((itinerary) => ({ ...itinerary, placeNames: itinerary.schedule.reduce((result, day) => {
+      day.stops.forEach((stop) => {
+        const place = places.find((item) => item.id === stop.placeId);
+        if (place) result.push(place.name);
+      });
+      return result;
+    }, []) })),
+  };
+}
 
-module.exports = { getCategories, getPlaces, getPlaceById, getRelatedPlaces, getGuides, getGuideById, getItineraries, getItineraryByDays, getFoods, getFoodById };
+module.exports = { getCategories, getPlaces, getPlaceById, getRelatedPlaces, getGuides, getGuideById, getItineraries, getItineraryByDays, getFoods, getFoodById, searchAll };

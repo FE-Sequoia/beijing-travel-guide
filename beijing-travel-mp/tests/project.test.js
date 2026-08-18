@@ -55,7 +55,7 @@ assert.match(homeWxml, /class="featured-grid"/, '首页趣玩应使用两列内�
 assert.ok(!homeWxml.includes('scroll-x class="places"'), '首页趣玩不应使用横向滚动');
 assert.match(homeWxss, /\.featured-grid\s*\{[^}]*grid-template-columns:\s*repeat\(2,\s*minmax\(0,\s*1fr\)\)/s, '趣玩应为两列网格');
 assert.ok(homeJs.includes("name: '全部景点'"), '首页分类应补足第六个入口');
-assert.match(exploreJs, /pending\s*!==\s*undefined/, '探索页应能处理“全部景点”的空分类状态');
+assert.match(exploreJs, /pending\s*!==\s*undefined/, '景点页应能处理“全部景点”的空分类状态');
 assert.match(appWxss, /box-sizing:\s*border-box/, '全局应使用 border-box 计算宽度');
 assert.match(appWxss, /overflow-x:\s*hidden/, '页面应裁切意外的横向溢出');
 assert.match(appWxss, /--paper:\s*#F7F3EC/, '全局应定义米白纸感背景令牌');
@@ -71,14 +71,14 @@ assert.match(placeCardWxss, /\.card\s*\{[^}]*box-sizing:\s*border-box/s, '隔离
 assert.match(homeWxss, /\.hero\s+\.eyebrow\s*\{[^}]*color:\s*#FFF/s, '首页 Hero 眉题应使用高对比白色');
 assert.match(placeCardWxss, /\.compact\s*\{[^}]*display:\s*block/s, '趣玩网格卡应使用纵向布局');
 assert.match(homeWxml, /class="search-icon"/, '首页搜索入口应使用可控尺寸的图标容器');
-assert.match(exploreWxml, /class="search-icon"/, '探索页搜索框应使用可控尺寸的图标容器');
-assert.match(exploreWxss, /\.search-box\s*\{[^}]*height:\s*104rpx/s, '探索页搜索框应提供足够的固定触控高度');
-assert.match(exploreWxss, /\.search-icon\s*\{[^}]*width:\s*32rpx[^}]*height:\s*32rpx/s, '探索页搜索图标应使用清晰的固定尺寸');
-assert.match(exploreWxss, /\.search-box input\s*\{[^}]*height:\s*100%/s, '探索页输入区域应填满搜索框高度');
-assert.match(homeWxml, /action-text="全部推荐"\s+bind:actiontap="onAllRecommendations"/, '首页趣玩“全部推荐”应可跳转到探索页');
+assert.match(exploreWxml, /class="search-icon"/, '景点页搜索框应使用可控尺寸的图标容器');
+assert.match(exploreWxss, /\.search-box\s*\{[^}]*height:\s*104rpx/s, '景点页搜索框应提供足够的固定触控高度');
+assert.match(exploreWxss, /\.search-icon\s*\{[^}]*width:\s*32rpx[^}]*height:\s*32rpx/s, '景点页搜索图标应使用清晰的固定尺寸');
+assert.match(exploreWxss, /\.search-box input\s*\{[^}]*height:\s*100%/s, '景点页输入区域应填满搜索框高度');
+assert.match(homeWxml, /action-text="全部推荐"\s+bind:actiontap="onAllRecommendations"/, '首页趣玩“全部推荐”应可跳转到景点页');
 assert.match(homeJs, /onAllRecommendations\(\)/, '首页应提供全部推荐跳转处理函数');
 assert.ok(!homeWxml.startsWith('<scroll-view'), '首页应使用页面原生滚动，避免根 scroll-view 兼容问题');
-assert.ok(!exploreWxml.startsWith('<scroll-view'), '探索页应使用页面原生滚动，避免根 scroll-view 兼容问题');
+assert.ok(!exploreWxml.startsWith('<scroll-view'), '景点页应使用页面原生滚动，避免根 scroll-view 兼容问题');
 assert.ok(!guidesWxml.startsWith('<scroll-view'), '攻略列表应使用页面原生滚动，确保点击事件可触发');
 
 const foodWxml = fs.readFileSync(path.join(root, 'pages/food/index.wxml'), 'utf8');

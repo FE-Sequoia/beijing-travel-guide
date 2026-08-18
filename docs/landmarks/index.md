@@ -66,15 +66,13 @@
 
 ## 长城
 
-### [八达岭长城](/landmarks/badaling/)
+### [水关长城](/landmarks/shuiguan/)
 
-万里长城精华段，最早开放的长城。
+明长城唯一以"水"命名的关隘，跨河而过，人少景美。
 
 - **门票**：40元
-- **建议时长**：3-4小时
-- **看点**：北八楼、好汉坡、关城
-
-🔍 **子景点**：[北八楼与好汉坡](/landmarks/badaling/beibalou) · [关城与城门](/landmarks/badaling/guancheng) · [敌楼与城墙](/landmarks/badaling/dilou) · [望京石与历史遗迹](/landmarks/badaling/wangjingshi) · [中国长城博物馆](/landmarks/badaling/changcheng-museum)
+- **建议时长**：2-3小时
+- **看点**：水关跨河、敌楼烽火台、京张铁路遗址
 
 ### [慕田峪长城](/landmarks/mutianyu)
 
@@ -316,7 +314,7 @@ CBD东南的美食购物中心，21街区夜宵圣地。
 | 天数 | 上午 | 下午 | 晚上 |
 |:---:|:---|:---|:---|
 | Day1 | 天安门广场 | 故宫博物院 | 王府井 |
-| Day2 | 八达岭长城 | 明十三陵 | 后海酒吧街 |
+| Day2 | 水关长城 | 明十三陵 | 后海酒吧街 |
 | Day3 | 天坛 | 颐和园 | 前门大街 |
 
 ### 门票预约须知

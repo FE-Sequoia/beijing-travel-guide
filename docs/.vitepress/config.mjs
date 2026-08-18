@@ -109,16 +109,8 @@ export default defineConfig({
           collapsed: false,
           items: [
             {
-              text: '八达岭长城',
-              link: '/landmarks/badaling/',
-              collapsed: true,
-              items: [
-                { text: '北八楼与好汉坡', link: '/landmarks/badaling/beibalou' },
-                { text: '关城与城门', link: '/landmarks/badaling/guancheng' },
-                { text: '敌楼与城墙', link: '/landmarks/badaling/dilou' },
-                { text: '望京石与历史遗迹', link: '/landmarks/badaling/wangjingshi' },
-                { text: '中国长城博物馆', link: '/landmarks/badaling/changcheng-museum' }
-              ]
+              text: '水关长城',
+              link: '/landmarks/shuiguan/'
             },
             { text: '慕田峪长城', link: '/landmarks/mutianyu' },
             { text: '司马台长城', link: '/landmarks/simatai' },
@@ -298,7 +290,7 @@ export default defineConfig({
           text: '皇家园林',
           collapsed: false,
           items: [
-            { text: '北海公园', link: '/parks/beihai-park' },
+            { text: '北海公园', link: '/landmarks/beihai/' },
             { text: '景山公园', link: '/parks/jingshan-park' },
             { text: '中山公园', link: '/parks/zhongshan-park' },
             { text: '劳动人民文化宫', link: '/parks/cultural-palace' }

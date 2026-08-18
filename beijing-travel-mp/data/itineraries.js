@@ -65,7 +65,7 @@ module.exports = [
           },
           {
             "time": "傍晚",
-            "placeId": "parks-beihai-park",
+            "placeId": "beihai",
             "note": "在湖边放慢脚步。"
           }
         ]
@@ -149,7 +149,7 @@ module.exports = [
         "stops": [
           {
             "time": "上午",
-            "placeId": "badaling",
+            "placeId": "shuiguan",
             "note": "早出发，缆车或徒步登城，预留往返时间。"
           },
           {
@@ -212,7 +212,7 @@ module.exports = [
         "stops": [
           {
             "time": "上午",
-            "placeId": "badaling",
+            "placeId": "shuiguan",
             "note": "早出发登城，索道或徒步都可，预留全天。"
           },
           {
@@ -301,7 +301,7 @@ module.exports = [
           },
           {
             "time": "午后",
-            "placeId": "parks-beihai-park",
+            "placeId": "beihai",
             "note": "湖畔休闲。"
           }
         ]
@@ -312,7 +312,7 @@ module.exports = [
         "stops": [
           {
             "time": "上午",
-            "placeId": "badaling",
+            "placeId": "shuiguan",
             "note": "全天登城，早去早回。"
           },
           {

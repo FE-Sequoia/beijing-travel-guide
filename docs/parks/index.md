@@ -6,7 +6,7 @@
 
 ## 皇家园林
 
-### [北海公园](/parks/beihai-park)
+### [北海公园](/landmarks/beihai/)
 
 现存最古老皇家园林，"让我们荡起双桨"。
 

@@ -130,7 +130,6 @@ const LEGACY_IDS = {
   'landmarks/forbidden-city/index.md': 'forbidden-city',
   'parks/jingshan-park.md': 'jingshan-park',
   'landmarks/shichahai.md': 'landmarks-shichahai',
-  'parks/beihai-park.md': 'parks-beihai-park',
   'history/summer-palace.md': 'history-summer-palace',
   'history/yuanmingyuan-ruins.md': 'history-yuanmingyuan-ruins',
   'parks/olympic-forest.md': 'parks-olympic-forest',

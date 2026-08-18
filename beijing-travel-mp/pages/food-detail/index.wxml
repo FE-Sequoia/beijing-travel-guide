@@ -7,7 +7,7 @@
     <view class="rating"><text wx:for="{{stars}}" wx:key="*this" class="star {{item <= food.rating ? 'active' : ''}}">★</text><text class="rating-copy">精选推荐</text></view>
     <view class="summary">{{food.summary}}</view>
     <view class="signature"><view class="meta-label">推荐这样点</view><view class="signature-copy">{{food.signature}}</view></view>
-    <view wx:for="{{food.sections}}" wx:key="title" class="section"><view class="section-title">{{item.title}}</view><view class="copy body-copy">{{item.body}}</view></view>
+    <view wx:for="{{food.sections}}" wx:key="title" class="section"><view class="section-title">{{item.title}}</view><view wx:for="{{item.paragraphs}}" wx:key="*this" class="copy">{{item}}</view></view>
     <view class="visit-card"><view class="section-title">就餐地址</view><view class="address">{{food.address}}</view><view class="meta-label tips-label">就餐提示</view><view class="tips">{{food.tips}}</view></view>
   </view>
 </view>

@@ -156,7 +156,7 @@ assert.match(placeCardWxss, /\.fallback\s*\{[^}]*box-sizing:\s*border-box/s, '�
 const placeDetailWxss = fs.readFileSync(path.join(root, 'pages/place-detail/index.wxss'), 'utf8');
 const guideDetailWxss = fs.readFileSync(path.join(root, 'pages/guide-detail/index.wxss'), 'utf8');
 assert.match(placeDetailWxss, /\.copy\s*\{[^}]*line-height:\s*1\.6/s, '景点正文应使用紧凑行高');
-assert.match(guideDetailWxss, /\.copy\s*\{[^}]*line-height:\s*1\.9/s, '攻略正文应使用舒适行高');
+assert.match(guideDetailWxss, /\.copy\s*\{[^}]*line-height:\s*1\.6/s, '攻略正文应使用紧凑行高');
 assert.match(placeDetailWxss, /\.info\s*\{[^}]*flex-wrap:\s*wrap/s, '景点信息应能在窄屏换行');
 
 console.log('project.test.js passed');

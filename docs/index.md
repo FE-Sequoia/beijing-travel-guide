@@ -144,7 +144,6 @@ hero:
     <a href="/beijing-travel-guide/guide/tickets"><span>🎫</span>门票预约指南</a>
     <a href="/beijing-travel-guide/guide/transportation"><span>🚇</span>交通出行</a>
     <a href="/beijing-travel-guide/guide/routes"><span>🗺️</span>推荐路线</a>
-    <a href="/beijing-travel-guide/guide/food"><span>🦆</span>美食地图</a>
     <a href="/beijing-travel-guide/guide/accommodation"><span>🏮</span>住宿建议</a>
     <a href="/beijing-travel-guide/guide/best-time"><span>📅</span>最佳时间</a>
   </div>

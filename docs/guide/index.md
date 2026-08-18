@@ -8,7 +8,6 @@
 - [交通指南](/guide/transportation)
 - [门票预约](/guide/tickets)
 - [推荐路线](/guide/routes)
-- [美食推荐](/guide/food)
 - [住宿建议](/guide/accommodation)
 - [注意事项](/guide/tips)
 

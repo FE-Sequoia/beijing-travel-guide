@@ -15,7 +15,7 @@ function getPlaces(options = {}) {
   return places.filter((place) => {
     if (options.featured && !place.featured) return false;
     if (options.categoryId === 'featured') { if (!place.featured) return false; }
-    else if (options.categoryId && place.categoryId !== options.categoryId) return false;
+    else if (options.categoryId && !(place.categories || [place.categoryId]).includes(options.categoryId)) return false;
     if (!keyword) return true;
     const haystack = [place.name, place.summary, ...(place.tags || [])].join(' ').toLowerCase();
     return haystack.includes(keyword);

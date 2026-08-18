@@ -46,6 +46,24 @@ function eligibleMarkdown(categoryId) {
 
 assert.ok(getCategories().length > 0, '分类数据应可读取');
 assert.ok(getCategories().some((category) => category.id === 'featured'), '必玩景点应为独立分类');
+assert.deepStrictEqual(
+  getPlaces({ categoryId: 'history' }).map((place) => place.id).sort(),
+  ['landmarks-nanluoguxiang', 'niaochao', 'parks-temple-heaven'],
+  '热门景点应仅收录精选成员',
+);
+assert.deepStrictEqual(
+  getPlaces({ categoryId: 'religion' }).map((place) => place.id).sort(),
+  ['dongjiaominxiang', 'guozijian', 'liangma-river', 'shougang', 'wudaoying-hutong', 'yangmeizhu-xiejie'],
+  '特色景点应仅收录精选成员',
+);
+assert.deepStrictEqual(
+  getPlaces({ categoryId: 'museums' }).map((place) => place.id).sort(),
+  ['blue-harbor', 'heshenghui', 'huaxi', 'sanlitun', 'wangfujing'],
+  '商圈夜景应仅收录精选成员',
+);
+assert.ok(getPlaces().every((place) => !['cao-xueqin-former-residence', 'peking-university-red', 'lao-she-residence', 'lu-xun-residence', 'baiyunguan', 'beitang', 'dongtang', 'xitang', 'capital-museum', 'museums-palace-museum'].includes(place.id)), '被移除的旧分类景点不应出现在小程序数据中');
+assert.ok(getPlaces().every((place) => Array.isArray(place.categories)), '每个景点都应具备分类成员数组');
+assert.ok(getPlaces().every((place) => place.categories.length > 0 || place.featured), '非必玩景点应归属至少一个分类');
 assert.ok(getPlaces({ categoryId: 'museums' }).every((place) => place.categoryId === 'museums'));
 assert.ok(getPlaces({ featured: true }).every((place) => place.featured), '趣玩查询只能返回推荐景点');
 assert.deepStrictEqual(

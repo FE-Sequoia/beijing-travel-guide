@@ -27,27 +27,50 @@ const COVER_OVERRIDES = {
   'zhonglou': 'https://images.unsplash.com/photo-1770944272463-38544f2f591f?w=800',
   'botanical-garden': 'https://images.unsplash.com/photo-1779126745580-a44077b3f71c?w=800',
   'xiangshan': 'https://images.unsplash.com/photo-1557228682-652da9b4cc60?w=800',
+  'wudaoying-hutong': 'https://images.unsplash.com/photo-1535941339077-2dd1c7963098?w=800',
+  'yangmeizhu-xiejie': 'https://images.unsplash.com/photo-1519501025264-65ba15a82390?w=800',
+  'liangma-river': 'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800',
+  'shougang': 'https://images.unsplash.com/photo-1519925610903-381054cc2a1c?w=800',
+  'wangfujing': 'https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?w=800',
+  'heshenghui': 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800',
+  'sanlitun': 'https://images.unsplash.com/photo-1531058020387-3be344556be6?w=800',
+  'huaxi': 'https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=800',
+  'blue-harbor': 'https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=800',
+};
+// 精选分类改为显式成员表：热门景点/特色景点/商圈夜景 不再由 docs 目录决定，
+// 一个景点可同时属于多个分类（公园漫步等目录类分类仍由目录决定）。
+const CURATED_CATEGORIES = ['history', 'religion', 'museums'];
+const CATEGORY_MEMBERS = {
+  history: ['parks-temple-heaven', 'landmarks-nanluoguxiang', 'niaochao'],
+  religion: ['dongjiaominxiang', 'guozijian', 'wudaoying-hutong', 'yangmeizhu-xiejie', 'liangma-river', 'shougang'],
+  museums: ['wangfujing', 'heshenghui', 'sanlitun', 'huaxi', 'blue-harbor'],
 };
 const GUIDE_ICONS = { 'best-time': '🌤️', transportation: '🚇', tickets: '🎫', accommodation: '🛏️', food: '🥢', theater: '🎭', routes: '🗺️', tips: '💡' };
 const FEATURED_IDS = new Set(['tiananmen', 'forbidden-city', 'jingshan-park', 'national-museum', '798-art-zone', 'yonghegong', 'landmarks-gongwangfu', 'landmarks-shichahai']);
 const EXCLUDED_SOURCES = new Set([
   'history/anti-japanese-war.md',
   'history/cai-yuanpei.md',
+  'history/cao-xueqin-residence.md',
   'history/guo-moruo-residence.md',
+  'history/lao-she-residence.md',
+  'history/lu-xun-residence.md',
   'history/lugou-bridge.md',
   'history/mao-dun-residence.md',
   'history/mausoleum.md',
   'history/monument.md',
   'history/national-museum.md',
+  'history/peking-university-red.md',
   'history/soong-ching-ling-residence.md',
   'history/summer-palace.md',
   'history/yuanmingyuan-ruins.md',
   'landmarks/juyongguan.md',
   'landmarks/lao-she-teahouse.md',
+  'museums/capital-museum.md',
   'museums/laoshe.md',
   'museums/lu-xun.md',
   'museums/military.md',
   'museums/natural-history.md',
+  'museums/palace-museum.md',
   'museums/paleo-zoo.md',
   'museums/planetarium.md',
   'museums/science-center.md',
@@ -55,7 +78,10 @@ const EXCLUDED_SOURCES = new Set([
   'parks/cultural-palace.md',
   'parks/wenyuhe.md',
   'parks/zizhuyuan.md',
+  'religion/baiyunguan.md',
+  'religion/beitang.md',
   'religion/catholic-churches.md',
+  'religion/dongtang.md',
   'religion/dongyuemiao.md',
   'religion/fayuan.md',
   'religion/guangji.md',
@@ -63,6 +89,7 @@ const EXCLUDED_SOURCES = new Set([
   'religion/jietai.md',
   'religion/nantang.md',
   'religion/tanzhe.md',
+  'religion/xitang.md',
 ]);
 const LEGACY_IDS = {
   'history/tiananmen-square.md': 'tiananmen',
@@ -147,6 +174,14 @@ function parentId(categoryId, file) {
   const parent = path.posix.dirname(relative);
   return parent === '.' ? '' : parent;
 }
+function categoriesOf(categoryId, id) {
+  const result = new Set();
+  if (!CURATED_CATEGORIES.includes(categoryId)) result.add(categoryId);
+  Object.keys(CATEGORY_MEMBERS).forEach((curated) => {
+    if (CATEGORY_MEMBERS[curated].includes(id)) result.add(curated);
+  });
+  return [...result];
+}
 function writeData(name, records) {
   const json = `${JSON.stringify(records, null, 2)}\n`;
   fs.writeFileSync(path.join(DATA_ROOT, `${name}.js`), `// 由 scripts/sync-from-docs.js 自动生成，请勿手动编辑。\nmodule.exports = ${json};\n`, 'utf8');
@@ -164,6 +199,7 @@ function main() {
       const name = titleOf(markdown, id);
       return {
         id, sourcePath: sourcePath(file), parentId: parentId(categoryId, file), name, categoryId,
+        categories: categoriesOf(categoryId, id),
         summary: summaryOf(markdown, `${name}，等待继续整理详细攻略。`), tags: old.tags && old.tags.length ? old.tags : [PLACE_CATEGORIES[categoryId].tag],
         cover: COVER_OVERRIDES[id] || coverOf(markdown, PLACE_CATEGORIES[categoryId].fallback), featured: FEATURED_IDS.has(id), funRank: old.funRank || 999,
         info: infoOf(markdown), sections: sectionsOf(markdown, name),

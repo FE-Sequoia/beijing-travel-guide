@@ -50,7 +50,7 @@ assert.ok(getCategories().length > 0, '分类数据应可读取');
 assert.ok(getCategories().some((category) => category.id === 'featured'), '必玩景点应为独立分类');
 assert.deepStrictEqual(
   getPlaces({ categoryId: 'history' }).map((place) => place.id).sort(),
-  ['landmarks-nanluoguxiang', 'niaochao', 'parks-temple-heaven'],
+  ['landmarks-nanluoguxiang', 'niaochao', 'temple-of-heaven'],
   '热门景点应仅收录精选成员',
 );
 assert.deepStrictEqual(
@@ -103,7 +103,7 @@ assert.deepStrictEqual(getGuides().map((guide) => guide.sourcePath).sort(), expe
 const allPlaces = getPlaces();
 assert.ok(allPlaces.every((place) => /^https:\/\//.test(place.cover)), '所有地点封面都应使用网络实拍图，不应回退到本地 SVG 占位图');
 assert.strictEqual(getPlaceById('national-museum').cover, 'https://images.unsplash.com/photo-1701847895783-979e086dae5e?w=800', '中国国家博物馆应使用网络实拍封面');
-assert.strictEqual(getPlaceById('jingshan-park').cover, 'https://images.unsplash.com/photo-1736237174975-0be4f327f35d?w=800', '景山公园应使用网络实拍封面');
+assert.strictEqual(getPlaceById('jingshan').cover, 'https://images.unsplash.com/photo-1736237174975-0be4f327f35d?w=800', '景山公园应使用网络实拍封面');
 assert.ok(syncedPlaces.every((place) => place.parentId === ''), '景点数据应只保留一级景点');
 assert.strictEqual(getPlaceById('forbidden-city').parentId, '', '目录首页生成的父级景点不应关联到自身');
 assert.ok(getPlaceById('forbidden-city').summary && getPlaceById('forbidden-city').sections.length > 0, '一级景点应具有可阅读详情');

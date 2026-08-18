@@ -24,7 +24,7 @@ module.exports = [
           },
           {
             "time": "午后",
-            "placeId": "jingshan-park",
+            "placeId": "jingshan",
             "note": "登高看中轴线，再按体力继续。"
           },
           {
@@ -60,7 +60,7 @@ module.exports = [
           },
           {
             "time": "午后",
-            "placeId": "jingshan-park",
+            "placeId": "jingshan",
             "note": "用一段登高收束故宫视角。"
           },
           {
@@ -117,7 +117,7 @@ module.exports = [
           },
           {
             "time": "午后",
-            "placeId": "jingshan-park",
+            "placeId": "jingshan",
             "note": "看故宫全景。"
           }
         ]
@@ -185,7 +185,7 @@ module.exports = [
           },
           {
             "time": "午后",
-            "placeId": "jingshan-park",
+            "placeId": "jingshan",
             "note": "登景山。"
           }
         ]
@@ -254,7 +254,7 @@ module.exports = [
           },
           {
             "time": "午后",
-            "placeId": "parks-temple-heaven",
+            "placeId": "temple-of-heaven",
             "note": "公园主轴线。"
           },
           {
@@ -296,7 +296,7 @@ module.exports = [
         "stops": [
           {
             "time": "上午",
-            "placeId": "jingshan-park",
+            "placeId": "jingshan",
             "note": "高处看城。"
           },
           {
@@ -381,7 +381,7 @@ module.exports = [
         "stops": [
           {
             "time": "上午",
-            "placeId": "parks-temple-heaven",
+            "placeId": "temple-of-heaven",
             "note": "留意开放安排。"
           },
           {
@@ -391,7 +391,7 @@ module.exports = [
           },
           {
             "time": "傍晚",
-            "placeId": "zhonglou",
+            "placeId": "drum-tower",
             "note": "选一处小而安静的文化停留。"
           }
         ]

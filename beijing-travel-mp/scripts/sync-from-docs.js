@@ -12,7 +12,7 @@ const PLACE_CATEGORIES = {
 };
 const COVER_OVERRIDES = {
   'national-museum': 'https://images.unsplash.com/photo-1701847895783-979e086dae5e?w=800',
-  'jingshan-park': 'https://images.unsplash.com/photo-1736237174975-0be4f327f35d?w=800',
+  'jingshan': 'https://images.unsplash.com/photo-1736237174975-0be4f327f35d?w=800',
   '798-art-zone': 'https://images.unsplash.com/photo-1639303638626-2003b9ac307e?w=800',
   'dashilan': 'https://images.unsplash.com/photo-1609788402404-5f5fac3f99a1?w=800',
   'landmarks-gongwangfu': 'https://images.unsplash.com/photo-1757229238044-499fafb313e1?w=800',
@@ -24,7 +24,6 @@ const COVER_OVERRIDES = {
   'landmarks-qianmen': 'https://images.unsplash.com/photo-1662791950162-001406e3aedb?w=800',
   'landmarks-shichahai': 'https://images.unsplash.com/photo-1613798518288-2e2ae91220ea?w=800',
   'zhengyangmen': 'https://images.unsplash.com/photo-1609788402404-5f5fac3f99a1?w=800',
-  'zhonglou': 'https://images.unsplash.com/photo-1770944272463-38544f2f591f?w=800',
   'botanical-garden': 'https://images.unsplash.com/photo-1779126745580-a44077b3f71c?w=800',
   'xiangshan': 'https://images.unsplash.com/photo-1557228682-652da9b4cc60?w=800',
   'wudaoying-hutong': 'https://images.unsplash.com/photo-1535941339077-2dd1c7963098?w=800',
@@ -42,7 +41,7 @@ const COVER_OVERRIDES = {
 // 一个景点可同时属于多个分类（公园漫步等目录类分类仍由目录决定）。
 const CURATED_CATEGORIES = ['history', 'religion', 'museums'];
 const CATEGORY_MEMBERS = {
-  history: ['parks-temple-heaven', 'landmarks-nanluoguxiang', 'niaochao'],
+  history: ['temple-of-heaven', 'landmarks-nanluoguxiang', 'niaochao'],
   religion: ['dongjiaominxiang', 'guozijian', 'wudaoying-hutong', 'yangmeizhu-xiejie', 'liangma-river', 'shougang'],
   museums: ['wangfujing', 'heshenghui', 'sanlitun', 'huaxi', 'blue-harbor', 'guomao-viewing-deck'],
 };
@@ -61,7 +60,7 @@ const CATEGORY_ID_OVERRIDES = {
   'guomao-viewing-deck': 'museums',
 };
 const GUIDE_ICONS = { 'best-time': '🌤️', transportation: '🚇', tickets: '🎫', accommodation: '🛏️', theater: '🎭', routes: '🗺️', tips: '💡', nightlife: '🌙', cycling: '🚲', suburban: '🏔️' };
-const FEATURED_IDS = new Set(['tiananmen', 'forbidden-city', 'jingshan-park', 'national-museum', '798-art-zone', 'yonghegong', 'landmarks-gongwangfu', 'landmarks-shichahai']);
+const FEATURED_IDS = new Set(['tiananmen', 'forbidden-city', 'jingshan', 'national-museum', '798-art-zone', 'yonghegong', 'landmarks-gongwangfu', 'landmarks-shichahai']);
 const EXCLUDED_SOURCES = new Set([
   'history/anti-japanese-war.md',
   'history/cai-yuanpei.md',
@@ -128,14 +127,12 @@ const LEGACY_IDS = {
   'history/tiananmen-square.md': 'tiananmen',
   'museums/national-museum.md': 'national-museum',
   'landmarks/forbidden-city/index.md': 'forbidden-city',
-  'parks/jingshan-park.md': 'jingshan-park',
   'landmarks/shichahai.md': 'landmarks-shichahai',
   'history/summer-palace.md': 'history-summer-palace',
   'history/yuanmingyuan-ruins.md': 'history-yuanmingyuan-ruins',
   'parks/olympic-forest.md': 'parks-olympic-forest',
   'landmarks/qianmen.md': 'landmarks-qianmen',
   'landmarks/nanluoguxiang.md': 'landmarks-nanluoguxiang',
-  'parks/temple-heaven.md': 'parks-temple-heaven',
   'history/cao-xueqin-residence.md': 'cao-xueqin-former-residence',
   'landmarks/gongwangfu.md': 'landmarks-gongwangfu',
 };

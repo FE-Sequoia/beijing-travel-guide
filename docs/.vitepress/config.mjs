@@ -291,7 +291,7 @@ export default defineConfig({
           collapsed: false,
           items: [
             { text: '北海公园', link: '/landmarks/beihai/' },
-            { text: '景山公园', link: '/parks/jingshan-park' },
+            { text: '景山公园', link: '/landmarks/jingshan/' },
             { text: '中山公园', link: '/parks/zhongshan-park' },
             { text: '劳动人民文化宫', link: '/parks/cultural-palace' }
           ]
@@ -300,7 +300,7 @@ export default defineConfig({
           text: '城市公园',
           collapsed: false,
           items: [
-            { text: '天坛公园', link: '/parks/temple-heaven' },
+            { text: '天坛公园', link: '/landmarks/temple-of-heaven/' },
             { text: '地坛公园', link: '/parks/ditan-park' },
             { text: '日坛公园', link: '/parks/ritan-park' },
             { text: '月坛公园', link: '/parks/yuetan-park' }

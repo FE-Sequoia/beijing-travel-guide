@@ -14,7 +14,7 @@
 - **特色**：白塔、九龙壁、让我们荡起双桨
 - **最佳季节**：夏季荷花
 
-### [景山公园](/parks/jingshan-park)
+### [景山公园](/landmarks/jingshan/)
 
 俯瞰紫禁城最佳位置。
 
@@ -40,7 +40,7 @@
 
 ## 皇家祭坛
 
-### [天坛公园](/parks/temple-heaven)
+### [天坛公园](/landmarks/temple-of-heaven/)
 
 明清祭天圣地，世界文化遗产。
 

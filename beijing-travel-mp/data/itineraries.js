@@ -97,9 +97,9 @@ module.exports = [
     "id": "classic-3-days",
     "days": 3,
     "title": "三日北京经典线",
-    "summary": "中轴线、古寺学府和城市历史各留一天，第一次来也不会太赶。",
+    "summary": "中轴线、古寺学府和长城各留一天，第一次来也能把最想看的都看遍。",
     "theme": "经典全览",
-    "tips": "第三天可根据天气在室内博物馆与户外公园之间互换。",
+    "tips": "第二天可在雍和宫、国子监和奥林匹克森林公园之间灵活取舍；去长城请早出发，预留往返时间。",
     "schedule": [
       {
         "day": 1,
@@ -135,27 +135,27 @@ module.exports = [
             "time": "午后",
             "placeId": "guozijian",
             "note": "从国学殿堂中读一段文教史。"
+          },
+          {
+            "time": "傍晚",
+            "placeId": "parks-olympic-forest",
+            "note": "顺路看鸟巢与水立方的灯光。"
           }
         ]
       },
       {
         "day": 3,
-        "title": "历史与街巷",
+        "title": "长城与老城",
         "stops": [
           {
             "time": "上午",
-            "placeId": "national-museum",
-            "note": "提前确认预约和开放安排。"
-          },
-          {
-            "time": "午后",
-            "placeId": "landmarks-qianmen",
-            "note": "从老字号与街景中慢慢逛。"
+            "placeId": "badaling",
+            "note": "早出发，缆车或徒步登城，预留往返时间。"
           },
           {
             "time": "傍晚",
             "placeId": "landmarks-nanluoguxiang",
-            "note": "避开主街高峰，转进附近胡同。"
+            "note": "回城后沿胡同慢逛，晚餐随心。"
           }
         ]
       }
@@ -165,7 +165,7 @@ module.exports = [
     "id": "deep-5-days",
     "days": 5,
     "title": "五日深度体验",
-    "summary": "在经典之外，给博物馆、公园与胡同各留出从容的一天。",
+    "summary": "经典、长城、博物馆、胡同与公园各留一天，把北京的高光都走一遍。",
     "theme": "慢节奏城市漫游",
     "tips": "每一天最多安排两处重点景点，下午留出交通与休息弹性。",
     "schedule": [
@@ -208,17 +208,17 @@ module.exports = [
       },
       {
         "day": 3,
-        "title": "博物馆的一天",
+        "title": "长城一日",
         "stops": [
           {
             "time": "上午",
-            "placeId": "national-museum",
-            "note": "选定一个展览主题。"
+            "placeId": "badaling",
+            "note": "早出发登城，索道或徒步都可，预留全天。"
           },
           {
-            "time": "午后",
-            "placeId": "parks-beihai-park",
-            "note": "湖边缓一缓。"
+            "time": "傍晚",
+            "placeId": "wangfujing",
+            "note": "回城后逛步行街，晚餐自由。"
           }
         ]
       },
@@ -245,15 +245,20 @@ module.exports = [
       },
       {
         "day": 5,
-        "title": "公园与留白",
+        "title": "博物馆与公园",
         "stops": [
           {
             "time": "上午",
+            "placeId": "national-museum",
+            "note": "看一条展览主线。"
+          },
+          {
+            "time": "午后",
             "placeId": "parks-temple-heaven",
             "note": "公园主轴线。"
           },
           {
-            "time": "午后",
+            "time": "傍晚",
             "placeId": "parks-olympic-forest",
             "note": "按体力调整。"
           }
@@ -265,9 +270,9 @@ module.exports = [
     "id": "complete-7-days",
     "days": 7,
     "title": "七日从容北京",
-    "summary": "适合第一次深入停留：经典、古寺学府、山色花木、博物馆、胡同与公园都有余白。",
+    "summary": "适合第一次深入停留：中轴线、长城、山色花木、博物馆、胡同与公园都有余白。",
     "theme": "全景慢游",
-    "tips": "把预约制场馆优先固定，再把公园和街巷作为可替换的弹性日程。",
+    "tips": "把预约制场馆优先固定，再把公园和街巷作为可替换的弹性日程；长城日务必早出发。",
     "schedule": [
       {
         "day": 1,
@@ -303,6 +308,22 @@ module.exports = [
       },
       {
         "day": 3,
+        "title": "长城与夜色",
+        "stops": [
+          {
+            "time": "上午",
+            "placeId": "badaling",
+            "note": "全天登城，早去早回。"
+          },
+          {
+            "time": "傍晚",
+            "placeId": "wangfujing",
+            "note": "回城逛步行街。"
+          }
+        ]
+      },
+      {
+        "day": 4,
         "title": "山色与花木",
         "stops": [
           {
@@ -318,7 +339,7 @@ module.exports = [
         ]
       },
       {
-        "day": 4,
+        "day": 5,
         "title": "国博与前门",
         "stops": [
           {
@@ -334,7 +355,7 @@ module.exports = [
         ]
       },
       {
-        "day": 5,
+        "day": 6,
         "title": "胡同",
         "stops": [
           {
@@ -346,11 +367,16 @@ module.exports = [
             "time": "午后",
             "placeId": "landmarks-shichahai",
             "note": "水边与街巷。"
+          },
+          {
+            "time": "傍晚",
+            "placeId": "landmarks-gongwangfu",
+            "note": "按预约与体力决定。"
           }
         ]
       },
       {
-        "day": 6,
+        "day": 7,
         "title": "天坛与公园",
         "stops": [
           {
@@ -362,22 +388,11 @@ module.exports = [
             "time": "午后",
             "placeId": "parks-olympic-forest",
             "note": "森林公园散步。"
-          }
-        ]
-      },
-      {
-        "day": 7,
-        "title": "留白日",
-        "stops": [
-          {
-            "time": "上午",
-            "placeId": "zhonglou",
-            "note": "选一处小而安静的文化停留。"
           },
           {
-            "time": "午后",
-            "placeId": "landmarks-gongwangfu",
-            "note": "按预约与体力决定。"
+            "time": "傍晚",
+            "placeId": "zhonglou",
+            "note": "选一处小而安静的文化停留。"
           }
         ]
       }

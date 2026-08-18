@@ -11,6 +11,7 @@ const {
   getCategories,
   getPlaces,
   getPlaceById,
+  getRelatedPlaces,
   getGuides,
   getGuideById,
   getItineraries,
@@ -99,6 +100,14 @@ assert.strictEqual(getPlaceById('jingshan-park').cover, 'https://images.unsplash
 assert.ok(syncedPlaces.every((place) => place.parentId === ''), '景点数据应只保留一级景点');
 assert.strictEqual(getPlaceById('forbidden-city').parentId, '', '目录首页生成的父级景点不应关联到自身');
 assert.ok(getPlaceById('forbidden-city').summary && getPlaceById('forbidden-city').sections.length > 0, '一级景点应具有可阅读详情');
+assert.ok(getPlaceById('forbidden-city').children.length >= 10, '故宫应包含景区内子景点导览');
+assert.strictEqual(getPlaceById('forbidden-city').children[0].id, 'forbidden-city-baohe-dian', '子景点应使用规范 ID');
+assert.ok(getPlaceById('forbidden-city-baohe-dian') && getPlaceById('forbidden-city-baohe-dian').parentId === 'forbidden-city', '子景点应可单独打开并关联父级');
+assert.ok(getPlaceById('forbidden-city-baohe-dian').sections.length > 0, '子景点应具有可阅读详情');
+assert.deepStrictEqual(getRelatedPlaces(getPlaceById('forbidden-city-baohe-dian')).map((p) => p.id), ['forbidden-city'], '子景点应提供返回父级关联');
+assert.ok(getPlaces().every((place) => place.parentId === ''), '列表查询不应混入子景点');
+const ticketsGuide = getGuideById('tickets');
+assert.ok(ticketsGuide.sections.some((section) => /故宫博物院｜提前7天/.test(section.body)), '攻略表格内容应转换为可读文本，不丢失表格信息');
 
 assert.deepStrictEqual(
   getItineraries().map((item) => item.days),

@@ -7,17 +7,20 @@ const itineraries = require('../data/itineraries');
 const foods = require('../data/foods');
 const categoryNames = categories.reduce((result, item) => { result[item.id] = item.name; return result; }, {});
 categoryNames.landmarks = '名胜古迹';
+const byParent = {};
+places.forEach((place) => { (byParent[place.parentId] = byParent[place.parentId] || []).push(place); });
 const withCategoryName = (place) => {
   const primary = place.categories && place.categories.includes(place.categoryId)
     ? place.categoryId
     : (place.categories && place.categories.length ? place.categories[0] : (place.featured ? 'featured' : place.categoryId));
-  return { ...place, categoryName: categoryNames[primary] || primary };
+  return { ...place, categoryName: categoryNames[primary] || primary, children: (byParent[place.id] || []).map((child) => ({ id: child.id, name: child.name, summary: child.summary })) };
 };
 
 function getCategories() { return categories; }
 function getPlaces(options = {}) {
   const keyword = (options.keyword || '').trim().toLowerCase();
   return places.filter((place) => {
+    if (place.parentId) return false;
     if (options.featured && !place.featured) return false;
     if (options.categoryId === 'featured') { if (!place.featured) return false; }
     else if (options.categoryId && !(place.categories || [place.categoryId]).includes(options.categoryId)) return false;
@@ -32,7 +35,7 @@ function getPlaces(options = {}) {
 function getPlaceById(id) { const place = places.find((item) => item.id === id); return place ? withCategoryName(place) : null; }
 function getRelatedPlaces(place) {
   if (!place) return [];
-  return places.filter((item) => item.id === place.parentId || item.parentId === place.id).map(withCategoryName);
+  return places.filter((item) => item.id === place.parentId).map(withCategoryName);
 }
 function getGuides() { return guides; }
 function getGuideById(id) { return guides.find((guide) => guide.id === id) || null; }

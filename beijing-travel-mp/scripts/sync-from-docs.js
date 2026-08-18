@@ -82,6 +82,22 @@ const EXCLUDED_SOURCES = new Set([
   'landmarks/lao-she-teahouse.md',
   'landmarks/summer-palace/index.md',
   'landmarks/yuanmingyuan/index.md',
+  'landmarks/summer-palace/changlang.md',
+  'landmarks/summer-palace/dehe-yuan.md',
+  'landmarks/summer-palace/foxiang-ge.md',
+  'landmarks/summer-palace/kunming-lake.md',
+  'landmarks/summer-palace/paiyun-dian.md',
+  'landmarks/summer-palace/renshou-dian.md',
+  'landmarks/summer-palace/shifang.md',
+  'landmarks/summer-palace/suzhou-street.md',
+  'landmarks/summer-palace/xidi-bridges.md',
+  'landmarks/summer-palace/xiequ-yuan.md',
+  'landmarks/yuanmingyuan/dashuifa.md',
+  'landmarks/yuanmingyuan/fuhai.md',
+  'landmarks/yuanmingyuan/haiyan-tang.md',
+  'landmarks/yuanmingyuan/qichun-yuan.md',
+  'landmarks/yuanmingyuan/wenyuan-ge.md',
+  'landmarks/yuanmingyuan/xiyang-lou.md',
   'museums/capital-museum.md',
   'museums/laoshe.md',
   'museums/lu-xun.md',
@@ -149,6 +165,10 @@ function summaryOf(markdown, fallback) {
     .filter((block) => block.length > 20 && !/^\|/.test(block) && !/^#{1,3}\s/.test(block));
   return (blocks[0] || fallback).slice(0, 220);
 }
+function isTableSeparator(line) {
+  const cells = line.split('|').slice(1, -1).map((cell) => cell.trim());
+  return cells.length > 0 && cells.every((cell) => /^:?-{2,}:?$/.test(cell));
+}
 function sectionsOf(markdown, fallback) {
   const lines = markdown.split('\n');
   const sections = [];
@@ -158,9 +178,13 @@ function sectionsOf(markdown, fallback) {
     if (heading) {
       if (current && current.body.length) sections.push({ title: current.title, body: current.body.join('\n').trim() });
       current = { title: stripMarkdown(heading[1]), body: [] };
-    } else if (current && !/^!\[/.test(line) && !/^\|/.test(line) && !/^---+$/.test(line.trim())) {
-      const nested = line.match(/^###\s+(.+)$/);
-      current.body.push(nested ? `【${stripMarkdown(nested[1])}】` : stripMarkdown(line));
+    } else if (current && !/^!\[/.test(line) && !/^---+$/.test(line.trim())) {
+      if (/^\|/.test(line)) {
+        if (!isTableSeparator(line)) current.body.push(line.split('|').slice(1, -1).map(stripMarkdown).join('｜'));
+      } else {
+        const nested = line.match(/^###\s+(.+)$/);
+        current.body.push(nested ? `【${stripMarkdown(nested[1])}】` : stripMarkdown(line));
+      }
     }
   });
   if (current && current.body.length) sections.push({ title: current.title, body: current.body.join('\n').replace(/\n{3,}/g, '\n\n').trim() });
@@ -222,7 +246,7 @@ function main() {
         cover: COVER_OVERRIDES[id] || coverOf(markdown, PLACE_CATEGORIES[categoryId].fallback), featured: FEATURED_IDS.has(id), funRank: old.funRank || 999,
         info: infoOf(markdown), sections: sectionsOf(markdown, name),
       };
-    })).filter((place) => place.parentId === '').sort((a, b) => a.sourcePath.localeCompare(b.sourcePath));
+    })).sort((a, b) => a.sourcePath.localeCompare(b.sourcePath));
   const guides = listMarkdownFiles(path.join(DOCS_ROOT, 'guide')).filter((file) => sourcePath(file) !== 'guide/index.md')
     .map((file) => {
       const markdown = fs.readFileSync(file, 'utf8');

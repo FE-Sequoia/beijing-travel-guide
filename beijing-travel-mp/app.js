@@ -1,4 +1,4 @@
 App({
-  globalData: { appName: '北京慢游记' },
+  globalData: { appName: '丫头京游攻略' },
   onLaunch() {}
 });

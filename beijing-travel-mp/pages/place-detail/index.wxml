@@ -1,6 +1,6 @@
 <view wx:if="{{place}}" class="detail safe-bottom">
   <image wx:if="{{!coverFailed}}" class="hero" src="{{place.cover}}" mode="aspectFill" binderror="onCoverError"></image>
-  <view wx:else class="hero fallback">{{place.categoryName || '北京慢游记'}}</view>
+  <view wx:else class="hero fallback">{{place.categoryName || '丫头京游攻略'}}</view>
   <view class="body">
     <view class="place-header">
       <view class="category">{{place.categoryName}}</view>
